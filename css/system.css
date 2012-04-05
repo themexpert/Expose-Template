@@ -1,0 +1,106 @@
+/**
+ *
+ * System css file usually used on Error and Offilne pages
+ *
+ * @package     Bootstrap Theme
+ * @version     1.0.0
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ **/
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, caption {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;background: transparent;}
+
+/* Clear Float
+---------------------------------------*/
+.clearfix:before, .clearfix:after, .ex-row:before, .ex-row:after, .ex-block:before, .ex-block:after {content: '';display: table;}
+.clearfix:after, .ex-row:after, .ex-block:after{clear: both;}
+
+body{
+    font:normal 14px/20px "DroidSansRegular",Arial,Helvetica,sans-serif;
+    background: #f3f3f3;
+    color: #444;
+}
+
+/*Offile page*/
+#frame{
+    width: 400px;
+    padding: 15px;
+    margin: 50px auto;
+    text-align: center;
+}
+#form-login,
+#errorboxbody{
+    background: #fbfcfd;
+    padding: 15px;
+    border: 1px solid #d2d3d4;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 10px 0 0;
+    text-align: left;
+}
+#form-login label{
+    display: block;
+    margin:8px 0 4px;;
+    font-size: 14px;
+    cursor: pointer;
+}
+#form-login input[type=text].inputbox,
+#form-login input[type=password].inputbox{
+    width:348px;
+    padding: 6px 8px;
+    font-size: 16px;
+}
+#form-login-remember * {float: left;}
+#form-login-remember .inputbox{margin: 13px 0 0 5px;}
+
+input.button{
+    float: right;
+    background: #e4ebf3;
+    padding: 4px 10px;
+    border: 1px solid #d4d7da;
+    color: #767e89;
+    text-shadow: 0 1px 1px #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px 0 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/*Error page*/
+#errorboxheader{
+    display: inline-block;
+    margin: 45px 0 4px;
+}
+#errorboxheader h1{
+    background: #D5D5D5;
+    padding: 0 26px 0 400px;
+    font-size: 6em;
+    line-height: 1em;
+    text-shadow: 1px 1px 1px white;
+}
+#errorboxheader p{
+    font-size: 17px;
+    text-align: right;
+    line-height: 28px;
+}
+#errorboxbody{
+    width: 500px;
+    margin: 10px auto;
+}
+#errorboxbody *{line-height: 22px}
+#errorboxbody ol,
+#errorboxbody ul{
+    list-style-position: inside;
+    margin: 3px 0 5px;
+}
+#techinfo{
+    background: #EEE;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-top: 6px;
+}

@@ -1,0 +1,157 @@
+/**
+ * @package     Bootstrap Theme
+ * @version     1.0
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ **/
+
+body{
+    background: #eee;
+    font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*--------------------------------------------------
+        Layout
+---------------------------------------------------*/
+/*Override default values*/
+.ex-row{background: #fff}
+.ex-block{}
+/*-------------------------------------------------
+        Positions Specific
+--------------------------------------------------*/
+#ex-top, #ex-header{background: #222;}
+
+/*-------------------------------------------------
+        Menu
+--------------------------------------------------*/
+/* Override ex-block with menu specific selector */
+.widget-menu.ex-block{padding-bottom: 0;margin-bottom: 0}
+#ex-menu{
+    /*border-top: 1px solid #eee;*/
+    /*border-bottom: 1px solid #eee;*/
+    height: 45px;
+}
+#ex-menu ul.level-0 > li{margin-right: 10px}
+#ex-menu ul.level-0 > li.last{margin-right: 0}
+#ex-menu ul li span.menu-title,
+#ex-menu ul li span.menu-desc{color: #fff;}
+
+#ex-menu ul li:hover span.menu-title, #ex-menu ul li:hover span.menu-desc,
+#ex-menu ul li.active span.menu-title, #ex-menu ul li.active span.menu-desc{color: #000;}
+
+/* lv - 0 Active Menu */
+#ex-menu ul.level-0 > li.active {background: #fff;}
+/* lv - 1 and below
+-----------------------------------*/
+/*Normal List Item*/
+#ex-menu ul.level-1 li.mega {}
+#ex-menu ul.level-1 li.first { border-top: 0; }
+#ex-menu ul.level-1 li span.menu-title,
+#ex-menu ul.level-1 li span.menu-desc{ border: 0; color: red;}
+#ex-menu ul.level-1 li a.mega:hover,
+#ex-menu ul.level-1 li span.mega:hover{ background: #eee; }
+/* Active Menu */
+#ex-menu ul.level-1 li.active a {background: #eee;}
+ /* CHILD CONTENT WRAPPER
+-----------------------------------*/
+#ex-menu li.mega .childcontent{
+    /*border applied here*/
+    border-top: 0;
+}
+#ex-menu .childcontent-inner { color: #333;}
+#ex-menu .level-1 .childcontent-inner { }
+
+/* GROUPD TITLE,DESC + DIRECT CHILD
+------------------------------------------------*/
+#ex-menu ul.level-1 .group-title {}
+#ex-menu ul.level-1 .group-title .menu-title {
+	color: #333;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 115%;
+}
+#ex-menu ul.level-1 .group-title .menu-desc {
+	color: #999;
+	padding-left: 0 !important;
+}
+/* Group content child item
+-----------------------------------*/
+#ex-menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title,
+#ex-menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title{color: green}
+
+/* Fancy menu
+-----------------------------------*/
+.fancy{background: #fff;color: #000}
+    .fancy-inner{}
+
+ /* Subnav common (Dorpline+Split)
+-----------------------------------*/
+#ex-subnav{background: #eee}
+
+/*----------------------------------
+        Component Area
+-----------------------------------*/
+#ex-component .ex-article-icons ul li a{
+    display:inline-block;
+    width:14px;
+    height:14px;vertical-align:text-top;background-image:url(../images/glyphicons-halflings.png);
+}
+#ex-component .print-icon a {background-position:-96px -48px;}
+#ex-component .email-icon a{background-position:-72px 0;}
+#ex-component .edit-icon a{background-position:-96px -72px;}
+
+/*----------------------------------
+        Widget Specific
+-----------------------------------*/
+.ex-block.widget-date{
+    padding: 5px;
+    text-align: right;
+}
+.designed-by a{
+    background: url(../images/themexpert.png) no-repeat;
+    width: 75px;
+    height: 18px;
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+}
+#ex-scrolltop{
+    background: url(../images/totop.png) no-repeat;
+    padding: 0 0 0 20px;
+    line-height: 20px;
+    display: inline-block;
+    color: #8e8e8e;
+}
+/*----------------------------------
+        Module Specific
+-----------------------------------*/
+/*Breadcrumbs*/
+.breadcrumbs .ex-block{padding: 0;}
+    .breadcrumbs ul.breadcrumb{margin-bottom: 0}
+#login-form #modlgn-username, #login-form #modlgn-passwd{display: block;width: 98%}
+#login-form #form-login-remember{margin: 5px 0;}
+#login-form #form-login-remember *{float: left;margin-right: 5px;}
+#login-form .button{margin: 0 0 5px; float: right}
+
+/*Default joomla menu*/
+/*Turn off image*/
+ul.menu li img{
+    display: none;
+}
+/*----------------------------------
+        Module Variations
+-----------------------------------*/
+/*Title Style*/
+.title-red .mod-header{color: #c10202}
+.title-blue .mod-header{color: #296fcf}
+.title-purple .mod-header{color: #811ec6}
+
+/*Badge Style*/
+.badge-new .badge,.badge-hot .badge, .badge-top .badge, .badge-pick .badge{position: absolute;width: 46px;height: 46px;top: 0;right: 0;z-index: 11;background-image: url(../images/badge.png);background-repeat: no-repeat}
+.badge-new .badge{background-position: 0 -150px}
+.badge-pick .badge{background-position: 0 -100px}
+.badge-top .badge{background-position: 0 -50px}
+
