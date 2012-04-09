@@ -42,7 +42,7 @@ function modChrome_standard( $module, $params, $attribs )
 
     // Output module
 
-    echo '<div class="ex-block ex-module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' column-spacing clearfix">' . "\n";
+    echo '<div class="ex-module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' column-spacing clearfix">' . "\n";
 	    	echo "\t\t" . '<div class="ex-header">' . "\n";
 	        	echo $badge;
 
