@@ -18,7 +18,7 @@ class ExposeWidgetDesignedby extends ExposeWidget{
     
     public $name = 'designedby';
 
-   /* public function inEnabled()
+   /* public function isEnabled()
     {
         return FALSE;
     }*/
