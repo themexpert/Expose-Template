@@ -505,24 +505,24 @@
             <fieldset name="TYPOGRAPHY">
                 <field name="spacer-font-global" type="spacer" text="SPACER_GLOBAL_FONT_LABEL" description="SPACER_GLOBAL_FONT_DESC" />
                 <!-- Body Font Settings -->
-                <field name="body-font" type="fonts" default="none" label="BODY_FONT_LABEL" description="BODY_FONT_DESC"/>
+                <field name="body-font" type="fonts" default="0" label="BODY_FONT_LABEL" description="BODY_FONT_DESC"/>
                 <field name="body-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="p,span" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Body Font Settings -->
 
                 <field name="spacer-font-menu" type="spacer" text="SPACER_MENU_FONT_LABEL" description="SPACER_MENU_FONT_DESC" />
                 <!-- Menu Font Settings -->
-                <field name="menu-font" type="fonts" default="none" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
+                <field name="menu-font" type="fonts" default="0" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
                 <field name="menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#ex-menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <field name="spacer-font-header" type="spacer" text="SPACER_HEADER_FONT_LABEL" description="SPACER_HEADER_FONT_DESC" />
                 <!-- Heading Font Settings -->
-                <field name="heading-font" type="fonts" default="none" label="HEADING_FONT_LABEL" description="HEADING_FONT_DESC"/>
+                <field name="heading-font" type="fonts" default="0" label="HEADING_FONT_LABEL" description="HEADING_FONT_DESC"/>
                 <field name="heading-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="h1,h3" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <!-- Module Header Settings -->
-                <field name="module-font" type="fonts" default="none" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
+                <field name="module-font" type="fonts" default="0" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
                 <field name="module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".ex-title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
             </fieldset>
