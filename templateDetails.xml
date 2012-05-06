@@ -123,16 +123,16 @@
             <fieldset name="STYLES">
                 <field name="style" type="presets" default="style1" pretext="SELECT" label="PRESET_STYLES" description="PRESET_STYLES_DESC_LABEL" />
 
-                <field name="custom-style-enabled" type="toggle" default="0" pretext="ENABLE" label="CUSTOM_STYLE_LABEL" description="CUSTOM_STYLE_DESC" />
+                <field name="stylus-enabled" type="toggle" default="0" pretext="ENABLE" label="CUSTOM_STYLE_LABEL" description="CUSTOM_STYLE_DESC" />
 
                 <!-- Title Style -->
-                <field name="module-title-color" type="colorpicker" pretext="MODULE_TITLE_COLOR_LABEL" default="f2560e" label="TITLE_COLOR_LABEL" description="TITLE_COLOR_DESC" />
-                <field name="article-title-color" type="colorpicker" pretext="ARTICLE_TITLE_COLOR_LABEL" class="remove-lbl border-left" default="5bd954" description="TEXT_COLOR_DESC" />
+                <field name="stylus-module-title-color" type="colorpicker" pretext="MODULE_TITLE_COLOR_LABEL" default="f2560e" label="TITLE_COLOR_LABEL" description="TITLE_COLOR_DESC" />
+                <field name="stylus-article-title-color" type="colorpicker" pretext="ARTICLE_TITLE_COLOR_LABEL" class="remove-lbl border-left" default="5bd954" description="TEXT_COLOR_DESC" />
 
                 <!-- Background Style -->
-                <field name="background-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="fffff" label="BACKGROUND_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="fffff" description="IMAGE_DESC" />
-                <field name="background-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-background-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="fffff" label="BACKGROUND_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="fffff" description="IMAGE_DESC" />
+                <field name="stylus-background-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -140,12 +140,12 @@
                 </field>
 
                 <!-- Header Style -->
-                <field name="header-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="555555" label="HEADER_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="header-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
-                <field name="header-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="bada55" description="LINK_COLOR_DESC" />
-                <field name="header-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_HOVER_COLOR_DESC" />
-                <field name="header-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="header-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-header-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="555555" label="HEADER_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-header-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
+                <field name="stylus-header-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="bada55" description="LINK_COLOR_DESC" />
+                <field name="stylus-header-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-header-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-header-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -153,12 +153,12 @@
                 </field>
 
                 <!-- Header Style -->
-                <field name="top-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="555555" label="TOP_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="top-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
-                <field name="top-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="bada55" description="LINK_COLOR_DESC" />
-                <field name="top-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_HOVER_COLOR_DESC" />
-                <field name="top-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="top-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-top-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="555555" label="TOP_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-top-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
+                <field name="stylus-top-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="bada55" description="LINK_COLOR_DESC" />
+                <field name="stylus-top-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-top-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-top-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -166,12 +166,12 @@
                 </field>
 
                 <!-- Feature Style -->
-                <field name="feature-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="dddddd" label="FEATURE_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="feature-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
-                <field name="feature-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_COLOR_DESC" />
-                <field name="feature-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="3d3a38" description="LINK_HOVER_COLOR_DESC" />
-                <field name="feature-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="feature-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-feature-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="dddddd" label="FEATURE_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-feature-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
+                <field name="stylus-feature-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_COLOR_DESC" />
+                <field name="stylus-feature-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="3d3a38" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-feature-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-feature-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -179,12 +179,12 @@
                 </field>
 
                 <!-- Main Content Style -->
-                <field name="maincontent-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="dddddd" label="MAINCONTENT_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="maincontent-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
-                <field name="maincontent-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_COLOR_DESC" />
-                <field name="maincontent-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="3d3a38" description="LINK_HOVER_COLOR_DESC" />
-                <field name="maincontent-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="maincontent-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-maincontent-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="dddddd" label="MAINCONTENT_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-maincontent-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="555555" description="TEXT_COLOR_DESC" />
+                <field name="stylus-maincontent-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="f2560e" description="LINK_COLOR_DESC" />
+                <field name="stylus-maincontent-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="3d3a38" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-maincontent-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-maincontent-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -192,12 +192,12 @@
                 </field>
 
                 <!-- Bottom Style -->
-                <field name="bottom-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="eeeeee" label="BOTTOM_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="bottom-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="222222" description="TEXT_COLOR_DESC" />
-                <field name="bottom-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="0ea8f0" description="LINK_COLOR_DESC" />
-                <field name="bottom-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="0ea8f0" description="LINK_HOVER_COLOR_DESC" />
-                <field name="bottom-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="bottom-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-bottom-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="eeeeee" label="BOTTOM_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-bottom-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="222222" description="TEXT_COLOR_DESC" />
+                <field name="stylus-bottom-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="0ea8f0" description="LINK_COLOR_DESC" />
+                <field name="stylus-bottom-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="0ea8f0" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-bottom-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-bottom-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -205,12 +205,12 @@
                 </field>
 
                 <!-- Footer Style -->
-                <field name="footer-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="000000" label="FOOTER_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="footer-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="ffffff" description="TEXT_COLOR_DESC" />
-                <field name="footer-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="30a8f4" description="LINK_COLOR_DESC" />
-                <field name="footer-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="30a8f4" description="LINK_HOVER_COLOR_DESC" />
-                <field name="footer-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
-                <field name="footer-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
+                <field name="stylus-footer-bg-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="000000" label="FOOTER_LABEL" description="BACKGROUND_COLOR_DESC" />
+                <field name="stylus-footer-text-color" type="colorpicker" pretext="TEXT_COLOR_LABEL" class="remove-lbl border-left" default="ffffff" description="TEXT_COLOR_DESC" />
+                <field name="stylus-footer-link-color" type="colorpicker" pretext="LINK_COLOR_LABEL" class="remove-lbl border-left" default="30a8f4" description="LINK_COLOR_DESC" />
+                <field name="stylus-footer-link-hover-color" type="colorpicker" pretext="LINK_HOVER_COLOR_LABEL" class="remove-lbl border-left" default="30a8f4" description="LINK_HOVER_COLOR_DESC" />
+                <field name="stylus-footer-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
+                <field name="stylus-footer-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
                     <option value="repeat-y">repeat-y</option>
@@ -505,25 +505,25 @@
             <fieldset name="TYPOGRAPHY">
                 <field name="spacer-font-global" type="spacer" text="SPACER_GLOBAL_FONT_LABEL" description="SPACER_GLOBAL_FONT_DESC" />
                 <!-- Body Font Settings -->
-                <field name="body-font" type="fonts" default="0" label="BODY_FONT_LABEL" description="BODY_FONT_DESC"/>
-                <field name="body-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="p,span" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-body-font" type="fonts" default="0" label="BODY_FONT_LABEL" description="BODY_FONT_DESC"/>
+                <field name="webfonts-body-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="body" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Body Font Settings -->
 
                 <field name="spacer-font-menu" type="spacer" text="SPACER_MENU_FONT_LABEL" description="SPACER_MENU_FONT_DESC" />
                 <!-- Menu Font Settings -->
-                <field name="menu-font" type="fonts" default="0" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
-                <field name="menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#ex-menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-menu-font" type="fonts" default="0" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
+                <field name="webfonts-menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#ex-menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <field name="spacer-font-header" type="spacer" text="SPACER_HEADER_FONT_LABEL" description="SPACER_HEADER_FONT_DESC" />
                 <!-- Heading Font Settings -->
-                <field name="heading-font" type="fonts" default="0" label="HEADING_FONT_LABEL" description="HEADING_FONT_DESC"/>
-                <field name="heading-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="h1,h3" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-heading-font" type="fonts" default="0" label="HEADING_FONT_LABEL" description="HEADING_FONT_DESC"/>
+                <field name="webfonts-heading-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="h1,h3" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <!-- Module Header Settings -->
-                <field name="module-font" type="fonts" default="0" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
-                <field name="module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".ex-title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-module-font" type="fonts" default="0" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
+                <field name="webfonts-module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".ex-title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
             </fieldset>
             <!-- Typography Settings -->
