@@ -266,7 +266,7 @@
                         <option value="light">Light</option>
                         <option value="dark">Dark</option>
                     </field>
-                    <field name="exposelogo-position" type="hidden" default="copyright-5" />
+                    <field name="exposelogo-position" type="positions" default="copyright-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
 
                 <field name="analytics-enabled" type="toggle" default="0" pretext="ENABLE" label="GOOGLE_ANALYTICS_LABEL" description="GOOGLE_ANALYTICS_DESC" />
                     <field name="analytics-id" type="text" default="UA-xxxxxx-x" class="remove-lbl border-left" pretext="UA Code" description="GOOGLE_ANALYTICS_CODE_DESC" />

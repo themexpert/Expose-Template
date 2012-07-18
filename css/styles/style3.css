@@ -6,4 +6,43 @@
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
  * @file        style3.css
  **/
-
+a {
+  color: #44b700;
+}
+a:hover {
+  color: #444444;
+  text-decoration: none;
+}
+::selection {
+  background: #44b700;
+  color: #fff;
+}
+::-moz-selection {
+  background: #44b700;
+  color: #fff;
+}
+/*----------------------------------
+         Menu style
+-----------------------------------*/
+#ex-menu ul.level-1 li span.menu-title:hover,
+#ex-menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title:hover,
+#ex-menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title:hover,
+#ex-menu ul.level-1 li.active a.mega,
+#ex-menu ul.level-1 li.active .menu-title {
+  color: #44b700;
+}
+/*----------------------------------
+          Module Specific
+-----------------------------------*/
+#mod-finder-searchform button.finder {
+  background-color: #44b700;
+}
+/* Joomla Menu */
+.nav-list .active > a,
+.nav-list .active:hover > a,
+.nav-list > li > a:hover {
+  border-color: #44b700;
+}
+.ex-title span {
+  color: #44b700;
+}

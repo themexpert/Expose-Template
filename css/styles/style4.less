@@ -1,0 +1,41 @@
+/**
+ * @package     Bootstrap Theme
+ * @version     1.0
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ * @file        style4.css
+ **/
+
+@color-primary: #F16D1A;
+@color-light-black : #444;
+
+a{color: @color-primary;}
+a:hover{color: @color-light-black;text-decoration: none;}
+::selection         {background: @color-primary; color: #fff;}
+::-moz-selection    {background: @color-primary; color: #fff;}
+
+/*----------------------------------
+         Menu style
+-----------------------------------*/
+#ex-menu{
+    ul.level-1{
+        li span.menu-title:hover,
+        li.mega .group-content > ul > li > a > span.menu-title:hover,
+        li.mega .group-content > ul > li > span > span.menu-title:hover,
+        li.active a.mega,
+        li.active .menu-title{ color: @color-primary;}
+    }
+}
+/*----------------------------------
+          Module Specific
+-----------------------------------*/
+#mod-finder-searchform button.finder{background-color: @color-primary;}
+/* Joomla Menu */
+.nav-list .active > a,
+.nav-list .active:hover > a,
+.nav-list > li > a:hover{
+    border-color: @color-primary;
+}
+
+.ex-title span{color: @color-primary;}
