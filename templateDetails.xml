@@ -18,6 +18,7 @@
         <folder>images</folder>
         <folder>js</folder>
         <folder>layouts</folder>
+        <folder>less</folder>
         <filename>index.php</filename>
         <filename>index.html</filename>
         <filename>component.php</filename>
