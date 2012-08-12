@@ -1,21 +1,25 @@
 /**
  * @package     Bootstrap Theme
- * @version     1.0
+ * @version     1.5
  * @author      ThemeXpert http://www.themexpert.com
  * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
  **/
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   background: #f5f5f5;
   color: #555;
   font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-}
-a {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
 /*--------------------------------------------------
         Layout
@@ -25,76 +29,6 @@ a {
   background: #fff;
   border-left: 1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
-}
-/* Globally usable classes
---------------------------------*/
-/* Margin */
-.nomargin {
-  margin: 0;
-}
-.nomargin-left {
-  margin-left: 0;
-}
-.nomargin-right {
-  margin-right: 0;
-}
-.nomargin-bottom {
-  margin-bottom: 0;
-}
-.nomargin-top {
-  margin-top: 0;
-}
-/* Padding */
-.nopadding {
-  padding: 0;
-}
-.nopadding-left {
-  padding-left: 0;
-}
-.nopadding-right {
-  padding-right: 0;
-}
-.nopadding-bottom {
-  padding-bottom: 0;
-}
-.nopadding-top {
-  padding-top: 0;
-}
-/* Both */
-.nostyle {
-  margin: 0;
-  padding: 0;
-}
-/* Alignments */
-.pull-left {
-  float: left;
-  margin-right: 10px;
-}
-.pull-right {
-  float: right;
-  margin-left: 10px;
-}
-.align-left {
-  text-align: left;
-}
-.align-right {
-  text-align: right;
-}
-.align-center {
-  text-align: center;
-}
-/* Fonts */
-.font-large {
-  font-size: 2em;
-  line-height: 1.2em;
-}
-.font-xlarge {
-  font-size: 4em;
-  line-height: 1.4em;
-}
-.font-xxlarge {
-  font-size: 5em;
-  line-height: 1.5em;
 }
 /*-------------------------------------------------
         Positions Specific
@@ -290,52 +224,6 @@ a {
   background-position: -96px -72px;
 }
 /*----------------------------------
-        Widget Specific
------------------------------------*/
-/* Logo */
-#ex-logo {
-  margin: 0;
-}
-/* Copyright info, designed by and expose logo widget settings */
-.widget-copyrightinfo,
-.widget-designedby,
-.widget-exposelogo {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 25px;
-}
-/*Date*/
-.ex-block.widget-date {
-  text-align: right;
-}
-/* Designed by - ThemeXpert */
-.designed-by a {
-  background: url(../images/themexpert.png) no-repeat;
-  width: 75px;
-  height: 18px;
-  display: inline-block;
-  text-indent: -9999px;
-  font-size: 0;
-}
-/* Powered by - Expose */
-#ex-poweredby {
-  margin: 0 auto;
-}
-/* Scroll to top */
-#ex-scrolltop {
-  background: url(../images/totop.png) no-repeat;
-  display: block;
-  width: 26px;
-  height: 28px;
-  text-indent: -9999px;
-  font-size: 0px;
-  margin: 30px auto 0;
-}
-#ex-scrolltop:hover {
-  background-position: 0 -71px;
-}
-/*----------------------------------
         Module Specific
 -----------------------------------*/
 /* Finder */
@@ -371,12 +259,6 @@ a {
   top: 6px;
   right: 22px;
   cursor: pointer;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 /*Breadcrumbs*/
 ul.breadcrumb {
@@ -423,6 +305,52 @@ ul.menu li img {
   text-shadow: 1px 1px 1px #fff;
 }
 /*----------------------------------
+        Widget Specific
+-----------------------------------*/
+/* Logo */
+#ex-logo {
+  margin: 0;
+}
+/* Copyright info, designed by and expose logo widget settings */
+.widget-copyrightinfo,
+.widget-designedby,
+.widget-exposelogo {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 25px;
+}
+/*Date*/
+.ex-block.widget-date {
+  text-align: right;
+}
+/* Designed by - ThemeXpert */
+.designed-by a {
+  background: url(../images/themexpert.png) no-repeat;
+  width: 75px;
+  height: 18px;
+  display: inline-block;
+  text-indent: -9999px;
+  font-size: 0;
+}
+/* Powered by - Expose */
+#ex-poweredby {
+  margin: 0 auto;
+}
+/* Scroll to top */
+#ex-scrolltop {
+  background: url(../images/totop.png) no-repeat;
+  display: block;
+  width: 26px;
+  height: 28px;
+  text-indent: -9999px;
+  font-size: 0px;
+  margin: 30px auto 0;
+}
+#ex-scrolltop:hover {
+  background-position: 0 -71px;
+}
+/*----------------------------------
         Module Variations
 -----------------------------------*/
 /* Default block style */
@@ -441,11 +369,6 @@ ul.menu li img {
   border: none;
 }
 /*Block variations*/
-.flush {
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
 .box1,
 .flush:hover {
   background: #fcfcfc;
@@ -506,4 +429,74 @@ body.align-rtl .nav-list .nav-header {
 body.align-rtl #mod-finder-searchform button.finder {
   left: 10px;
   right: auto;
+}
+/* Globally usable classes
+--------------------------------*/
+/* Margin */
+.nomargin {
+  margin: 0;
+}
+.nomargin-left {
+  margin-left: 0;
+}
+.nomargin-right {
+  margin-right: 0;
+}
+.nomargin-bottom {
+  margin-bottom: 0;
+}
+.nomargin-top {
+  margin-top: 0;
+}
+/* Padding */
+.nopadding {
+  padding: 0;
+}
+.nopadding-left {
+  padding-left: 0;
+}
+.nopadding-right {
+  padding-right: 0;
+}
+.nopadding-bottom {
+  padding-bottom: 0;
+}
+.nopadding-top {
+  padding-top: 0;
+}
+/* Both */
+.nostyle {
+  margin: 0;
+  padding: 0;
+}
+/* Alignments */
+.pull-left {
+  float: left;
+  margin-right: 10px;
+}
+.pull-right {
+  float: right;
+  margin-left: 10px;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+/* Fonts */
+.font-large {
+  font-size: 2em;
+  line-height: 1.2em;
+}
+.font-xlarge {
+  font-size: 4em;
+  line-height: 1.4em;
+}
+.font-xxlarge {
+  font-size: 5em;
+  line-height: 1.5em;
 }

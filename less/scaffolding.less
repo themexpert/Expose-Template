@@ -1,0 +1,62 @@
+body{
+    background: @background;
+    color: #555;
+    font-family: @font-sans;
+    font-size: 14px;
+    line-height: 20px;
+}
+a{ }
+
+/*--------------------------------------------------
+        Layout
+---------------------------------------------------*/
+/*Override default values*/
+.ex-row{
+    background: #fff;
+    border-left: 1px solid @border-color;
+    border-right: 1px solid @border-color;
+}
+
+
+/*-------------------------------------------------
+        Positions Specific
+--------------------------------------------------*/
+#ex-header{background: @background-light;}
+
+/*Common*/
+#ex-roof,
+#ex-top,
+#ex-header,
+#ex-utility,
+#ex-feature,
+#ex-main-top,
+#ex-breadcrumbs,
+#ex-content-top{border-bottom: 1px solid @border-color;}
+
+#ex-main-bottom,
+#ex-content-bottom,
+#ex-bottom,
+#ex-footer{border-top: 1px solid @border-color;}
+
+#ex-sidebar-a:after,
+#ex-sidebar-b:after{
+    border-style: solid;
+    border-color: @border-color;
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#ex-sidebar-a:after{border-width: 0 1px 0 0;}
+#ex-sidebar-b:after{border-width: 0 0 0 1px;}
+#ex-sidebar-a, #ex-sidebar-b{
+    .ex-block{z-index:10;}
+}
+#ex-copyright{
+    background: @background-light;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color
+}
