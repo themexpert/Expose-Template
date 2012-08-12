@@ -2,8 +2,7 @@
 // ---------------
 
 // Base classes
-.label,
-.badge {
+.label {
   font-size: @baseFontSize * .846;
   font-weight: bold;
   line-height: 14px; // ensure proper line-height if floated
@@ -18,10 +17,6 @@
   padding: 1px 4px 2px;
   .border-radius(3px);
 }
-.badge {
-  padding: 1px 9px 2px;
-  .border-radius(9px);
-}
 
 // Hover state, but only for links
 a {
@@ -35,8 +30,7 @@ a {
 
 // Colors
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
-.label,
-.badge {
+.label{
   // Important (red)
   &-important         { background-color: @errorText; }
   &-important[href]   { background-color: darken(@errorText, 10%); }
@@ -53,3 +47,9 @@ a {
   &-inverse           { background-color: @grayDark; }
   &-inverse[href]     { background-color: darken(@grayDark, 10%); }
 }
+
+/*Badge Style*/
+.badge-new .badge,.badge-hot .badge, .badge-top .badge, .badge-pick .badge{position: absolute;width: 46px;height: 46px;top: 0;right: 0;z-index: 11;background-image: url(../images/badge.png);background-repeat: no-repeat}
+.badge-new .badge{background-position: 0 -150px}
+.badge-pick .badge{background-position: 0 -100px}
+.badge-top .badge{background-position: 0 -50px}
