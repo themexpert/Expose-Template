@@ -3,13 +3,15 @@
 
 @media (max-width: 480px) {
 
+    // Make column all 100%
+    .ex-column{ width: 100% !important; }
 
-
-  // Update checkboxes for iOS
-  input[type="checkbox"],
-  input[type="radio"] {
+    // Update checkboxes for iOS
+    input[type="checkbox"],
+    input[type="radio"] {
     border: 1px solid #ccc;
-  }
+
+    }
 }
 
 
@@ -19,13 +21,15 @@
 
 @media (max-width: 767px) {
 
-  // Padding to set content in a bit
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    // Padding to set content in a bit
+    body { padding-left: 20px; padding-right: 20px; }
 
+    .ex-column[style^="width"] {width: 50% !important; height: auto !important;} // Default column with 50%
+    .ex-column[style="width: 100%"] {width: 100% !important; height: auto !important;} //If column is 100% dont touch it
 
+    #ex-mainbody{ width: 100% !important; left: 0 !important}
+    #ex-sidebar-a,
+    #ex-sidebar-b{ width: 50% !important; left: auto !important; right: auto !important;}
 
   // FORM FIELDS
   // ------------------------------

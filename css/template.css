@@ -40,6 +40,9 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
+a {
+  text-decoration: none;
+}
 /*--------------------------------------------------
         Layout
 ---------------------------------------------------*/
@@ -219,6 +222,13 @@ body {
 #ex-subnav {
   background: #f7f7f7;
 }
+#ex-mobile-menu {
+  margin: 10px;
+  text-align: center;
+}
+#ex-mobile-menu select {
+  margin: 0 auto;
+}
 /*----------------------------------
         Component Area
 -----------------------------------*/
@@ -330,6 +340,14 @@ ul.menu li img {
 #ex-logo {
   margin: 0;
 }
+#ex-logo a {
+  display: block;
+  font: a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
 /* Copyright info, designed by and expose logo widget settings */
 .widget-copyrightinfo,
 .widget-designedby,
@@ -397,29 +415,6 @@ ul.menu li img {
   padding: 0;
   font-size: 20px;
   line-height: 21px;
-}
-/*Badge Style*/
-.badge-new .badge,
-.badge-hot .badge,
-.badge-top .badge,
-.badge-pick .badge {
-  position: absolute;
-  width: 46px;
-  height: 46px;
-  top: 0;
-  right: 0;
-  z-index: 11;
-  background-image: url(../images/badge.png);
-  background-repeat: no-repeat;
-}
-.badge-new .badge {
-  background-position: 0 -150px;
-}
-.badge-pick .badge {
-  background-position: 0 -100px;
-}
-.badge-top .badge {
-  background-position: 0 -50px;
 }
 /*----------------------------------
         RTL

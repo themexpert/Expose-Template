@@ -6,7 +6,8 @@
 // --------------------------------------------------
 
 // Core
-.btn {
+.btn,
+#editor-xtd-buttons a{
   display: inline-block;
   .ie7-inline-block();
   padding: 4px 10px 4px;
@@ -16,6 +17,7 @@
   *line-height: 20px;
   color: @grayDark;
   text-align: center;
+  text-decoration: none;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
   vertical-align: middle;
   cursor: pointer;
@@ -29,7 +31,8 @@
 }
 
 // Hover state
-.btn:hover {
+.btn:hover,
+#editor-xtd-buttons a:hover{
   color: @grayDark;
   text-decoration: none;
   background-color: darken(@white, 10%);
@@ -42,7 +45,8 @@
 }
 
 // Focus state for keyboard and accessibility
-.btn:focus {
+.btn:focus,
+#editor-xtd-buttons a:focus{
   .tab-focus();
 }
 

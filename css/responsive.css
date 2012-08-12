@@ -76,6 +76,9 @@
   }
 }
 @media (max-width: 480px) {
+  .ex-column {
+    width: 100% !important;
+  }
   input[type="checkbox"],
   input[type="radio"] {
     border: 1px solid #ccc;
@@ -85,6 +88,24 @@
   body {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .ex-column[style^="width"] {
+    width: 50% !important;
+    height: auto !important;
+  }
+  .ex-column[style="width: 100%"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+  #ex-mainbody {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  #ex-sidebar-a,
+  #ex-sidebar-b {
+    width: 50% !important;
+    left: auto !important;
+    right: auto !important;
   }
   .input-large,
   .input-xlarge,
@@ -110,7 +131,10 @@
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (min-width: 1200px) {
   
