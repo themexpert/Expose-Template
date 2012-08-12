@@ -72,7 +72,7 @@ endif;
 
 	</fieldset>
 	<?php if ($params->get('show_urls_images_frontend')  ): ?>
-	<fieldset>
+	<fieldset class="pull-left">
 		<legend><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS'); ?></legend>
 			<div class="formelm">
 			<?php echo $this->form->getLabel('image_intro', 'images'); ?>
@@ -140,7 +140,7 @@ endif;
 	</fieldset>
 	<?php endif; ?>
 
-	<fieldset>
+	<fieldset class="pull-right">
 		<legend><?php echo JText::_('COM_CONTENT_PUBLISHING'); ?></legend>
 		<div class="formelm">
 		<?php echo $this->form->getLabel('catid'); ?>
