@@ -1,7 +1,7 @@
 body{
-    background: @background;
+    background: @bodyBackground;
     color: #555;
-    font-family: @font-sans;
+    font-family: @sansFontFamily;
     font-size: 14px;
     line-height: 20px;
 }
@@ -13,15 +13,15 @@ a{ }
 /*Override default values*/
 .ex-row{
     background: #fff;
-    border-left: 1px solid @border-color;
-    border-right: 1px solid @border-color;
+    border-left: 1px solid @grayLighter;
+    border-right: 1px solid @grayLighter;
 }
 
 
 /*-------------------------------------------------
         Positions Specific
 --------------------------------------------------*/
-#ex-header{background: @background-light;}
+#ex-header{background: @whiteLight;}
 
 /*Common*/
 #ex-roof,
@@ -31,17 +31,17 @@ a{ }
 #ex-feature,
 #ex-main-top,
 #ex-breadcrumbs,
-#ex-content-top{border-bottom: 1px solid @border-color;}
+#ex-content-top{border-bottom: 1px solid @grayLighter;}
 
 #ex-main-bottom,
 #ex-content-bottom,
 #ex-bottom,
-#ex-footer{border-top: 1px solid @border-color;}
+#ex-footer{border-top: 1px solid @grayLighter;}
 
 #ex-sidebar-a:after,
 #ex-sidebar-b:after{
     border-style: solid;
-    border-color: @border-color;
+    border-color: @grayLighter;
     content: '';
     display: block;
     position: absolute;
@@ -56,7 +56,7 @@ a{ }
     .ex-block{z-index:10;}
 }
 #ex-copyright{
-    background: @background-light;
-    border-top: 1px solid @border-color;
-    border-bottom: 1px solid @border-color
+    background: @whiteLight;
+    border-top: 1px solid @grayLighter;
+    border-bottom: 1px solid @grayLighter
 }

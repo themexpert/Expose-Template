@@ -1,10 +1,29 @@
-/**
+/*!
  * @package     Bootstrap Theme
  * @version     1.5
  * @author      ThemeXpert http://www.themexpert.com
- * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @copyright   Copyright (C) 2010 - 2012 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ * @file        template.less
  **/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
 .input-block-level {
   display: block;
   width: 100%;
@@ -17,7 +36,7 @@
 body {
   background: #f5f5f5;
   color: #555;
-  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
