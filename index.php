@@ -36,7 +36,7 @@ $prefix = $expose->getPrefix();
 
         <?php
             $expose->displayHead();
-            $expose->addLink(array('bootstrap.css','template.css'),'css');
+            $expose->addLink(array('bootstrap.css','template.css','responsive.css'),'css');
         ?>
     </head>
     
