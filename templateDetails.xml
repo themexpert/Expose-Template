@@ -337,12 +337,7 @@
             <fieldset name="LAYOUT">
                 <field name="spacer-positions-map" class="positions-map" type="spacer" text="MODULE_POSITIONS_MAP" description="MODULE_POSITIONS_MAP_DESC" />
                 <field name="layouts" type="layouts" default="sidebara-content-sidebarb" label="LAYOUT_TYPE_LABEL" description="LAYOUT_TYPE_DESC" />
-                <field name="layouts-type" type="list" default="fixed" label="TEMPLATE_TYPE_LABEL" description="TEMPLATE_TYPE_DESC">
-                    <option value="fluid">Fluid</option>
-                    <option value="fixed">Fixed</option>
-                </field>
 
-                
                 <field name="sidebar-a" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_A_LABEL" description="SIDEBAR_A_DESC" />
                     <field name="sidebar-a-chrome" type="hidden" max-mods="1" default="sidebar-a:standard" />
                     <field name="sidebar-a-mobile" type="hidden" default="0" />
