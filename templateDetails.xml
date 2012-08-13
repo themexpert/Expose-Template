@@ -343,11 +343,7 @@
                     <field name="sidebar-a-mobile" type="hidden" default="0" />
 
                 <field name="sidebar-b" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_B_LABEL" description="SIDEBAR_B_DESC" />
-                    <field name="sidebar-b-chrome" type="hidden" max-mods="1" default="sidebar-b:standard" />                                     <field name="sidebar-b-mobile" type="hidden" default="0" />
-                
-                <field name="iphone-enabled" type="toggle" default="0" label="IPHONE_THEME_LABEL" description="IPHONE_THEME_DESC" />
-                <field name="android-enabled" type="toggle" default="0" label="ANDROID_THEME_LABEL" description="ANDROID_THEME_DESC" />
-
+                    <field name="sidebar-b-chrome" type="hidden" max-mods="1" default="sidebar-b:standard" />
                 <field name="spacer-upper" type="spacer" text="SPACER_UPPER_MODULE_LABEL" description="SPACER_UPPER_MODULE_DESC" />
 
                 <field name="roof" type="positionlayouts" max-mods="6"
@@ -359,8 +355,6 @@
                         <option value="basic">Basic</option>
                     </field>
                 
-                    <field name="roof-mobile" type="toggle" default="0" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="top" type="positionlayouts" max-mods="6"
                     default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="TOP_LABEL" description="TOP_DESC" />
 
@@ -369,8 +363,6 @@
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="top-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="header" type="positionlayouts" max-mods="6"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="HEADER_LABEL" description="HEADER_DESC" />
@@ -381,8 +373,6 @@
                         <option value="basic">Basic</option>
                     </field>
                 
-                    <field name="header-mobile" type="toggle" default="1" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="utility" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="UTILITY_LABEL" description="UTILITY_DESC" />
 
@@ -391,8 +381,6 @@
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="utility-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="feature" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FEATURE_LABEL" description="FEATURE_DESC" />
@@ -403,8 +391,6 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="feature-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="maintop" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="MAIN_TOP_LABEL" description="MAIN_TOP_DESC" />
 
@@ -413,8 +399,6 @@
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="maintop-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="spacer-inner-content" type="spacer" text="SPACER_INNER_CONTENT_MODULE_LABEL" description="SPACER_INNER_CONTENT_MODULE_DESC" />
 
@@ -427,8 +411,6 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="contenttop-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="contentbottom" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="CONTENT_BOTTOM" description="CONTENT_BOTTOM_DESC" />
 
@@ -437,8 +419,6 @@
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="contentbottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="spacer-bottom" type="spacer" text="SPACER_BOTTOM_MODULE_LABEL" description="SPACER_BOTTOM_MODULE_DESC" />
                 
@@ -451,8 +431,6 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="mainbottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="bottom" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="BOTTOM_LABEL" description="BOTTOM_DESC" />
 
@@ -461,8 +439,6 @@
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="bottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="footer" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FOOTER_LABEL" description="FOOTER_DESC" />
@@ -473,8 +449,6 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="footer-mobile" type="toggle" default="1" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-                
                 <field name="copyright" type="positionlayouts" max-mods="5"
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="COPYRIGHT_LABEL" description="COPYRIGHT_DESC" />
 
@@ -484,15 +458,11 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="copyright-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
                 <field name="absolute" type="hidden" max-mods="1" default="1:100" />
                 <field name="absolute-chrome" type="hidden" default="absolute:raw" />
-                    <field name="absolute-mobile" type="hidden" default="0" />
 
                 <field name="breadcrumbs" type="hidden" max-mods="1" default="1:100" />
                 <field name="breadcrumbs-chrome" type="hidden" default="breadcrumbs:standard" />
-                    <field name="breadcrumbs-mobile" type="hidden" default="0" />
 
             </fieldset>
             <!-- Layout Settings -->
