@@ -42,21 +42,26 @@ function modChrome_standard( $module, $params, $attribs )
 
     // Output module
 
-    echo '<div class="ex-block ex-module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' column-spacing clearfix">' . "\n";
+    echo '<div class="block module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' clearfix">' . "\n";
 	    	echo "\t\t" . '<div class="ex-header">' . "\n";
 	        	echo $badge;
 
+                //separate subtitle
+                $titles 	= explode('||', $module->title);
+                $title 		= $titles[0];
+                $subTitle 	= $titles[1];
+
                 // Creates span around first word of module title for unique styling
-                $part_one = explode(' ', $module->title);
-                $part_one = $part_one[0];
+                $parts = explode(' ', $title);
+                $parts[0] = '<span>' . $parts[0] . '</span>';
+                $title = implode(' ', $parts);
 
-                if( count( explode( ' ', $module->title ) ) > 1 ) {
-                    $part_two = substr( $module->title, strpos( $module->title,' ' ) );
-                } else {
-                    $part_two = '';
+                echo "\t\t\t\t" . '<h2 class="ex-title">' . $title .'</h2>' . "\n";
+
+                if( !empty($subTitle) )
+                {
+                    echo "\t\t\t\t\t" . '<h3 class="ex-subtitle">' . $subTitle .'</h3>' . "\n";
                 }
-
-                echo "\t\t\t\t" . '<h' . $headerLevel . ' class="ex-title"><span>'.$part_one.'</span>'.$part_two.'</h' . $headerLevel . '>' . "\n";
 
 	    	echo "\t\t\t" . '</div>' . "\n";
 	        if ( !empty ( $module->content ) ) :
