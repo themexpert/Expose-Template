@@ -19,16 +19,6 @@ if(file_exists(JPATH_LIBRARIES.DS.'expose'.DS.'expose.php')){
     die();
 }
 
-/*
- * If you want to change html id prefix to yours, you should register it,
- * otherwise custom styling function won't work
- * eg: tx-/tx_
- *
- * */
-
-//$expose->setPrefix('tx-');
-$prefix = $expose->getPrefix();
-
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $expose->direction ;?>" class="no-js">
@@ -37,47 +27,58 @@ $prefix = $expose->getPrefix();
         <?php
             $expose->displayHead();
             $expose->addLink(array('typography.css','template.css','responsive.css'),'css');
+            $expose->addLink( array('template.js') ,'js', 11 )
         ?>
     </head>
     
-    <body <?php echo $expose->generateBodyClass();?> <?php /*Do not change the ID, otherwise it will fail to load mobile menu*/ echo ($expose->platform == 'mobile')? 'id="ex-mobile"' : '' ;?> >
+    <body <?php echo $expose->generateBodyClass();?> >
 
         <?php /**Begin Roof**/ if($expose->countModules('roof')): ?>
         <!--Start Roof Modules-->
-        <div id="<?php echo $prefix;?>roof" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('roof'); ?>
+        <div id="roof" class="container">
+            <div class="row">
+                <?php $expose->renderModules('roof'); ?>
+            </div>
         </div>
         <!--End Roof Modules-->
         <?php /**End Roof**/ endif;?>
 
         <?php /**Begin Top**/ if($expose->countModules('top')): ?>
         <!--Start Top Modules-->
-        <div id="<?php echo $prefix;?>top" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('top'); ?>
+        <div id="top" class="container">
+            <div class="row">
+                <?php $expose->renderModules('top'); ?>
+            </div>
         </div>
         <!--End Top Modules-->
         <?php /**End Top**/ endif;?>
 
         <?php /**Begin Header**/ if($expose->countModules('header')): ?>
         <!--Start Header Modules-->
-        <div id="<?php echo $prefix;?>header" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('header'); ?>
+        <div id="header" class="container">
+            <div class="row">
+                <?php $expose->renderModules('header'); ?>
+            </div>
         </div>
         <!--End Header Modules-->
         <?php /**End Header**/ endif;?>
 
         <?php /**Begin Utility**/ if($expose->countModules('utility')): ?>
         <!--Start Utility Modules-->
-        <div id="<?php echo $prefix;?>utility" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('utility'); ?>
+        <div id="utility" class="container">
+            <div class="row">
+                <?php $expose->renderModules('utility'); ?>
+            </div>
         </div>
         <!--End Utility Modules-->
         <?php /**End Utility**/ endif;?>
 
         <?php /**Begin Feature**/ if($expose->countModules('feature')): ?>
         <!--Start Feature Modules-->
-        <div id="<?php echo $prefix;?>feature" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('feature'); ?>
+        <div id="feature" class="container">
+            <div class="row">
+                <?php $expose->renderModules('feature'); ?>
+            </div>
 
         </div>
         <!--End Feature Modules-->
@@ -85,16 +86,20 @@ $prefix = $expose->getPrefix();
 
         <?php /**Begin Main-Top**/ if($expose->countModules('maintop')): ?>
         <!--Start Main-Top Modules-->
-        <div id="<?php echo $prefix;?>main-top" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('maintop'); ?>
+        <div id="main-top" class="container">
+            <div class="row">
+                <?php $expose->renderModules('maintop'); ?>
+            </div>
         </div>
         <!--End Main-Top Modules-->
         <?php /**End Main-Top**/ endif;?>
 
         <?php /**Begin Breadcrumbs**/ if($expose->countModules('breadcrumbs')): ?>
        <!--Start Breadcrumbs Module-->
-       <div id="<?php echo $prefix;?>breadcrumbs" class="<?php echo $prefix;?>row">
-           <?php $expose->renderModules('breadcrumbs'); ?>
+       <div id="breadcrumbs" class="container">
+            <div class="row">
+                <?php $expose->renderModules('breadcrumbs'); ?>
+            </div>
        </div>
        <!--End Breadcrumbs Module-->
        <?php /**End Breadcrumbs**/ endif;?>
@@ -107,36 +112,40 @@ $prefix = $expose->getPrefix();
 
         <?php /**Begin Main-Bottom**/ if($expose->countModules('mainbottom')): ?>
         <!--Start Main-Bottom Modules-->
-        <div id="<?php echo $prefix;?>main-bottom" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('mainbottom'); ?>
+        <div id="main-bottom" class="container">
+            <div class="row">
+                <?php $expose->renderModules('mainbottom'); ?>
+            </div>
         </div>
         <!--End Main Bottom Modules-->
         <?php /**End Main Bottom**/ endif;?>
 
         <?php /**Begin Bottom**/ if($expose->countModules('bottom')): ?>
         <!--Start Bottom Modules-->
-        <div id="<?php echo $prefix;?>bottom" class="<?php echo $prefix;?>row">
-            <?php $expose->renderModules('bottom'); ?>
+        <div id="bottom" class="container">
+            <div class="row">
+                <?php $expose->renderModules('bottom'); ?>
+            </div>
         </div>
         <!--End Bottom Modules-->
         <?php /**End Bottom**/ endif;?>
 
         <?php /**Begin Footer**/ if($expose->countModules('footer')): ?>
         <!--Start Footer Modules-->
-        <div id="<?php echo $prefix;?>footer" class="<?php echo $prefix;?>row">
+        <div id="footer" class="container">
             <?php $expose->renderModules('footer'); ?>
         </div>
         <!--End Footer Modules-->
         <?php /**End Footer**/ endif;?>
 
         <?php /**Begin Copyright**/ if($expose->countModules('copyright')): ?>
-        <div id="<?php echo $prefix;?>copyright" class="<?php echo $prefix;?>row">
+        <div id="copyright" class="container">
             <?php $expose->renderModules('copyright'); ?>
         </div>
         <?php /**End Copyright**/ endif;?>
 
         <?php /**Begin Absolute**/ if($expose->countModules('absolute')): ?>
-        <div id="<?php echo $prefix;?>absolute">
+        <div id="absolute">
             <?php $expose->renderModules('absolute'); ?>
         </div>
         <?php /**End Absolute**/ endif;?>
