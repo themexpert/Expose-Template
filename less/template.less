@@ -8,10 +8,12 @@
  **/
 
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
+@import "../../../libraries/expose/interface/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../libraries/expose/interface/less/mixins.less";
 
-// Page structure
+// Grid system and page structure
+@import "../../../libraries/expose/interface/less/grid.less";
+@import "../../../libraries/expose/interface/less/layouts.less";
 @import "scaffolding.less";
 
 // Menu
@@ -33,4 +35,4 @@
 @import "rtl.less";
 
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+@import "../../../libraries/expose/interface/less/utilities.less"; // Has to be last to override when necessary

@@ -1,12 +1,11 @@
 /*!
- * Bootstrap Responsive v2.0.4
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
+ * @package     Bootstrap Theme
+ * @version     1.5
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2012 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ * @file        template.less
+ **/
 .clearfix {
   *zoom: 1;
 }
@@ -76,12 +75,50 @@
   }
 }
 @media (max-width: 480px) {
-  .ex-column {
-    width: 100% !important;
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  .page-header h1 small {
+    display: block;
+    line-height: 18px;
   }
   input[type="checkbox"],
   input[type="radio"] {
     border: 1px solid #ccc;
+  }
+  .form-horizontal .control-group > label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  .form-horizontal .control-list {
+    padding-top: 0;
+  }
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .modal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0;
+  }
+  .modal.fade.in {
+    top: auto;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+  .carousel-caption {
+    position: static;
   }
 }
 @media (max-width: 767px) {
@@ -89,23 +126,39 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .ex-column[style^="width"] {
-    width: 50% !important;
-    height: auto !important;
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  .ex-column[style="width: 100%"] {
-    width: 100% !important;
-    height: auto !important;
+  .container-fluid {
+    padding: 0;
   }
-  #ex-mainbody {
-    width: 100% !important;
-    left: 0 !important;
+  .dl-horizontal dt {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: left;
   }
-  #ex-sidebar-a,
-  #ex-sidebar-b {
-    width: 50% !important;
-    left: auto !important;
-    right: auto !important;
+  .dl-horizontal dd {
+    margin-left: 0;
+  }
+  .container {
+    width: auto;
+  }
+  .row-fluid {
+    width: 100%;
+  }
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  [class*="span"],
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
   }
   .input-large,
   .input-xlarge,
@@ -131,11 +184,433 @@
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
+  .row {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="grid"] {
+    float: left;
+    margin-left: 20px;
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 724px;
+  }
+  .grid12 {
+    width: 724px;
+  }
+  .grid11 {
+    width: 662px;
+  }
+  .grid10 {
+    width: 600px;
+  }
+  .grid9 {
+    width: 538px;
+  }
+  .grid8 {
+    width: 476px;
+  }
+  .grid7 {
+    width: 414px;
+  }
+  .grid6 {
+    width: 352px;
+  }
+  .grid5 {
+    width: 290px;
+  }
+  .grid4 {
+    width: 228px;
+  }
+  .grid3 {
+    width: 166px;
+  }
+  .grid2 {
+    width: 104px;
+  }
+  .grid1 {
+    width: 42px;
+  }
+  .offset12 {
+    margin-left: 764px;
+  }
+  .offset11 {
+    margin-left: 702px;
+  }
+  .offset10 {
+    margin-left: 640px;
+  }
+  .offset9 {
+    margin-left: 578px;
+  }
+  .offset8 {
+    margin-left: 516px;
+  }
+  .offset7 {
+    margin-left: 454px;
+  }
+  .offset6 {
+    margin-left: 392px;
+  }
+  .offset5 {
+    margin-left: 330px;
+  }
+  .offset4 {
+    margin-left: 268px;
+  }
+  .offset3 {
+    margin-left: 206px;
+  }
+  .offset2 {
+    margin-left: 144px;
+  }
+  .offset1 {
+    margin-left: 82px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid [class*="grid"] {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.762430939%;
+    *margin-left: 2.709239449638298%;
+  }
+  .row-fluid [class*="grid"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid .grid12 {
+    width: 99.999999993%;
+    *width: 99.9468085036383%;
+  }
+  .row-fluid .grid11 {
+    width: 91.436464082%;
+    *width: 91.38327259263829%;
+  }
+  .row-fluid .grid10 {
+    width: 82.87292817100001%;
+    *width: 82.8197366816383%;
+  }
+  .row-fluid .grid9 {
+    width: 74.30939226%;
+    *width: 74.25620077063829%;
+  }
+  .row-fluid .grid8 {
+    width: 65.74585634900001%;
+    *width: 65.6926648596383%;
+  }
+  .row-fluid .grid7 {
+    width: 57.182320438000005%;
+    *width: 57.129128948638304%;
+  }
+  .row-fluid .grid6 {
+    width: 48.618784527%;
+    *width: 48.5655930376383%;
+  }
+  .row-fluid .grid5 {
+    width: 40.055248616%;
+    *width: 40.0020571266383%;
+  }
+  .row-fluid .grid4 {
+    width: 31.491712705%;
+    *width: 31.4385212156383%;
+  }
+  .row-fluid .grid3 {
+    width: 22.928176794%;
+    *width: 22.874985304638297%;
+  }
+  .row-fluid .grid2 {
+    width: 14.364640883%;
+    *width: 14.311449393638298%;
+  }
+  .row-fluid .grid1 {
+    width: 5.801104972%;
+    *width: 5.747913482638298%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  input.grid12, textarea.grid12, .uneditable-input.grid12 {
+    width: 714px;
+  }
+  input.grid11, textarea.grid11, .uneditable-input.grid11 {
+    width: 652px;
+  }
+  input.grid10, textarea.grid10, .uneditable-input.grid10 {
+    width: 590px;
+  }
+  input.grid9, textarea.grid9, .uneditable-input.grid9 {
+    width: 528px;
+  }
+  input.grid8, textarea.grid8, .uneditable-input.grid8 {
+    width: 466px;
+  }
+  input.grid7, textarea.grid7, .uneditable-input.grid7 {
+    width: 404px;
+  }
+  input.grid6, textarea.grid6, .uneditable-input.grid6 {
+    width: 342px;
+  }
+  input.grid5, textarea.grid5, .uneditable-input.grid5 {
+    width: 280px;
+  }
+  input.grid4, textarea.grid4, .uneditable-input.grid4 {
+    width: 218px;
+  }
+  input.grid3, textarea.grid3, .uneditable-input.grid3 {
+    width: 156px;
+  }
+  input.grid2, textarea.grid2, .uneditable-input.grid2 {
+    width: 94px;
+  }
+  input.grid1, textarea.grid1, .uneditable-input.grid1 {
+    width: 32px;
   }
 }
 @media (min-width: 1200px) {
-  
+  .row {
+    margin-left: -30px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="grid"] {
+    float: left;
+    margin-left: 30px;
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1170px;
+  }
+  .grid12 {
+    width: 1170px;
+  }
+  .grid11 {
+    width: 1070px;
+  }
+  .grid10 {
+    width: 970px;
+  }
+  .grid9 {
+    width: 870px;
+  }
+  .grid8 {
+    width: 770px;
+  }
+  .grid7 {
+    width: 670px;
+  }
+  .grid6 {
+    width: 570px;
+  }
+  .grid5 {
+    width: 470px;
+  }
+  .grid4 {
+    width: 370px;
+  }
+  .grid3 {
+    width: 270px;
+  }
+  .grid2 {
+    width: 170px;
+  }
+  .grid1 {
+    width: 70px;
+  }
+  .offset12 {
+    margin-left: 1230px;
+  }
+  .offset11 {
+    margin-left: 1130px;
+  }
+  .offset10 {
+    margin-left: 1030px;
+  }
+  .offset9 {
+    margin-left: 930px;
+  }
+  .offset8 {
+    margin-left: 830px;
+  }
+  .offset7 {
+    margin-left: 730px;
+  }
+  .offset6 {
+    margin-left: 630px;
+  }
+  .offset5 {
+    margin-left: 530px;
+  }
+  .offset4 {
+    margin-left: 430px;
+  }
+  .offset3 {
+    margin-left: 330px;
+  }
+  .offset2 {
+    margin-left: 230px;
+  }
+  .offset1 {
+    margin-left: 130px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid [class*="grid"] {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.564102564%;
+    *margin-left: 2.510911074638298%;
+  }
+  .row-fluid [class*="grid"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid .grid12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  .row-fluid .grid11 {
+    width: 91.45299145300001%;
+    *width: 91.3997999636383%;
+  }
+  .row-fluid .grid10 {
+    width: 82.905982906%;
+    *width: 82.8527914166383%;
+  }
+  .row-fluid .grid9 {
+    width: 74.358974359%;
+    *width: 74.30578286963829%;
+  }
+  .row-fluid .grid8 {
+    width: 65.81196581200001%;
+    *width: 65.7587743226383%;
+  }
+  .row-fluid .grid7 {
+    width: 57.264957265%;
+    *width: 57.2117657756383%;
+  }
+  .row-fluid .grid6 {
+    width: 48.717948718%;
+    *width: 48.6647572286383%;
+  }
+  .row-fluid .grid5 {
+    width: 40.170940171000005%;
+    *width: 40.117748681638304%;
+  }
+  .row-fluid .grid4 {
+    width: 31.623931624%;
+    *width: 31.5707401346383%;
+  }
+  .row-fluid .grid3 {
+    width: 23.076923077%;
+    *width: 23.0237315876383%;
+  }
+  .row-fluid .grid2 {
+    width: 14.529914530000001%;
+    *width: 14.4767230406383%;
+  }
+  .row-fluid .grid1 {
+    width: 5.982905983%;
+    *width: 5.929714493638298%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  input.grid12, textarea.grid12, .uneditable-input.grid12 {
+    width: 1160px;
+  }
+  input.grid11, textarea.grid11, .uneditable-input.grid11 {
+    width: 1060px;
+  }
+  input.grid10, textarea.grid10, .uneditable-input.grid10 {
+    width: 960px;
+  }
+  input.grid9, textarea.grid9, .uneditable-input.grid9 {
+    width: 860px;
+  }
+  input.grid8, textarea.grid8, .uneditable-input.grid8 {
+    width: 760px;
+  }
+  input.grid7, textarea.grid7, .uneditable-input.grid7 {
+    width: 660px;
+  }
+  input.grid6, textarea.grid6, .uneditable-input.grid6 {
+    width: 560px;
+  }
+  input.grid5, textarea.grid5, .uneditable-input.grid5 {
+    width: 460px;
+  }
+  input.grid4, textarea.grid4, .uneditable-input.grid4 {
+    width: 360px;
+  }
+  input.grid3, textarea.grid3, .uneditable-input.grid3 {
+    width: 260px;
+  }
+  input.grid2, textarea.grid2, .uneditable-input.grid2 {
+    width: 160px;
+  }
+  input.grid1, textarea.grid1, .uneditable-input.grid1 {
+    width: 60px;
+  }
+  .thumbnails {
+    margin-left: -30px;
+  }
+  .thumbnails > li {
+    margin-left: 30px;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
 }

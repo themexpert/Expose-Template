@@ -1,13 +1,11 @@
 /*!
- * Bootstrap Responsive v2.0.4
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
-
+ * @package     Bootstrap Theme
+ * @version     1.5
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2012 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ * @file        template.less
+ **/
 
 // Responsive.less
 // For phone and tablet devices
@@ -18,24 +16,22 @@
 // -------------------------
 // Required since we compile the responsive stuff separately
 
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
-
+@import "../../../libraries/expose/interface/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../libraries/expose/interface/less/mixins.less";
 
 // RESPONSIVE CLASSES
 // ------------------
 
-@import "responsive-utilities.less";
-
+@import "../../../libraries/expose/interface/less/responsive-utilities.less";
 
 // MEDIA QUERIES
 // ------------------
 
 // Phones to portrait tablets and narrow desktops
-@import "responsive-767px-max.less";
+@import "../../../libraries/expose/interface/less/responsive-767px-max.less";
 
 // Tablets to regular desktops
-@import "responsive-768px-979px.less";
+@import "../../../libraries/expose/interface/less/responsive-768px-979px.less";
 
 // Large desktops
-@import "responsive-1200px-min.less";
+@import "../../../libraries/expose/interface/less/responsive-1200px-min.less";
