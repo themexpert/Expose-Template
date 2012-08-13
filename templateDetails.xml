@@ -338,12 +338,12 @@
                 <field name="spacer-positions-map" class="positions-map" type="spacer" text="MODULE_POSITIONS_MAP" description="MODULE_POSITIONS_MAP_DESC" />
                 <field name="layouts" type="layouts" default="sidebara-content-sidebarb" label="LAYOUT_TYPE_LABEL" description="LAYOUT_TYPE_DESC" />
 
-                <field name="sidebar-a" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_A_LABEL" description="SIDEBAR_A_DESC" />
+                <field name="sidebar-a" type="positionlayouts" default="1:3" posttext="%" max-mods="1" label="SIDEBAR_A_LABEL" description="SIDEBAR_A_DESC" />
                     <field name="sidebar-a-chrome" type="hidden" max-mods="1" default="sidebar-a:standard" />
-                    <field name="sidebar-a-mobile" type="hidden" default="0" />
 
-                <field name="sidebar-b" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_B_LABEL" description="SIDEBAR_B_DESC" />
+                <field name="sidebar-b" type="positionlayouts" default="1:3" posttext="%" max-mods="1" label="SIDEBAR_B_LABEL" description="SIDEBAR_B_DESC" />
                     <field name="sidebar-b-chrome" type="hidden" max-mods="1" default="sidebar-b:standard" />
+
                 <field name="spacer-upper" type="spacer" text="SPACER_UPPER_MODULE_LABEL" description="SPACER_UPPER_MODULE_DESC" />
 
                 <field name="roof" type="positionlayouts" max-mods="6"
