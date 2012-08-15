@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="1.6" type="template" client="site" method="upgrade">
+<extension version="2.5" type="template" client="site" method="upgrade">
     <name>Tx_Bootstrap</name>
     <version>1.0</version>
     <creationDate>01 March 2012</creationDate>
@@ -41,31 +41,37 @@
         <position>roof-3</position>
         <position>roof-4</position>
         <position>roof-5</position>
+        <position>roof-6</position>
         <position>top-1</position>
         <position>top-2</position>
         <position>top-3</position>
         <position>top-4</position>
         <position>top-5</position>
+        <position>top-6</position>
         <position>header-1</position>
         <position>header-2</position>
         <position>header-3</position>
         <position>header-4</position>
         <position>header-5</position>
+        <position>header-6</position>
         <position>utility-1</position>
         <position>utility-2</position>
         <position>utility-3</position>
         <position>utility-4</position>
         <position>utility-5</position>
+        <position>utility-6</position>
         <position>feature-1</position>
         <position>feature-2</position>
         <position>feature-3</position>
         <position>feature-4</position>
         <position>feature-5</position>
+        <position>feature-6</position>
         <position>maintop-1</position>
         <position>maintop-2</position>
         <position>maintop-3</position>
         <position>maintop-4</position>
         <position>maintop-5</position>
+        <position>maintop-6</position>
         <position>breadcrumbs</position>
         <!--Upper Module positions-->
         <!--Inner Content Positions-->
@@ -73,12 +79,10 @@
         <position>contenttop-2</position>
         <position>contenttop-3</position>
         <position>contenttop-4</position>
-        <position>contenttop-5</position>
         <position>contentbottom-1</position>
         <position>contentbottom-2</position>
         <position>contentbottom-3</position>
         <position>contentbottom-4</position>
-        <position>contentbottom-5</position>
         <position>sidebar-a</position>
         <position>sidebar-b</position>
         <!--Inner Content Positions-->
@@ -88,28 +92,33 @@
         <position>mainbottom-3</position>
         <position>mainbottom-4</position>
         <position>mainbottom-5</position>
+        <position>mainbottom-6</position>
         <position>bottom-1</position>
         <position>bottom-2</position>
         <position>bottom-3</position>
         <position>bottom-4</position>
         <position>bottom-5</position>
+        <position>bottom-6</position>
         <position>footer-1</position>
         <position>footer-2</position>
         <position>footer-3</position>
         <position>footer-4</position>
         <position>footer-5</position>
+        <position>footer-6</position>
         <position>absolute</position>
         <position>copyright-1</position>
         <position>copyright-2</position>
         <position>copyright-3</position>
         <position>copyright-4</position>
         <position>copyright-5</position>
+        <position>copyright-6</position>
         <!--Mega menu position only for menu-->
         <position>mega1</position>
         <position>mega2</position>
         <position>mega3</position>
         <position>mega4</position>
         <position>mega5</position>
+        <position>mega6</position>
     </positions>
 
     <config>
@@ -350,7 +359,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="ROOF_LABEL" description="ROOF_DESC" />
                 
                     <field name="roof-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="roof-1:standard,roof-2:standard,roof-3:standard,roof-4:standard,roof-5:standard" description="MODULE_CHROME_DESC">
+                           default="roof-1:standard,roof-2:standard,roof-3:standard,roof-4:standard,roof-5:standard,roof-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -359,7 +368,7 @@
                     default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="TOP_LABEL" description="TOP_DESC" />
 
                     <field name="top-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="top-1:standard,top-2:standard,top-3:standard,top-4:standard,top-5:standard" description="MODULE_CHROME_DESC">
+                           default="top-1:standard,top-2:standard,top-3:standard,top-4:standard,top-5:standard,top-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -368,7 +377,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="HEADER_LABEL" description="HEADER_DESC" />
                     
                     <field name="header-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="header-1:standard,header-2:standard,header-3:standard,header-4:standard,header-5:standard" description="MODULE_CHROME_DESC">
+                           default="header-1:standard,header-2:standard,header-3:standard,header-4:standard,header-5:standard,header-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -377,7 +386,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="UTILITY_LABEL" description="UTILITY_DESC" />
 
                     <field name="utility-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="utility-1:standard,utility-2:standard,utility-3:standard,utility-4:standard,utility-5:standard" description="MODULE_CHROME_DESC">
+                           default="utility-1:standard,utility-2:standard,utility-3:standard,utility-4:standard,utility-5:standard,utility-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -386,7 +395,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FEATURE_LABEL" description="FEATURE_DESC" />
 
                     <field name="feature-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="feature-1:standard,feature-2:standard,feature-3:standard,feature-4:standard,feature-5:standard" description="MODULE_CHROME_DESC">
+                           default="feature-1:standard,feature-2:standard,feature-3:standard,feature-4:standard,feature-5:standard,feature-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -395,27 +404,27 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="MAIN_TOP_LABEL" description="MAIN_TOP_DESC" />
 
                     <field name="maintop-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="maintop-1:standard,maintop-2:standard,maintop-3:standard,maintop-4:standard,maintop-5:standard" description="MODULE_CHROME_DESC">
+                           default="maintop-1:standard,maintop-2:standard,maintop-3:standard,maintop-4:standard,maintop-5:standard,maintop-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                <field name="spacer-inner-content" type="spacer" text="SPACER_INNER_CONTENT_MODULE_LABEL" description="SPACER_INNER_CONTENT_MODULE_DESC" />
+                <!--<field name="spacer-inner-content" type="spacer" text="SPACER_INNER_CONTENT_MODULE_LABEL" description="SPACER_INNER_CONTENT_MODULE_DESC" />-->
 
-                <field name="contenttop" type="positionlayouts" max-mods="6"
-                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="CONTENT_TOP_LABEL" description="CONTENT_TOP_DESC" />
+                <field name="contenttop" type="hidden" max-mods="4"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3" label="CONTENT_TOP_LABEL" description="CONTENT_TOP_DESC" />
 
-                    <field name="contenttop-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="contenttop-1:standard,contenttop-2:standard,contenttop-3:standard,contenttop-4:standard,contenttop-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="contenttop-chrome" type="hidden" max-mods="4" class="remove-lbl"
+                           default="contenttop-1:standard,contenttop-2:standard,contenttop-3:standard,contenttop-4:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                <field name="contentbottom" type="positionlayouts" max-mods="6"
-                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="CONTENT_BOTTOM" description="CONTENT_BOTTOM_DESC" />
+                <field name="contentbottom" type="hidden" max-mods="4"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3" label="CONTENT_BOTTOM" description="CONTENT_BOTTOM_DESC" />
 
-                    <field name="contentbottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="contentbottom-1:standard,contentbottom-2:standard,contentbottom-3:standard,contentbottom-4:standard,contentbottom-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="contentbottom-chrome" type="hidden" max-mods="4" class="remove-lbl"
+                           default="contentbottom-1:standard,contentbottom-2:standard,contentbottom-3:standard,contentbottom-4:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -426,7 +435,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="MAIN_BOTTOM_LABEL" description="MAIN_BOTTOM_DESC" />
 
                     <field name="mainbottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="mainbottom-1:standard,mainbottom-2:standard,mainbottom-3:standard,mainbottom-4:standard,mainbottom-5:standard" description="MODULE_CHROME_DESC">
+                           default="mainbottom-1:standard,mainbottom-2:standard,mainbottom-3:standard,mainbottom-4:standard,mainbottom-5:standard,mainbottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -435,7 +444,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="BOTTOM_LABEL" description="BOTTOM_DESC" />
 
                     <field name="bottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="bottom-1:standard,bottom-2:standard,bottom-3:standard,bottom-4:standard,bottom-5:standard" description="MODULE_CHROME_DESC">
+                           default="bottom-1:standard,bottom-2:standard,bottom-3:standard,bottom-4:standard,bottom-5:standard,bottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -444,7 +453,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FOOTER_LABEL" description="FOOTER_DESC" />
 
                     <field name="footer-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="footer-1:standard,footer-2:standard,footer-3:standard,footer-4:standard,footer-5:standard" description="MODULE_CHROME_DESC">
+                           default="footer-1:standard,footer-2:standard,footer-3:standard,footer-4:standard,footer-5:standard,footer-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
@@ -453,7 +462,7 @@
                        default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="COPYRIGHT_LABEL" description="COPYRIGHT_DESC" />
 
                     <field name="copyright-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
-                           default="copyright-1:standard,copyright-2:standard,copyright-3:standard,copyright-4:standard,copyright-5:standard" description="MODULE_CHROME_DESC">
+                           default="copyright-1:standard,copyright-2:standard,copyright-3:standard,copyright-4:standard,copyright-5:standard,copyright-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
                         <option value="basic">Basic</option>
                     </field>
