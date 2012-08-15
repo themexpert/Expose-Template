@@ -14,8 +14,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* Clear Float
 ---------------------------------------*/
-.clearfix:before, .clearfix:after, .ex-row:before, .ex-row:after, .ex-block:before, .ex-block:after {content: '';display: table;}
-.clearfix:after, .ex-row:after, .ex-block:after{clear: both;}
+.clearfix:before, .clearfix:after, .row:before, .row:after, .block:before, .block:after {content: '';display: table;}
+.clearfix:after, .row:after, .block:after{clear: both;}
 
 body{
     font:normal 14px/20px "DroidSansRegular",Arial,Helvetica,sans-serif;

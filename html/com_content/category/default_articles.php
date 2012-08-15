@@ -56,7 +56,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	</fieldset>
 	<?php endif; ?>
 
-	<table class="ex-category table table-striped">
+	<table class="category table table-striped">
 		<?php if ($this->params->get('show_headings')) :?>
 		<thead>
 			<tr>

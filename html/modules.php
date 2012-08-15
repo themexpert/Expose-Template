@@ -43,7 +43,7 @@ function modChrome_standard( $module, $params, $attribs )
     // Output module
 
     echo '<div class="block module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' clearfix">' . "\n";
-	    	echo "\t\t" . '<div class="ex-header">' . "\n";
+	    	echo "\t\t" . '<div class="header">' . "\n";
 	        	echo $badge;
 
                 //separate subtitle
@@ -56,16 +56,16 @@ function modChrome_standard( $module, $params, $attribs )
                 $parts[0] = '<span>' . $parts[0] . '</span>';
                 $title = implode(' ', $parts);
 
-                echo "\t\t\t\t" . '<h2 class="ex-title">' . $title .'</h2>' . "\n";
+                echo "\t\t\t\t" . '<h2 class="title">' . $title .'</h2>' . "\n";
 
                 if( !empty($subTitle) )
                 {
-                    echo "\t\t\t\t\t" . '<h3 class="ex-subtitle">' . $subTitle .'</h3>' . "\n";
+                    echo "\t\t\t\t\t" . '<h3 class="subtitle">' . $subTitle .'</h3>' . "\n";
                 }
 
 	    	echo "\t\t\t" . '</div>' . "\n";
 	        if ( !empty ( $module->content ) ) :
-	        echo "\t\t\t" . '<div class="ex-content">' . "\n";
+	        echo "\t\t\t" . '<div class="content">' . "\n";
 	        	echo "\t\t\t\t" . $module->content . "\n";
 	        	echo "\t\t\t\t" . '' . "\n";
 	        echo "\t\t\t" . '</div>' . "\n";

@@ -22,9 +22,9 @@ JHtml::core();
 <?php if ($this->item->state == 0) : ?>
 <div class="system-unpublished">
 <?php endif; ?>
-<div class="ex-article <?php echo $this->escape($this->item->category_title); ?><?php echo ($this->item->featured) ? ' featured' : ''?>"><div class="ex-article-bg">
+<div class="article <?php echo $this->escape($this->item->category_title); ?><?php echo ($this->item->featured) ? ' featured' : ''?>"><div class="article-bg">
 <?php if ($params->get('show_title')) : ?>
-	<h2 class="ex-title">
+	<h2 class="title">
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
 			<?php echo $this->escape($this->item->title); ?></a>
@@ -35,7 +35,7 @@ JHtml::core();
 <?php endif; ?>
 
 <?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
-    <div class="ex-article-icons">
+    <div class="article-icons">
         <ul class="actions">
             <?php if ($params->get('show_print_icon')) : ?>
             <li class="print-icon">
@@ -65,11 +65,11 @@ JHtml::core();
 <?php // to do not that elegant would be nice to group the params ?>
 
     <?php /** Begin Article Info **/ if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_parent_category')) or ($params->get('show_hits'))) : ?>
-    	 <dl class="ex-articleinfo">
+    	 <dl class="articleinfo">
     	 <!--<dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>-->
     	<?php endif; ?>
     	<?php if ($params->get('show_parent_category')) : ?>
-    	<dd class="ex-parent-category">
+    	<dd class="parent-category">
     		<?php $title = $this->escape($this->item->parent_title);
     			$url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_id)) . '">' . $title . '</a>'; ?>
     		<?php if ($params->get('link_parent_category')) : ?>
@@ -80,7 +80,7 @@ JHtml::core();
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_category')) : ?>
-    	<dd class="ex-category">
+    	<dd class="category">
     		<?php $title = $this->escape($this->item->category_title);
     				$url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catid)) . '">' . $title . '</a>'; ?>
     		<?php if ($params->get('link_category')) : ?>
@@ -91,22 +91,22 @@ JHtml::core();
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_create_date')) : ?>
-    	<dd class="ex-date-posted">
+    	<dd class="date-posted">
     		<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHTML::_('date',$this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_modify_date')) : ?>
-    	<dd class="ex-date-modified">
+    	<dd class="date-modified">
     		<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHTML::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_publish_date')) : ?>
-    	<dd class="ex-date-published">
+    	<dd class="date-published">
     		<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHTML::_('date',$this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
-    	<dd class="ex-author">
+    	<dd class="author">
     		<?php $author =  $this->item->author; ?>
     		<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author);?>
 
@@ -120,7 +120,7 @@ JHtml::core();
     	</dd>
     	<?php endif; ?>
     	<?php if ($params->get('show_hits')) : ?>
-    	<dd class="ex-hits">
+    	<dd class="hits">
     		<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
     	</dd>
     	<?php endif; ?>
@@ -143,7 +143,7 @@ JHtml::core();
     			$link->setVar('return', base64_encode($returnURL));
     		endif;
     	?>
-    		<p class="ex-readon-surround">
+    		<p class="readon-surround">
     			<a href="<?php echo $link; ?>" class="readon btn btn-info"><span><i class="icon-info-sign icon-white"></i>
     				<?php if (!$params->get('access-view')) :
     					echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');

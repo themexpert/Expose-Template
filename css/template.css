@@ -134,7 +134,6 @@ textarea {
         Template Grid system
 ----------------------------------------*/
 .row {
-  margin-left: -20px;
   *zoom: 1;
 }
 .row:before,
@@ -147,120 +146,119 @@ textarea {
 }
 [class*="grid"] {
   float: left;
-  margin-left: 20px;
 }
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 960px;
 }
 .grid12 {
-  width: 940px;
+  width: 960px;
 }
 .grid11 {
-  width: 860px;
+  width: 880px;
 }
 .grid10 {
-  width: 780px;
+  width: 800px;
 }
 .grid9 {
-  width: 700px;
+  width: 720px;
 }
 .grid8 {
-  width: 620px;
+  width: 640px;
 }
 .grid7 {
-  width: 540px;
+  width: 560px;
 }
 .grid6 {
-  width: 460px;
+  width: 480px;
 }
 .grid5 {
-  width: 380px;
+  width: 400px;
 }
 .grid4 {
-  width: 300px;
+  width: 320px;
 }
 .grid3 {
-  width: 220px;
+  width: 240px;
 }
 .grid2 {
-  width: 140px;
+  width: 160px;
 }
 .grid1 {
-  width: 60px;
+  width: 80px;
 }
 .offset12 {
-  margin-left: 980px;
+  margin-left: 960px;
 }
 .offset11 {
-  margin-left: 900px;
+  margin-left: 880px;
 }
 .offset10 {
-  margin-left: 820px;
+  margin-left: 800px;
 }
 .offset9 {
-  margin-left: 740px;
+  margin-left: 720px;
 }
 .offset8 {
-  margin-left: 660px;
+  margin-left: 640px;
 }
 .offset7 {
-  margin-left: 580px;
+  margin-left: 560px;
 }
 .offset6 {
-  margin-left: 500px;
+  margin-left: 480px;
 }
 .offset5 {
-  margin-left: 420px;
+  margin-left: 400px;
 }
 .offset4 {
-  margin-left: 340px;
+  margin-left: 320px;
 }
 .offset3 {
-  margin-left: 260px;
+  margin-left: 240px;
 }
 .offset2 {
-  margin-left: 180px;
+  margin-left: 160px;
 }
 .offset1 {
-  margin-left: 100px;
+  margin-left: 80px;
 }
 .inset12 {
-  margin-left: -940px;
+  margin-left: -960px;
 }
 .inset11 {
-  margin-left: -860px;
+  margin-left: -880px;
 }
 .inset10 {
-  margin-left: -780px;
+  margin-left: -800px;
 }
 .inset9 {
-  margin-left: -700px;
+  margin-left: -720px;
 }
 .inset8 {
-  margin-left: -620px;
+  margin-left: -640px;
 }
 .inset7 {
-  margin-left: -540px;
+  margin-left: -560px;
 }
 .inset6 {
-  margin-left: -460px;
+  margin-left: -480px;
 }
 .inset5 {
-  margin-left: -380px;
+  margin-left: -400px;
 }
 .inset4 {
-  margin-left: -300px;
+  margin-left: -320px;
 }
 .inset3 {
-  margin-left: -220px;
+  margin-left: -240px;
 }
 .inset2 {
-  margin-left: -140px;
+  margin-left: -160px;
 }
 .inset1 {
-  margin-left: -60px;
+  margin-left: -80px;
 }
 .row-fluid {
   width: 100%;
@@ -284,58 +282,58 @@ textarea {
   box-sizing: border-box;
   float: left;
   margin-left: 2.127659574%;
-  *margin-left: 2.0744680846382977%;
+  *margin-left: 2.0755762406666665%;
 }
 .row-fluid [class*="grid"]:first-child {
   margin-left: 0;
 }
 .row-fluid .grid12 {
   width: 99.99999998999999%;
-  *width: 99.94680850063828%;
+  *width: 99.94791665666666%;
 }
 .row-fluid .grid11 {
   width: 91.489361693%;
-  *width: 91.4361702036383%;
+  *width: 91.43727835966668%;
 }
 .row-fluid .grid10 {
   width: 82.97872339599999%;
-  *width: 82.92553190663828%;
+  *width: 82.92664006266666%;
 }
 .row-fluid .grid9 {
   width: 74.468085099%;
-  *width: 74.4148936096383%;
+  *width: 74.41600176566668%;
 }
 .row-fluid .grid8 {
   width: 65.95744680199999%;
-  *width: 65.90425531263828%;
+  *width: 65.90536346866666%;
 }
 .row-fluid .grid7 {
   width: 57.446808505%;
-  *width: 57.3936170156383%;
+  *width: 57.394725171666664%;
 }
 .row-fluid .grid6 {
   width: 48.93617020799999%;
-  *width: 48.88297871863829%;
+  *width: 48.88408687466666%;
 }
 .row-fluid .grid5 {
   width: 40.425531911%;
-  *width: 40.3723404216383%;
+  *width: 40.373448577666665%;
 }
 .row-fluid .grid4 {
   width: 31.914893614%;
-  *width: 31.8617021246383%;
+  *width: 31.862810280666668%;
 }
 .row-fluid .grid3 {
   width: 23.404255317%;
-  *width: 23.3510638276383%;
+  *width: 23.35217198366667%;
 }
 .row-fluid .grid2 {
   width: 14.89361702%;
-  *width: 14.8404255306383%;
+  *width: 14.841533686666667%;
 }
 .row-fluid .grid1 {
   width: 6.382978723%;
-  *width: 6.329787233638298%;
+  *width: 6.330895389666667%;
 }
 .container {
   margin-right: auto;
@@ -351,8 +349,8 @@ textarea {
   clear: both;
 }
 .container-fluid {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
   *zoom: 1;
 }
 .container-fluid:before,

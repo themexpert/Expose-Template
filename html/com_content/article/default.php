@@ -18,15 +18,15 @@ $params		= $this->item->params;
 $canEdit	= $this->item->params->get('access-edit');
 
 ?>
-<div class="ex-article"><div class="ex-article-bg clearfix">
+<div class="article"><div class="article-bg clearfix">
 	<div class="item-page<?php echo $this->pageclass_sfx?>">
 		<?php /** Begin Page Title **/ if ($this->params->get('show_page_heading', 1)) : ?>
-		<h1 class="ex-title">
+		<h1 class="title">
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
 		</h1>
 		<?php /** End Page Title **/  endif; ?>
 		<?php /** Begin Article Title **/ if ($params->get('show_title')|| $params->get('access-edit')) : ?>
-		<h2 class="ex-title">
+		<h2 class="title">
 			<?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
 			<a href="<?php echo $this->item->readmore_link; ?>">
 				<?php echo $this->escape($this->item->title); ?></a>
@@ -37,7 +37,7 @@ $canEdit	= $this->item->params->get('access-edit');
 		<?php /** End Article Title **/ endif; ?>
 
 		<?php /** Begin Article Icons **/ if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
-			<div class="ex-article-icons">
+			<div class="article-icons">
 				<ul class="actions">
 				<?php if (!$this->print) : ?>
 					<?php if ($params->get('show_print_icon')) : ?>
@@ -77,11 +77,11 @@ $canEdit	= $this->item->params->get('access-edit');
 			OR ($params->get('show_hits'))); ?>
 
 		<?php /** Begin Article Info **/ if ($useDefList) : ?>
-		 <dl class="ex-articleinfo">
-		 <!--<dt class="ex-articleinfo-desc"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>-->
+		 <dl class="articleinfo">
+		 <!--<dt class="articleinfo-desc"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>-->
 		<?php endif; ?>
 		<?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>
-		<dd class="ex-parent-category">
+		<dd class="parent-category">
 			<?php	$title = $this->escape($this->item->parent_title);
 					$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)).'">'.$title.'</a>';?>
 			<?php if ($params->get('link_parent_category') AND $this->item->parent_slug) : ?>
@@ -92,7 +92,7 @@ $canEdit	= $this->item->params->get('access-edit');
 		</dd>
 		<?php endif; ?>
 		<?php if ($params->get('show_category')) : ?>
-		<dd class="ex-category">
+		<dd class="category">
 			<?php 	$title = $this->escape($this->item->category_title);
 					$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
 			<?php if ($params->get('link_category') AND $this->item->catslug) : ?>
@@ -103,22 +103,22 @@ $canEdit	= $this->item->params->get('access-edit');
 		</dd>
 		<?php endif; ?>
 		<?php if ($params->get('show_create_date')) : ?>
-		<dd class="ex-date-posted">
+		<dd class="date-posted">
 			<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHTML::_('date',$this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
 		</dd>
 		<?php endif; ?>
 		<?php if ($params->get('show_modify_date')) : ?>
-		<dd class="ex-date-modified">
+		<dd class="date-modified">
 			<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHTML::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
 		</dd>
 		<?php endif; ?>
 		<?php if ($params->get('show_publish_date')) : ?>
-		<dd class="ex-date-published">
+		<dd class="date-published">
 			<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHTML::_('date',$this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
 		</dd>
 		<?php endif; ?>
 		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
-		<dd class="ex-author">
+		<dd class="author">
 			<?php $author =  $this->item->author; ?>
 			<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author);?>
 
@@ -132,7 +132,7 @@ $canEdit	= $this->item->params->get('access-edit');
 		</dd>
 		<?php endif; ?>	
 		<?php if ($params->get('show_hits')) : ?>
-		<dd class="ex-hits">
+		<dd class="hits">
 			<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
 		</dd>
 		<?php endif; ?>

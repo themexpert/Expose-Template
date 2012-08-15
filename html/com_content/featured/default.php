@@ -15,17 +15,17 @@ JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 
 
 ?>
-<div class="ex-blog <?php echo $this->pageclass_sfx;?>">
+<div class="blog <?php echo $this->pageclass_sfx;?>">
 	
 	<?php /** Begin Page Title **/ if ( $this->params->get('show_page_heading')!=0) : ?>
-	<h1 class="ex-title">
+	<h1 class="title">
 		<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
 	<?php /** End Page Title **/ endif; ?>
 
 	<?php $leadingcount=0 ; ?>
 	<?php /** Begin Leading Articles **/ if (!empty($this->lead_items)) : ?>
-	<div class="ex-leading-articles">
+	<div class="leading-articles">
 		<?php foreach ($this->lead_items as &$item) : ?>
 			<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
 				<?php
@@ -69,7 +69,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 	<?php /** End Articles **/ endif; ?>
 
 	<?php /** Begin Article Links **/ if (!empty($this->link_items)) : ?>
-	<div class="ex-article-links">
+	<div class="article-links">
 		<?php echo $this->loadTemplate('links'); ?>
 	</div>
 	<?php /** End Article Links **/ endif; ?>
@@ -77,7 +77,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.DS.'helpers');
 	<?php /** Begin Pagination **/ if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->get('pages.total') > 1)) : ?>
 	<div class="pagination">
 		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-		<p class="ex-results">
+		<p class="results">
 			<?php echo $this->pagination->getPagesCounter(); ?>
 		</p>
 		<?php  endif; ?>

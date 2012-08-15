@@ -12,15 +12,15 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
 ?>
-<div class="ex-blog <?php echo $this->pageclass_sfx;?>">
+<div class="blog <?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
-	<h1 class="ex-title">
+	<h1 class="title">
 		<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-	<h2 class="ex-title">
+	<h2 class="title">
 		<?php echo $this->escape($this->params->get('page_subheading')); ?>
 		<?php if ($this->params->get('show_category_title')) : ?>
 			<span class="subheading-category"><?php echo $this->category->title;?></span>

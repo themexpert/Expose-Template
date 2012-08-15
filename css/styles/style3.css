@@ -24,11 +24,11 @@ a:hover {
 /*----------------------------------
          Menu style
 -----------------------------------*/
-#ex-menu ul.level-1 li span.menu-title:hover,
-#ex-menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title:hover,
-#ex-menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title:hover,
-#ex-menu ul.level-1 li.active a.mega,
-#ex-menu ul.level-1 li.active .menu-title {
+#menu ul.level-1 li span.menu-title:hover,
+#menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title:hover,
+#menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title:hover,
+#menu ul.level-1 li.active a.mega,
+#menu ul.level-1 li.active .menu-title {
   color: #44b700;
 }
 /*----------------------------------
@@ -43,6 +43,6 @@ a:hover {
 .nav-list > li > a:hover {
   border-color: #44b700;
 }
-.ex-title span {
+.title span {
   color: #44b700;
 }
