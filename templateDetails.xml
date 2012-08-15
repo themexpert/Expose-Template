@@ -501,9 +501,9 @@
                         <option value="google-cdn">Google CDN</option>
                         <option value="local">From Framework</option>
                     </field>
-                    <field name="jquery-version" type="list" default="1.7.1" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
+                    <field name="jquery-version" type="list" default="1.7.2" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
+                        <option value="1.7.2">1.7.2</option>
                         <option value="1.7.1">1.7.1</option>
-                        <option value="1.6.4">1.6.4</option>
                     </field>
                 <field name="combined-css" type="toggle" default="0" class="hidenext" pretext="ENABLE" label="COMBINED_CSS_LABEL" description="COMBINED_CSS_DESC" />
                     <field name="minify-css" type="toggle" default="0" pretext="ENABLE" label="MINIFY_CSS_LABEL" description="MINIFY_CSS_DESC" />
