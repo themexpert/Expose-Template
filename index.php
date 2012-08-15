@@ -133,7 +133,9 @@ if(file_exists(JPATH_LIBRARIES.DS.'expose'.DS.'expose.php')){
         <?php /**Begin Footer**/ if($expose->countModules('footer')): ?>
         <!--Start Footer Modules-->
         <div id="footer" class="container">
-            <?php $expose->renderModules('footer'); ?>
+            <div class="row">
+                <?php $expose->renderModules('footer'); ?>
+            </div>
         </div>
         <!--End Footer Modules-->
         <?php /**End Footer**/ endif;?>
