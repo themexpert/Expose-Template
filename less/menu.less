@@ -1,11 +1,12 @@
 /*-------------------------------------------------
         Menu
 --------------------------------------------------*/
-/* Override ex-block with menu specific selector */
+/* Override block with menu specific selector */
 .widget-menu{padding:0; margin: 0;}
 
-/* common menu code for mega, dropline and split */
-#ex-menu{
+// common menu code for mega, dropline and split
+#menu{
+    position: relative; z-index: 99;
 
     // Level 0 - first level
     ul.level-0 > li.mega > a.mega,
@@ -31,9 +32,10 @@
         background: #fff;
     }
 
-    /* lv - 1 and below
-    -----------------------------------*/
-    /*Normal List Item*/
+    // lv - 1 and below
+    //-----------------------------------
+
+    // Normal List Item
     ul.level-1{
         li.mega {border-bottom: 1px solid #ddd}
         li.last { border-bottom: 0; } //Last child
@@ -60,10 +62,10 @@
         li.active a {}
     }
 
-    /* CHILD CONTENT WRAPPER
-    -----------------------------------*/
+    // CHILD CONTENT WRAPPER
+    //-----------------------------------
     li.mega .childcontent{
-        /*border applied here*/
+        //border applied here
         border: 1px solid @grayLighter;
         margin-left: -1px;
         padding: 0 10px;
@@ -72,8 +74,8 @@
     .childcontent-inner { color: #333;}
     .level-1 .childcontent-inner { }
 
-    /* GROUPD TITLE,DESC + DIRECT CHILD
-    ------------------------------------------------*/
+    // GROUPD TITLE,DESC + DIRECT CHILD
+    //--------------------------------------------
     ul.level-1 .group-title {}
     ul.level-1 .group-title .menu-title {
     	color: #333;
@@ -86,36 +88,36 @@
         font-size: 11px;
     	padding-left: 0 !important;
     }
-    /* Group content child item
-    -----------------------------------*/
+    // Group content child item
+    //-----------------------------------
     ul.level-1 li.mega .group-content > ul > li > a > span.menu-title,
     ul.level-1 li.mega .group-content > ul > li > span > span.menu-title{color: #F16D1A;}
 
-    /*Module under menu*/
-    .ex-block{padding: 10px;margin: 0;}
+    // Module under menu
+    .block{padding: 10px;margin: 0;}
 }
 
-/* Fancy menu
------------------------------------*/
+// Fancy menu
+//-----------------------------------
 .fancy{background: #fff;color: #333}
     .fancy-inner{}
 
-/*Dropline Menu + Split menu*/
+// Dropline Menu + Split menu
 #exdl-mainnav a, #exdl-mainnav ul li > span,
-#ex-splitmenu a, #ex-splitmenu ul li > span{
+#splitmenu a, #splitmenu ul li > span{
     padding-left: 15px;
     padding-right: 15px;
     border-right: 1px solid @grayLighter;
     color: #333;
 }
-/* Subnav common (Dorpline+Split)
------------------------------------*/
-#ex-subnav{background: #f7f7f7}
+// Subnav common (Dorpline+Split)
+//-----------------------------------
+#subnav{background: #f7f7f7}
 
 // Mobile menu
 //----------------
 //Menu
-#ex-mobile-menu{
+#mobile-menu{
     margin: 10px;
     text-align: center;
 

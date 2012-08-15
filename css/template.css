@@ -6,6 +6,103 @@
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
  * @file        template.less
  **/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+#map_canvas img {
+  max-width: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
 .clearfix {
   *zoom: 1;
 }
@@ -129,6 +226,42 @@
 .offset1 {
   margin-left: 100px;
 }
+.inset12 {
+  margin-left: -940px;
+}
+.inset11 {
+  margin-left: -860px;
+}
+.inset10 {
+  margin-left: -780px;
+}
+.inset9 {
+  margin-left: -700px;
+}
+.inset8 {
+  margin-left: -620px;
+}
+.inset7 {
+  margin-left: -540px;
+}
+.inset6 {
+  margin-left: -460px;
+}
+.inset5 {
+  margin-left: -380px;
+}
+.inset4 {
+  margin-left: -300px;
+}
+.inset3 {
+  margin-left: -220px;
+}
+.inset2 {
+  margin-left: -140px;
+}
+.inset1 {
+  margin-left: -60px;
+}
 .row-fluid {
   width: 100%;
   *zoom: 1;
@@ -244,7 +377,6 @@ a {
            Common
 -----------------------------------------*/
 .block {
-  margin: 0 10px;
   padding: 15px;
   position: relative;
   display: block;
@@ -252,27 +384,24 @@ a {
 .no-title > .header {
   display: none;
 }
-.ex-title {
+.title {
   margin: 0 0 7px;
   padding: 0 0 7px;
 }
 * html .ie6-offset {
   margin-right: -4px;
 }
-#ex-mainbody,
-#ex-sidebar-a,
-#ex-sidebar-b {
+#mainbody,
+#sidebar-a,
+#sidebar-b {
   position: relative;
 }
-#ex-sidebar-a .col,
-#ex-sidebar-b .col,
-#ex-legal .col {
+#sidebar-a[class*='grid'] [class*='grid'],
+#sidebar-b[class*='grid'] [class*='grid'] {
+  margin-left: 0;
   width: 100%;
 }
-#ex-component {
-  padding: 15px;
-}
-#ex-copyright .ex-block {
+#copyright .block {
   padding: 10px 15px;
   margin: 0;
 }
@@ -280,7 +409,7 @@ a {
         Layout
 ---------------------------------------------------*/
 /*Override default values*/
-.ex-row {
+.container {
   background: #fff;
   border-left: 1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
@@ -288,28 +417,28 @@ a {
 /*-------------------------------------------------
         Positions Specific
 --------------------------------------------------*/
-#ex-header {
+#header {
   background: #fcfcfc;
 }
 /*Common*/
-#ex-roof,
-#ex-top,
-#ex-header,
-#ex-utility,
-#ex-feature,
-#ex-main-top,
-#ex-breadcrumbs,
-#ex-content-top {
+#roof,
+#top,
+#header,
+#utility,
+#feature,
+#main-top,
+#breadcrumbs,
+#content-top {
   border-bottom: 1px solid #d7d7d7;
 }
-#ex-main-bottom,
-#ex-content-bottom,
-#ex-bottom,
-#ex-footer {
+#main-bottom,
+#content-bottom,
+#bottom,
+#footer {
   border-top: 1px solid #d7d7d7;
 }
-#ex-sidebar-a:after,
-#ex-sidebar-b:after {
+#sidebar-a:after,
+#sidebar-b:after {
   border-style: solid;
   border-color: #d7d7d7;
   content: '';
@@ -320,17 +449,17 @@ a {
   left: 0;
   right: 0;
 }
-#ex-sidebar-a:after {
+#sidebar-a:after {
   border-width: 0 1px 0 0;
 }
-#ex-sidebar-b:after {
+#sidebar-b:after {
   border-width: 0 0 0 1px;
 }
-#ex-sidebar-a .ex-block,
-#ex-sidebar-b .ex-block {
+#sidebar-a .block,
+#sidebar-b .block {
   z-index: 10;
 }
-#ex-copyright {
+#copyright {
   background: #fcfcfc;
   border-top: 1px solid #d7d7d7;
   border-bottom: 1px solid #d7d7d7;
@@ -338,151 +467,129 @@ a {
 /*-------------------------------------------------
         Menu
 --------------------------------------------------*/
-/* Override ex-block with menu specific selector */
+/* Override block with menu specific selector */
 .widget-menu {
   padding: 0;
   margin: 0;
 }
-/* common menu code for mega, dropline and split */
-#ex-menu {
-  /* lv - 1 and below
-    -----------------------------------*/
-
-  /*Normal List Item*/
-
-  /* CHILD CONTENT WRAPPER
-    -----------------------------------*/
-
-  /* GROUPD TITLE,DESC + DIRECT CHILD
-    ------------------------------------------------*/
-
-  /* Group content child item
-    -----------------------------------*/
-
-  /*Module under menu*/
-
+#menu {
+  position: relative;
+  z-index: 99;
 }
-#ex-menu ul.level-0 > li.mega > a.mega,
-#ex-menu ul.level-0 > li.mega > span.mega {
+#menu ul.level-0 > li.mega > a.mega,
+#menu ul.level-0 > li.mega > span.mega {
   padding-left: 15px;
   padding-right: 15px;
   border-right: 1px solid #d7d7d7;
 }
-#ex-menu ul li span.menu-title,
-#ex-menu ul li span.menu-desc {
+#menu ul li span.menu-title,
+#menu ul li span.menu-desc {
   color: #333;
 }
-#ex-menu ul li:hover span.menu-title,
-#ex-menu ul li:hover span.menu-desc,
-#ex-menu ul li.active span.menu-title,
-#ex-menu ul li.active span.menu-desc {
+#menu ul li:hover span.menu-title,
+#menu ul li:hover span.menu-desc,
+#menu ul li.active span.menu-title,
+#menu ul li.active span.menu-desc {
   color: #000;
 }
-#ex-menu ul.level-0 > li:hover,
-#ex-menu ul.level-0 > li.active {
+#menu ul.level-0 > li:hover,
+#menu ul.level-0 > li.active {
   background: #fff;
 }
-#ex-menu ul.level-1 li.mega {
+#menu ul.level-1 li.mega {
   border-bottom: 1px solid #dddddd;
 }
-#ex-menu ul.level-1 li.last {
+#menu ul.level-1 li.last {
   border-bottom: 0;
 }
-#ex-menu ul.level-1 > li.mega > a.mega,
-#ex-menu ul.level-1 > li.mega > span.mega {
+#menu ul.level-1 > li.mega > a.mega,
+#menu ul.level-1 > li.mega > span.mega {
   padding: 10px 0;
 }
-#ex-menu ul.level-1 .group-content li.mega {
+#menu ul.level-1 .group-content li.mega {
   border: none;
 }
-#ex-menu ul.level-1 .group-content li.mega a.mega,
-#ex-menu ul.level-1 .group-content li.mega span.mega {
+#menu ul.level-1 .group-content li.mega a.mega,
+#menu ul.level-1 .group-content li.mega span.mega {
   padding: 4px 0;
 }
-#ex-menu ul.level-1 li span.menu-title,
-#ex-menu ul.level-1 li span.menu-desc {
+#menu ul.level-1 li span.menu-title,
+#menu ul.level-1 li span.menu-desc {
   border: 0;
   color: #222;
 }
-#ex-menu li.mega .childcontent {
-  /*border applied here*/
-
+#menu li.mega .childcontent {
   border: 1px solid #d7d7d7;
   margin-left: -1px;
   padding: 0 10px;
   background: #fff;
 }
-#ex-menu .childcontent-inner {
+#menu .childcontent-inner {
   color: #333;
 }
-#ex-menu ul.level-1 .group-title .menu-title {
+#menu ul.level-1 .group-title .menu-title {
   color: #333;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 115%;
 }
-#ex-menu ul.level-1 .group-title .menu-desc {
+#menu ul.level-1 .group-title .menu-desc {
   color: #333;
   font-size: 11px;
   padding-left: 0 !important;
 }
-#ex-menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title,
-#ex-menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title {
+#menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title,
+#menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title {
   color: #F16D1A;
 }
-#ex-menu .ex-block {
+#menu .block {
   padding: 10px;
   margin: 0;
 }
-/* Fancy menu
------------------------------------*/
 .fancy {
   background: #fff;
   color: #333333;
 }
-/*Dropline Menu + Split menu*/
 #exdl-mainnav a,
 #exdl-mainnav ul li > span,
-#ex-splitmenu a,
-#ex-splitmenu ul li > span {
+#splitmenu a,
+#splitmenu ul li > span {
   padding-left: 15px;
   padding-right: 15px;
   border-right: 1px solid #d7d7d7;
   color: #333;
 }
-/* Subnav common (Dorpline+Split)
------------------------------------*/
-#ex-subnav {
+#subnav {
   background: #f7f7f7;
 }
-#ex-mobile-menu {
+#mobile-menu {
   margin: 10px;
   text-align: center;
 }
-#ex-mobile-menu select {
+#mobile-menu select {
   margin: 0 auto;
 }
 /*----------------------------------
         Component Area
 -----------------------------------*/
-#ex-component .ex-article-bg {
+#component .article-bg {
   padding-bottom: 0;
   border: 0;
 }
-#ex-component .ex-article-icons ul li a {
+#component .article-icons ul li a {
   display: inline-block;
   width: 14px;
   height: 14px;
   vertical-align: text-top;
   background-image: url(../images/glyphicons-halflings.png);
 }
-#ex-component .print-icon a {
+#component .print-icon a {
   background-position: -96px -48px;
 }
-#ex-component .email-icon a {
+#component .email-icon a {
   background-position: -72px 0;
 }
-#ex-component .edit-icon a {
+#component .edit-icon a {
   background-position: -96px -72px;
 }
 /*----------------------------------
@@ -570,10 +677,10 @@ ul.menu li img {
         Widget Specific
 -----------------------------------*/
 /* Logo */
-#ex-logo {
+#logo {
   margin: 0;
 }
-#ex-logo a {
+#logo a {
   display: block;
   font: a;
   color: transparent;
@@ -591,7 +698,7 @@ ul.menu li img {
   margin-left: 25px;
 }
 /*Date*/
-.ex-block.widget-date {
+.block.widget-date {
   text-align: right;
 }
 /* Designed by - ThemeXpert */
@@ -604,11 +711,28 @@ ul.menu li img {
   font-size: 0;
 }
 /* Powered by - Expose */
-#ex-poweredby {
+/* Core Widgets
+-------------------------------------------*/
+.expose-logo,
+.expose-logo a {
+  width: 152px;
+  height: 40px;
+  display: block;
+}
+.expose-logo-light {
+  background: url(../../../libraries/expose/interface/images/expose_logo_light.png) no-repeat;
+}
+.expose-logo-dark {
+  background: url(../../../libraries/expose/interface/images/expose_logo_dark.png) no-repeat;
+}
+.expose-logo span {
+  display: none;
+}
+#poweredby {
   margin: 0 auto;
 }
 /* Scroll to top */
-#ex-scrolltop {
+#scrolltop {
   background: url(../images/totop.png) no-repeat;
   display: block;
   width: 26px;
@@ -617,25 +741,25 @@ ul.menu li img {
   font-size: 0px;
   margin: 30px auto 0;
 }
-#ex-scrolltop:hover {
+#scrolltop:hover {
   background-position: 0 -71px;
 }
 /*----------------------------------
         Module Variations
 -----------------------------------*/
 /* Default block style */
-.ex-block {
+.block {
   border-left: 1px solid #d7d7d7;
   margin: 0;
 }
-.ex-first .ex-block {
+.first .block {
   border-left: none;
 }
 /*Exceptions*/
-#ex-top .ex-block,
-#ex-header .ex-block,
-#ex-component .ex-block,
-#ex-copyright .ex-block {
+#top .block,
+#header .block,
+#component .block,
+#copyright .block {
   border: none;
 }
 /*Block variations*/
@@ -644,7 +768,7 @@ ul.menu li img {
   background: #fcfcfc;
 }
 /*Title Style*/
-.ex-title {
+.title {
   padding: 0;
   font-size: 20px;
   line-height: 21px;
@@ -655,46 +779,46 @@ ul.menu li img {
 body.align-rtl * {
   text-align: right;
 }
-body.align-rtl #ex-mainbody,
-body.align-rtl #ex-sidebar-a,
-body.align-rtl #ex-sidebar-b,
+body.align-rtl #mainbody,
+body.align-rtl #sidebar-a,
+body.align-rtl #sidebar-b,
 body.align-rtl .grid {
   float: right;
 }
-body.align-rtl .ex-megamenu ul.level-0 > li.mega,
-body.align-rtl #exdl-mainnav li,
-body.align-rtl #ex-splitmenu li,
-body.align-rtl #exdl-subnav > ul > li,
-body.align-rtl #ex-subnav .sublevel > ul > li {
+body.align-rtl .megamenu ul.level-0 > li.mega,
+body.align-rtl #mainnav li,
+body.align-rtl #splitmenu li,
+body.align-rtl #subnav > ul > li,
+body.align-rtl #subnav .sublevel > ul > li {
   float: right;
 }
-body.align-rtl .ex-menu ul li:hover ul,
-body.align-rtl .ex-menu ul li.over ul {
+body.align-rtl .menu ul li:hover ul,
+body.align-rtl .menu ul li.over ul {
   right: 0;
 }
-body.align-rtl .ex-menu ul li:hover li ul,
-body.align-rtl .ex-menu ul li.over li ul {
+body.align-rtl .menu ul li:hover li ul,
+body.align-rtl .menu ul li.over li ul {
   right: -999em;
 }
-body.align-rtl .ex-menu ul li li:hover ul,
-body.align-rtl .ex-menu ul li li.over ul {
+body.align-rtl .menu ul li li:hover ul,
+body.align-rtl .menu ul li li.over ul {
   right: 13em;
 }
-body.align-rtl .ex-menu ul li li li:hover ul,
-body.align-rtl .ex-menu ul li li li.over ul {
+body.align-rtl .menu ul li li li:hover ul,
+body.align-rtl .menu ul li li li.over ul {
   right: 10em;
   top: 0;
 }
-body.align-rtl .ex-megamenu ul.level-0 li.has-submenu a.mega span.menu-title,
-body.align-rtl .ex-megamenu ul.level-0 li.has-submenu span.mega.level-0 span.menu-title {
+body.align-rtl .megamenu ul.level-0 li.has-submenu a.mega span.menu-title,
+body.align-rtl .megamenu ul.level-0 li.has-submenu span.mega.level-0 span.menu-title {
   padding-right: 12px;
   background-position: right center;
 }
-body.align-rtl .ex-megamenu ul.level-0 li.has-submenu a.mega span.menu-desc,
-body.align-rtl .ex-megamenu ul.level-0 li.has-submenu span.mega span.menu-desc {
+body.align-rtl .megamenu ul.level-0 li.has-submenu a.mega span.menu-desc,
+body.align-rtl .megamenu ul.level-0 li.has-submenu span.mega span.menu-desc {
   padding-right: 12px;
 }
-body.align-rtl .ex-megamenu ul.level-0 li.mega .has-image {
+body.align-rtl .megamenu ul.level-0 li.mega .has-image {
   padding-right: 35px;
   padding-left: 0;
   background-position: 100%;

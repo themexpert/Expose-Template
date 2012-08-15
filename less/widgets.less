@@ -2,7 +2,7 @@
         Widget Specific
 -----------------------------------*/
 /* Logo */
-#ex-logo{
+#logo{
     margin: 0;
     a{
         display: block;
@@ -21,7 +21,7 @@
 }
 
 /*Date*/
-.ex-block.widget-date{
+.block.widget-date{
     text-align: right;
 }
 
@@ -35,10 +35,17 @@
     font-size: 0;
 }
 /* Powered by - Expose */
-#ex-poweredby{margin: 0 auto;}
+/* Core Widgets
+-------------------------------------------*/
+.expose-logo, .expose-logo a{width: 152px;height: 40px;display: block}
+    .expose-logo-light{background: url(../../../libraries/expose/interface/images/expose_logo_light.png) no-repeat;}
+    .expose-logo-dark{background: url(../../../libraries/expose/interface/images/expose_logo_dark.png) no-repeat;}
+    .expose-logo span{display: none}
+
+#poweredby{margin: 0 auto;}
 
 /* Scroll to top */
-#ex-scrolltop{
+#scrolltop{
     background: url(../images/totop.png) no-repeat;
     display: block;
     width: 26px;

@@ -6,24 +6,27 @@ body{
     line-height: 20px;
 }
 a{ text-decoration: none; }
+
 /*----------------------------------------
            Common
 -----------------------------------------*/
-.block {margin:0 10px;padding: 15px; position: relative; display: block;}
+.block {padding: 15px; position: relative; display: block;}
 .no-title > .header {display: none;}
-    .ex-title{margin: 0 0 7px;padding: 0 0 7px;}
+    .title{margin: 0 0 7px;padding: 0 0 7px;}
 * html .ie6-offset {margin-right: -4px;}
-#ex-mainbody, #ex-sidebar-a, #ex-sidebar-b{position: relative;}
-#ex-sidebar-a .col, #ex-sidebar-b .col, #ex-legal .col{width:100%}
-#ex-component{padding: 15px;}
-#ex-copyright .ex-block{padding: 10px 15px;margin: 0;}
+#mainbody, #sidebar-a, #sidebar-b{position: relative;}
+// Sidebar a/b grid inside grid
+#sidebar-a[class*='grid'] [class*='grid'],
+#sidebar-b[class*='grid'] [class*='grid']{ margin-left: 0; width: 100%;}
+
+#copyright .block{padding: 10px 15px;margin: 0;}
 
 /*--------------------------------------------------
         Layout
 ---------------------------------------------------*/
 
 /*Override default values*/
-.ex-row{
+.container{
     background: #fff;
     border-left: 1px solid @grayLighter;
     border-right: 1px solid @grayLighter;
@@ -33,25 +36,25 @@ a{ text-decoration: none; }
 /*-------------------------------------------------
         Positions Specific
 --------------------------------------------------*/
-#ex-header{background: @whiteLight;}
+#header{background: @whiteLight;}
 
 /*Common*/
-#ex-roof,
-#ex-top,
-#ex-header,
-#ex-utility,
-#ex-feature,
-#ex-main-top,
-#ex-breadcrumbs,
-#ex-content-top{border-bottom: 1px solid @grayLighter;}
+#roof,
+#top,
+#header,
+#utility,
+#feature,
+#main-top,
+#breadcrumbs,
+#content-top{border-bottom: 1px solid @grayLighter;}
 
-#ex-main-bottom,
-#ex-content-bottom,
-#ex-bottom,
-#ex-footer{border-top: 1px solid @grayLighter;}
+#main-bottom,
+#content-bottom,
+#bottom,
+#footer{border-top: 1px solid @grayLighter;}
 
-#ex-sidebar-a:after,
-#ex-sidebar-b:after{
+#sidebar-a:after,
+#sidebar-b:after{
     border-style: solid;
     border-color: @grayLighter;
     content: '';
@@ -62,12 +65,13 @@ a{ text-decoration: none; }
     left: 0;
     right: 0;
 }
-#ex-sidebar-a:after{border-width: 0 1px 0 0;}
-#ex-sidebar-b:after{border-width: 0 0 0 1px;}
-#ex-sidebar-a, #ex-sidebar-b{
-    .ex-block{z-index:10;}
+#sidebar-a:after{border-width: 0 1px 0 0;}
+#sidebar-b:after{border-width: 0 0 0 1px;}
+#sidebar-a, #sidebar-b{
+    .block{z-index:10;}
 }
-#ex-copyright{
+
+#copyright{
     background: @whiteLight;
     border-top: 1px solid @grayLighter;
     border-bottom: 1px solid @grayLighter
