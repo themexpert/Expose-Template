@@ -361,6 +361,9 @@ textarea {
 .container-fluid:after {
   clear: both;
 }
+/*----------------------------------------
+           Common
+-----------------------------------------*/
 body {
   background: #f5f5f5;
   color: #555;
@@ -371,9 +374,6 @@ body {
 a {
   text-decoration: none;
 }
-/*----------------------------------------
-           Common
------------------------------------------*/
 .block {
   padding: 15px;
   position: relative;
