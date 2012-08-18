@@ -29,129 +29,136 @@ if(file_exists(JPATH_LIBRARIES.DS.'expose'.DS.'expose.php')){
             $expose->addLink(array('typography.css','template.css','responsive.css'),'css');
             $expose->addLink( array('template.js') ,'js', 11 )
         ?>
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
     </head>
     
     <body <?php echo $expose->generateBodyClass();?> >
+        <div class="container">
+            
+            <?php /**Begin Roof**/ if($expose->countModules('roof')): ?>
+            <!--Start Roof Modules-->
+            <section id="roof" class="row">
 
-        <?php /**Begin Roof**/ if($expose->countModules('roof')): ?>
-        <!--Start Roof Modules-->
-        <div id="roof" class="container">
-            <div class="row">
                 <?php $expose->renderModules('roof'); ?>
-            </div>
-        </div>
-        <!--End Roof Modules-->
-        <?php /**End Roof**/ endif;?>
 
-        <?php /**Begin Top**/ if($expose->countModules('top')): ?>
-        <!--Start Top Modules-->
-        <div id="top" class="container">
-            <div class="row">
-                <?php $expose->renderModules('top'); ?>
-            </div>
-        </div>
-        <!--End Top Modules-->
-        <?php /**End Top**/ endif;?>
+            </section>
+            <!--End Roof Modules-->
+            <?php /**End Roof**/ endif;?>
 
-        <?php /**Begin Header**/ if($expose->countModules('header')): ?>
-        <!--Start Header Modules-->
-        <div id="header" class="container">
-            <div class="row">
-                <?php $expose->renderModules('header'); ?>
-            </div>
-        </div>
-        <!--End Header Modules-->
-        <?php /**End Header**/ endif;?>
+            <header>
+                <?php /**Begin Top**/ if($expose->countModules('top')): ?>
+                <!--Start Top Modules-->
+                <section id="top" class="row">
 
-        <?php /**Begin Utility**/ if($expose->countModules('utility')): ?>
-        <!--Start Utility Modules-->
-        <div id="utility" class="container">
-            <div class="row">
+                    <?php $expose->renderModules('top'); ?>
+
+                </section>
+                <!--End Top Modules-->
+                <?php /**End Top**/ endif;?>
+
+                <?php /**Begin Header**/ if($expose->countModules('header')): ?>
+                <!--Start Header Modules-->
+                <section id="header" class="row">
+
+                    <?php $expose->renderModules('header'); ?>
+
+                </section>
+                <!--End Header Modules-->
+                <?php /**End Header**/ endif;?>
+            </header>
+
+            <?php /**Begin Utility**/ if($expose->countModules('utility')): ?>
+            <!--Start Utility Modules-->
+            <section id="utility" class="row">
+
                 <?php $expose->renderModules('utility'); ?>
-            </div>
-        </div>
-        <!--End Utility Modules-->
-        <?php /**End Utility**/ endif;?>
 
-        <?php /**Begin Feature**/ if($expose->countModules('feature')): ?>
-        <!--Start Feature Modules-->
-        <div id="feature" class="container">
-            <div class="row">
+            </section>
+            <!--End Utility Modules-->
+            <?php /**End Utility**/ endif;?>
+    
+            <?php /**Begin Feature**/ if($expose->countModules('feature')): ?>
+            <!--Start Feature Modules-->
+            <section id="feature" class="row">
+
                 <?php $expose->renderModules('feature'); ?>
-            </div>
 
-        </div>
-        <!--End Feature Modules-->
-        <?php /**End Feature**/ endif;?>
+            </section>
+            <!--End Feature Modules-->
+            <?php /**End Feature**/ endif;?>
+    
+            <?php /**Begin Main-Top**/ if($expose->countModules('maintop')): ?>
+            <!--Start Main-Top Modules-->
+            <section id="main-top" class="row">
 
-        <?php /**Begin Main-Top**/ if($expose->countModules('maintop')): ?>
-        <!--Start Main-Top Modules-->
-        <div id="main-top" class="container">
-            <div class="row">
                 <?php $expose->renderModules('maintop'); ?>
-            </div>
-        </div>
-        <!--End Main-Top Modules-->
-        <?php /**End Main-Top**/ endif;?>
 
-        <?php /**Begin Breadcrumbs**/ if($expose->countModules('breadcrumbs')): ?>
-       <!--Start Breadcrumbs Module-->
-       <div id="breadcrumbs" class="container">
-            <div class="row">
+            </section>
+            <!--End Main-Top Modules-->
+            <?php /**End Main-Top**/ endif;?>
+    
+            <?php /**Begin Breadcrumbs**/ if($expose->countModules('breadcrumbs')): ?>
+            <!--Start Breadcrumbs Module-->
+            <section id="breadcrumbs" class="row">
+
                 <?php $expose->renderModules('breadcrumbs'); ?>
-            </div>
-       </div>
-       <!--End Breadcrumbs Module-->
-       <?php /**End Breadcrumbs**/ endif;?>
 
-        <!--Start Main Body-->
+            </section>
+            <!--End Breadcrumbs Module-->
+            <?php /**End Breadcrumbs**/ endif;?>
+    
+            <!--Start Main Body-->
+            <section id="main" class="row">
+                <?php $expose->renderBody();?>
+            </section>
+            <!--End Main Body Modules-->
+    
+            <?php /**Begin Main-Bottom**/ if($expose->countModules('mainbottom')): ?>
+            <!--Start Main-Bottom Modules-->
+            <section id="main-bottom" class="row">
 
-        <?php $expose->renderBody();?>
-
-        <!--End Main Body Modules-->
-
-        <?php /**Begin Main-Bottom**/ if($expose->countModules('mainbottom')): ?>
-        <!--Start Main-Bottom Modules-->
-        <div id="main-bottom" class="container">
-            <div class="row">
                 <?php $expose->renderModules('mainbottom'); ?>
-            </div>
-        </div>
-        <!--End Main Bottom Modules-->
-        <?php /**End Main Bottom**/ endif;?>
 
-        <?php /**Begin Bottom**/ if($expose->countModules('bottom')): ?>
-        <!--Start Bottom Modules-->
-        <div id="bottom" class="container">
-            <div class="row">
+            </section>
+            <!--End Main Bottom Modules-->
+            <?php /**End Main Bottom**/ endif;?>
+    
+            <?php /**Begin Bottom**/ if($expose->countModules('bottom')): ?>
+            <!--Start Bottom Modules-->
+            <section id="bottom" class="row">
+
                 <?php $expose->renderModules('bottom'); ?>
-            </div>
-        </div>
-        <!--End Bottom Modules-->
-        <?php /**End Bottom**/ endif;?>
 
-        <?php /**Begin Footer**/ if($expose->countModules('footer')): ?>
-        <!--Start Footer Modules-->
-        <div id="footer" class="container">
-            <div class="row">
+            </section>
+            <!--End Bottom Modules-->
+            <?php /**End Bottom**/ endif;?>
+    
+            <?php /**Begin Footer**/ if($expose->countModules('footer')): ?>
+            <!--Start Footer Modules-->
+            <footer id="footer" class="row">
+
                 <?php $expose->renderModules('footer'); ?>
+
+            </footer>
+            <!--End Footer Modules-->
+            <?php /**End Footer**/ endif;?>
+    
+            <?php /**Begin Copyright**/ if($expose->countModules('copyright')): ?>
+            <section id="copyright" class="row">
+                <?php $expose->renderModules('copyright'); ?>
+            </section>
+            <?php /**End Copyright**/ endif;?>
+    
+            <?php /**Begin Absolute**/ if($expose->countModules('absolute')): ?>
+            <div id="absolute">
+                <?php $expose->renderModules('absolute'); ?>
             </div>
+            <?php /**End Absolute**/ endif;?>
         </div>
-        <!--End Footer Modules-->
-        <?php /**End Footer**/ endif;?>
-
-        <?php /**Begin Copyright**/ if($expose->countModules('copyright')): ?>
-        <div id="copyright" class="container">
-            <?php $expose->renderModules('copyright'); ?>
-        </div>
-        <?php /**End Copyright**/ endif;?>
-
-        <?php /**Begin Absolute**/ if($expose->countModules('absolute')): ?>
-        <div id="absolute">
-            <?php $expose->renderModules('absolute'); ?>
-        </div>
-        <?php /**End Absolute**/ endif;?>
-
     </body>
 </html>
 <?php
