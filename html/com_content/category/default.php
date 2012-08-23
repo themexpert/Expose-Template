@@ -1,15 +1,28 @@
 <?php
 
- /* =====================================================================
-Template:	OneWeb for Joomla 2.5						            
-Author: 	Seth Warburton - Internet Inspired! - @nternetinspired 				            
-Version: 	2.0 											             
-Created: 	June 2012                                                    
-Copyright:	Seth Warburton - (C) 2012 - All rights reserved		
-Licenses:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
-			DBAD License http://philsturgeon.co.uk/code/dbad-license
-Source: 	J2.5.1. com_content/views/							             		
-/* ===================================================================== */
+/**
+ *
+ * @package     Template Override-ThemeXpert
+ * @subpackage  com_content
+ * @version     1.0
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ *
+ **/
+
+/**
+ *
+ * This HTML5 Override taken from OneWeb Template for Joomla 2.5
+ *
+ * @author      : Seth Warburton - Internet Inspired! - @nternetinspired
+ * @version     : 2.0
+ * @license     : GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ 			      DBAD License http://philsturgeon.co.uk/code/dbad-license
+ * @copyright   : Seth Warburton - (C) 2012 - All rights reserved
+ *
+ **/
+
 
 // no direct access
 defined('_JEXEC') or die;

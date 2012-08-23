@@ -1,4 +1,14 @@
 <?php
+/**
+ *
+ * @package     Template Override-ThemeXpert
+ * @subpackage  com_contact
+ * @version     1.0
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ *
+ **/
 
  /**
  * @package		Joomla.Site
@@ -6,6 +16,7 @@
  * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
+
 defined('_JEXEC') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidation');
