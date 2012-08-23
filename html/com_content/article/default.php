@@ -192,7 +192,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item
 <?php
 if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND!$this->item->paginationrelative):
 	 echo $this->item->pagination;?>
-     
+
 <?php endif; ?>
 <?php if (isset($urls) AND ((!empty($urls->urls_position)  AND ($urls->urls_position=='1')) OR ( $params->get('urls_position')=='1') )): ?>
 <?php echo $this->loadTemplate('links'); ?>

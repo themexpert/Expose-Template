@@ -29,7 +29,7 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
 ?>
-<section class="blog <?php echo $this->pageclass_sfx;?>">
+<section class="blog clearfix <?php echo $this->pageclass_sfx;?>">
 <hgroup>
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
 <header>
@@ -133,7 +133,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 <?php if (($this->params->def('show_pagination', 1) == 1  || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
 		<section class="pagination">
 						<?php  if ($this->params->def('show_pagination_results', 1)) : ?>
-						<p class="counter">
+						<p class="counter pull-left">
 								<?php echo $this->pagination->getPagesCounter(); ?>
 						</p>
 
