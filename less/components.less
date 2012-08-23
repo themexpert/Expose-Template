@@ -2,7 +2,22 @@
         Component Area
 -----------------------------------*/
 #main{}
+
+/* Joomla - Article
+------------------------------*/
 #component{
+    //Column layout
+    .articles-row {margin-bottom: 10px;}
+    [class*='cols'] > [class*='col-']{float: left; padding: 0;}
+    .cols-1 > [class*='col-'] {display: block;float: none;margin: 0;}
+    .cols-2 > [class*='col-'] {width: 50%;}
+    .cols-3 > [class*='col-'] {float: left;width: 33.3%;}
+    .cols-4 > [class*='col-'] {width: 25%;}
+    article{margin: 0 10px 20px 10px;}
+    [class*="cols"] article:first-child{margin-left: 0;}
+    [class*="cols"] article:last-child{margin-left: 0;}
+    
+    //Icons
     .article-bg{padding-bottom: 0; border: 0;}
     .article-icons ul li a{
         display:inline-block;
@@ -12,4 +27,14 @@
     .print-icon a {background-position:-96px -48px;}
     .email-icon a{background-position:-72px 0;}
     .edit-icon a{background-position:-96px -72px;}
+    
+    // Editing
+    .edit .formelm{float: left; width: 70%;margin-top: 10px}
+    .edit .formelm label{float: left;line-height: 22px; width:110px}
+    .edit textarea{margin-top: 10px;}
+    .edit .pull-left{width: 50%}
+    .CodeMirror-wrapping{box-sizing: border-box;margin-top: 20px}
+    .edit .formelm-buttons{ margin-top: 10px;}
+    .button2-left {float: left;margin-right: 5px;}
+    #editor-xtd-buttons{margin-top: 15px; height: 32px;}
 }

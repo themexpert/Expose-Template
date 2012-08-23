@@ -57,6 +57,7 @@ sub {
 }
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -110,6 +111,7 @@ textarea {
 .clearfix:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .clearfix:after {
   clear: both;
@@ -124,30 +126,33 @@ textarea {
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 /*---------------------------------------
         Template Grid system
 ----------------------------------------*/
 .row {
+  margin-left: 0px;
   *zoom: 1;
 }
 .row:before,
 .row:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .row:after {
   clear: both;
 }
 [class*="grid"] {
   float: left;
+  margin-left: 0px;
 }
 .container,
+.navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 960px;
@@ -268,6 +273,7 @@ textarea {
 .row-fluid:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .row-fluid:after {
   clear: both;
@@ -275,65 +281,160 @@ textarea {
 .row-fluid [class*="grid"] {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  margin-left: 2.127659574%;
-  *margin-left: 2.0755762406666665%;
+  margin-left: 0%;
+  *margin-left: -0.052083333333333336%;
 }
 .row-fluid [class*="grid"]:first-child {
   margin-left: 0;
 }
 .row-fluid .grid12 {
-  width: 99.99999998999999%;
-  *width: 99.94791665666666%;
+  width: 99.99999999999999%;
+  *width: 99.94791666666666%;
 }
 .row-fluid .grid11 {
-  width: 91.489361693%;
-  *width: 91.43727835966668%;
+  width: 91.66666666666666%;
+  *width: 91.61458333333333%;
 }
 .row-fluid .grid10 {
-  width: 82.97872339599999%;
-  *width: 82.92664006266666%;
+  width: 83.33333333333331%;
+  *width: 83.28124999999999%;
 }
 .row-fluid .grid9 {
-  width: 74.468085099%;
-  *width: 74.41600176566668%;
+  width: 74.99999999999999%;
+  *width: 74.94791666666666%;
 }
 .row-fluid .grid8 {
-  width: 65.95744680199999%;
-  *width: 65.90536346866666%;
+  width: 66.66666666666666%;
+  *width: 66.61458333333333%;
 }
 .row-fluid .grid7 {
-  width: 57.446808505%;
-  *width: 57.394725171666664%;
+  width: 58.33333333333333%;
+  *width: 58.28124999999999%;
 }
 .row-fluid .grid6 {
-  width: 48.93617020799999%;
-  *width: 48.88408687466666%;
+  width: 49.99999999999999%;
+  *width: 49.94791666666666%;
 }
 .row-fluid .grid5 {
-  width: 40.425531911%;
-  *width: 40.373448577666665%;
+  width: 41.66666666666666%;
+  *width: 41.61458333333332%;
 }
 .row-fluid .grid4 {
-  width: 31.914893614%;
-  *width: 31.862810280666668%;
+  width: 33.33333333333333%;
+  *width: 33.28124999999999%;
 }
 .row-fluid .grid3 {
-  width: 23.404255317%;
-  *width: 23.35217198366667%;
+  width: 24.999999999999996%;
+  *width: 24.947916666666664%;
 }
 .row-fluid .grid2 {
-  width: 14.89361702%;
-  *width: 14.841533686666667%;
+  width: 16.666666666666664%;
+  *width: 16.614583333333332%;
 }
 .row-fluid .grid1 {
-  width: 6.382978723%;
-  *width: 6.330895389666667%;
+  width: 8.333333333333332%;
+  *width: 8.281249999999998%;
+}
+.row-fluid .offset12 {
+  margin-left: 99.99999999999999%;
+  *margin-left: 99.89583333333333%;
+}
+.row-fluid .offset12:first-child {
+  margin-left: 99.99999999999999%;
+  *margin-left: 99.89583333333333%;
+}
+.row-fluid .offset11 {
+  margin-left: 91.66666666666666%;
+  *margin-left: 91.5625%;
+}
+.row-fluid .offset11:first-child {
+  margin-left: 91.66666666666666%;
+  *margin-left: 91.5625%;
+}
+.row-fluid .offset10 {
+  margin-left: 83.33333333333331%;
+  *margin-left: 83.22916666666666%;
+}
+.row-fluid .offset10:first-child {
+  margin-left: 83.33333333333331%;
+  *margin-left: 83.22916666666666%;
+}
+.row-fluid .offset9 {
+  margin-left: 74.99999999999999%;
+  *margin-left: 74.89583333333333%;
+}
+.row-fluid .offset9:first-child {
+  margin-left: 74.99999999999999%;
+  *margin-left: 74.89583333333333%;
+}
+.row-fluid .offset8 {
+  margin-left: 66.66666666666666%;
+  *margin-left: 66.5625%;
+}
+.row-fluid .offset8:first-child {
+  margin-left: 66.66666666666666%;
+  *margin-left: 66.5625%;
+}
+.row-fluid .offset7 {
+  margin-left: 58.33333333333333%;
+  *margin-left: 58.22916666666666%;
+}
+.row-fluid .offset7:first-child {
+  margin-left: 58.33333333333333%;
+  *margin-left: 58.22916666666666%;
+}
+.row-fluid .offset6 {
+  margin-left: 49.99999999999999%;
+  *margin-left: 49.89583333333332%;
+}
+.row-fluid .offset6:first-child {
+  margin-left: 49.99999999999999%;
+  *margin-left: 49.89583333333332%;
+}
+.row-fluid .offset5 {
+  margin-left: 41.66666666666666%;
+  *margin-left: 41.562499999999986%;
+}
+.row-fluid .offset5:first-child {
+  margin-left: 41.66666666666666%;
+  *margin-left: 41.562499999999986%;
+}
+.row-fluid .offset4 {
+  margin-left: 33.33333333333333%;
+  *margin-left: 33.22916666666666%;
+}
+.row-fluid .offset4:first-child {
+  margin-left: 33.33333333333333%;
+  *margin-left: 33.22916666666666%;
+}
+.row-fluid .offset3 {
+  margin-left: 24.999999999999996%;
+  *margin-left: 24.895833333333332%;
+}
+.row-fluid .offset3:first-child {
+  margin-left: 24.999999999999996%;
+  *margin-left: 24.895833333333332%;
+}
+.row-fluid .offset2 {
+  margin-left: 16.666666666666664%;
+  *margin-left: 16.5625%;
+}
+.row-fluid .offset2:first-child {
+  margin-left: 16.666666666666664%;
+  *margin-left: 16.5625%;
+}
+.row-fluid .offset1 {
+  margin-left: 8.333333333333332%;
+  *margin-left: 8.229166666666664%;
+}
+.row-fluid .offset1:first-child {
+  margin-left: 8.333333333333332%;
+  *margin-left: 8.229166666666664%;
 }
 .container {
   margin-right: auto;
@@ -344,6 +445,7 @@ textarea {
 .container:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .container:after {
   clear: both;
@@ -357,6 +459,7 @@ textarea {
 .container-fluid:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .container-fluid:after {
   clear: both;
@@ -570,6 +673,39 @@ a {
 /*----------------------------------
         Component Area
 -----------------------------------*/
+/* Joomla - Article
+------------------------------*/
+#component .articles-row {
+  margin-bottom: 10px;
+}
+#component [class*='cols'] > [class*='col-'] {
+  float: left;
+  padding: 0;
+}
+#component .cols-1 > [class*='col-'] {
+  display: block;
+  float: none;
+  margin: 0;
+}
+#component .cols-2 > [class*='col-'] {
+  width: 50%;
+}
+#component .cols-3 > [class*='col-'] {
+  float: left;
+  width: 33.3%;
+}
+#component .cols-4 > [class*='col-'] {
+  width: 25%;
+}
+#component article {
+  margin: 0 10px 20px 10px;
+}
+#component [class*="cols"] article:first-child {
+  margin-left: 0;
+}
+#component [class*="cols"] article:last-child {
+  margin-left: 0;
+}
 #component .article-bg {
   padding-bottom: 0;
   border: 0;
@@ -589,6 +725,37 @@ a {
 }
 #component .edit-icon a {
   background-position: -96px -72px;
+}
+#component .edit .formelm {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+#component .edit .formelm label {
+  float: left;
+  line-height: 22px;
+  width: 110px;
+}
+#component .edit textarea {
+  margin-top: 10px;
+}
+#component .edit .pull-left {
+  width: 50%;
+}
+#component .CodeMirror-wrapping {
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+#component .edit .formelm-buttons {
+  margin-top: 10px;
+}
+#component .button2-left {
+  float: left;
+  margin-right: 5px;
+}
+#component #editor-xtd-buttons {
+  margin-top: 15px;
+  height: 32px;
 }
 /*----------------------------------
         Module Specific
@@ -918,4 +1085,16 @@ body.align-rtl #mod-finder-searchform button.finder {
 .font-xxlarge {
   font-size: 5em;
   line-height: 1.5em;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.affix {
+  position: fixed;
 }
