@@ -35,21 +35,21 @@ JHtml::_('behavior.keepalive');
 
 	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post">
 
-		<fieldset>
+		<fieldset class="well">
 			<?php foreach ($this->form->getFieldset('credentials') as $field): ?>
 				<?php if (!$field->hidden): ?>
-					<div class="login-fields"><?php echo $field->label; ?>
+					<div class="control-group"><?php echo $field->label; ?>
 					<?php echo $field->input; ?></div>
 				<?php endif; ?>
 			<?php endforeach; ?>
-			<button type="submit" class="button btn"><?php echo JText::_('JLOGIN'); ?></button>
+			<button type="submit" class="button btn btn-primary"><?php echo JText::_('JLOGIN'); ?></button>
 			<input type="hidden" name="return" value="<?php echo base64_encode($this->params->get('login_redirect_url', $this->form->getValue('return'))); ?>" />
 			<?php echo JHtml::_('form.token'); ?>
 		</fieldset>
 	</form>
 </div>
 <div>
-	<ul>
+	<ul class="nav nav-tabs nav-stacked">
 		<li>
 			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
 			<?php echo JText::_('COM_USERS_LOGIN_RESET'); ?></a>
