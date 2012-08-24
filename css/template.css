@@ -711,7 +711,7 @@ a {
   padding-bottom: 0;
   border: 0;
 }
-#component .article-icons ul li a {
+#component .actions a {
   display: inline-block;
   width: 14px;
   height: 14px;
