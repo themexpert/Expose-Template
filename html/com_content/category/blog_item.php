@@ -80,7 +80,7 @@ JHtml::core();
 <?php if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_parent_category')) or ($params->get('show_hits'))) : ?>
 <aside class="article-meta">
 	<dl class="article-info">
-	
+
 <?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>
 	<dd class="parent-category-name">
 	<?php	$title = $this->escape($this->item->parent_title);

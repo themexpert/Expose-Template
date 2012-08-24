@@ -28,20 +28,43 @@ JHtml::_('behavior.tooltip');
 <?php endif; ?>
 
 <div class="contact-form">
-	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate">
+	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
 		<fieldset>
-			<dl>
-				<dt><?php echo $this->form->getLabel('contact_name'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_name'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_email'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_email'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_subject'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_subject'); ?></dd>
-				<dt><?php echo $this->form->getLabel('contact_message'); ?></dt>
-				<dd><?php echo $this->form->getInput('contact_message'); ?></dd>
+            <div class="control-group">
+                <?php echo $this->form->getLabel('contact_name'); ?>
+                <div class="controls">
+                    <?php echo $this->form->getInput('contact_name'); ?>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <?php echo $this->form->getLabel('contact_email'); ?>
+                <div class="controls">
+                    <?php echo $this->form->getInput('contact_email'); ?>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <?php echo $this->form->getLabel('contact_subject'); ?>
+                <div class="controls">
+                    <?php echo $this->form->getInput('contact_subject'); ?>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <?php echo $this->form->getLabel('contact_message'); ?>
+                <div class="controls">
+                    <?php echo $this->form->getInput('contact_message'); ?>
+                </div>
+            </div>
+
+
 				<?php 	if ($this->params->get('show_email_copy')){ ?>
-						<dt><?php echo $this->form->getLabel('contact_email_copy'); ?></dt>
-						<dd><?php echo $this->form->getInput('contact_email_copy'); ?></dd>
+					<div class="control-group">
+                        <?php echo $this->form->getInput('contact_email_copy'); ?>
+                        <?php echo $this->form->getLabel('contact_email_copy'); ?>
+					</div>
+
 				<?php 	} ?>
 			<?php //Dynamically load any additional fields from plugins. ?>
 			     <?php foreach ($this->form->getFieldsets() as $fieldset): ?>
@@ -63,14 +86,14 @@ JHtml::_('behavior.tooltip');
 			          <?php endif ?>
 			     <?php endforeach;?>
 				<dt></dt>
-				<dd><button class="button validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
+				<dd><button class="button validate btn" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
 					<input type="hidden" name="option" value="com_contact" />
 					<input type="hidden" name="task" value="contact.submit" />
 					<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
 					<input type="hidden" name="id" value="<?php echo $this->contact->slug; ?>" />
 					<?php echo JHtml::_( 'form.token' ); ?>
 				</dd>
-			</dl>
+
 		</fieldset>
 	</form>
 </div>

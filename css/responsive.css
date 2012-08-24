@@ -78,12 +78,9 @@
   }
 }
 @media (max-width: 480px) {
-  .nav-collapse {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-  .page-header h1 small {
-    display: block;
-    line-height: 20px;
+  #component [class*="cols"] > [class*="col-"] {
+    float: none;
+    width: 100%;
   }
   input[type="checkbox"],
   input[type="radio"] {
@@ -105,37 +102,15 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  .modal {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    width: auto;
-    margin: 0;
-  }
-  .modal.fade.in {
-    top: auto;
-  }
-  .modal-header .close {
-    padding: 10px;
-    margin: -10px;
-  }
-  .carousel-caption {
-    position: static;
-  }
 }
 @media (max-width: 767px) {
   body {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .container-fluid {
-    padding: 0;
+  #component [class*="cols"] > [class*="col-"] {
+    float: none;
+    width: 100%;
   }
   .dl-horizontal dt {
     float: none;
@@ -531,6 +506,13 @@
   }
   input.grid1, textarea.grid1, .uneditable-input.grid1 {
     width: 48px;
+  }
+  #menu ul.level-0 > li.mega > a.mega,
+  #menu ul.level-0 > li.mega > span.mega {
+    border-right: 0;
+  }
+  #menu li.mega .childcontent {
+    border: 0;
   }
 }
 @media (min-width: 1200px) {
