@@ -39,7 +39,7 @@ $user		= JFactory::getUser();
 	<h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
-</header>    
+</header>
 <?php endif; ?>
 <article class="article fulltext <?php echo $this->pageclass_sfx?>">
 <?php
@@ -58,7 +58,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 		<?php echo $this->escape($this->item->title); ?>
 	<?php endif; ?>
 	</h2>
-</header>    
+</header>
 <?php endif; ?>
 <?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<section class="actions">
@@ -102,7 +102,6 @@ endif; ?>
 <?php if ($useDefList) : ?>
 <aside class="article-meta">
 	<dl class="article-info">
-	<dt class="article-info-term"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 <?php if ($params->get('show_parent_category') && $this->item->parent_slug != '1:root') : ?>
 	<dd class="parent-category-name">
 	<?php	$title = $this->escape($this->item->parent_title);
@@ -127,17 +126,17 @@ endif; ?>
 <?php endif; ?>
 <?php if ($params->get('show_create_date')) : ?>
 	<dd class="create">
-	<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',$this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',$this->item->created)); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_modify_date')) : ?>
 	<dd class="modified">
-	<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date',$this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date',$this->item->modified)); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_publish_date')) : ?>
 	<dd class="published">
-	<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE', JHtml::_('date',$this->item->publish_up)); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
@@ -161,7 +160,7 @@ endif; ?>
 	</dd>
 <?php endif; ?>
 	</dl>
-</aside>    
+</aside>
 <?php endif; ?>
 <?php if (isset ($this->item->toc)) : ?>
 	<?php echo $this->item->toc; ?>
@@ -224,7 +223,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item-
 		endif; ?></a>
 		</p>
 	<?php endif; ?>
-</section>    
+</section>
 <?php endif; ?>
 <?php
 if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND $this->item->paginationrelative):
