@@ -1,21 +1,117 @@
+//color mixin
+.white{
+    color: #fff;
+    text-shadow: 1px 1px 1px #444;
+}
+.black{
+    color: #333;
+    text-shadow: 1px 1px 1px #fff;
+}
 /*----------------------------------
         Module Variations
 -----------------------------------*/
 /* Default block style */
 .block{border-left: 1px solid @grayLighter; margin: 0;}
 .first .block{border-left: none;}
+
 /*Exceptions*/
 #top, #header, #component, #copyright{
     .block{border: none;}
 }
 
-/*Block variations*/
-.flush{
+/* Block style (box)
+---------------------------------*/
+.box-black{
+    background: #333439;
+    .white();
 
+    .title{ .white(); }
 }
-.box1,
-.flush:hover{background: @whiteLight;}
+.box-white{
+    background: #fff;
+    .black();
 
-/*Title Style*/
+    .title{ color: #333; }
+}
+.box-green{
+    background: #6bb739;
+    .white();
+}
+.box-blue{
+    background: #36b0e4;
+    .white();
+}
+.box-red{
+    background: #eb593c;
+    .white();
+}
+.box-purple{
+    background: #99aae9;
+    .white();
+}
+.box-blue,
+.box-green,
+.box-red,
+.box-purple{
+    .title{ .white(); }
+    .title span{ color: #222;text-shadow: 0 1px 1px #fff;}
+}
+/* Title Style
+------------------------------------*/
 .title{padding: 0;font-size: 20px;line-height: 21px;}
 
+.title1{
+    .header{
+        border-left: 4px solid #333439;
+        padding-left: 10px;
+        margin-left: -15px;
+    }
+}
+
+.title2{
+    .header{
+        background: rgba(238,238,238,.5);
+        border-left: 4px solid #333439;
+        padding-left: 10px;
+        margin-left: -15px;
+    }
+    .title{ line-height: 27px; }
+}
+
+.title3{
+    .header{
+        border-bottom: 3px double #ccc;
+    }
+}
+
+.title4{
+    .header{ position: relative; padding: 7px 0 1px }
+    .header:before{
+        border: 1px solid #ccc;
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        left: 0;
+        right: 0;
+    }
+    .header:after{
+        border: 1px solid #ccc;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        left: 0;
+        right: 0;
+    }
+
+}
+/* Box and title style combo
+---------------------------------*/
+.box-black.title1,
+.box-green.title1,
+.box-blue.title1,
+.box-red.title1,
+.box-purple.title1{
+    .header{ border-left-color: #fff;}
+}

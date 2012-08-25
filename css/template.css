@@ -910,6 +910,14 @@ ul.menu li img {
 #scrolltop:hover {
   background-position: 0 -71px;
 }
+.white {
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.black {
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+}
 /*----------------------------------
         Module Variations
 -----------------------------------*/
@@ -928,16 +936,113 @@ ul.menu li img {
 #copyright .block {
   border: none;
 }
-/*Block variations*/
-.box1,
-.flush:hover {
-  background: #fcfcfc;
+/* Block style (box)
+---------------------------------*/
+.box-black {
+  background: #333439;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
 }
-/*Title Style*/
+.box-black .title {
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-white {
+  background: #fff;
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+}
+.box-white .title {
+  color: #333;
+}
+.box-green {
+  background: #6bb739;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-blue {
+  background: #36b0e4;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-red {
+  background: #eb593c;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-purple {
+  background: #99aae9;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-blue .title,
+.box-green .title,
+.box-red .title,
+.box-purple .title {
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+}
+.box-blue .title span,
+.box-green .title span,
+.box-red .title span,
+.box-purple .title span {
+  color: #222;
+  text-shadow: 0 1px 1px #fff;
+}
+/* Title Style
+------------------------------------*/
 .title {
   padding: 0;
   font-size: 20px;
   line-height: 21px;
+}
+.title1 .header {
+  border-left: 4px solid #333439;
+  padding-left: 10px;
+  margin-left: -15px;
+}
+.title2 .header {
+  background: rgba(238, 238, 238, 0.5);
+  border-left: 4px solid #333439;
+  padding-left: 10px;
+  margin-left: -15px;
+}
+.title2 .title {
+  line-height: 27px;
+}
+.title3 .header {
+  border-bottom: 3px double #ccc;
+}
+.title4 .header {
+  position: relative;
+  padding: 7px 0 1px;
+}
+.title4 .header:before {
+  border: 1px solid #ccc;
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  left: 0;
+  right: 0;
+}
+.title4 .header:after {
+  border: 1px solid #ccc;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  display: block;
+  left: 0;
+  right: 0;
+}
+/* Box and title style combo
+---------------------------------*/
+.box-black.title1 .header,
+.box-green.title1 .header,
+.box-blue.title1 .header,
+.box-red.title1 .header,
+.box-purple.title1 .header {
+  border-left-color: #fff;
 }
 /*----------------------------------
         RTL
