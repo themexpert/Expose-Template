@@ -344,6 +344,9 @@
 
             <!-- Layout Settings -->
             <fieldset name="LAYOUT">
+
+                <field name="responsive-enabled" type="toggle" default="1" pretext="ENABLE" label="RESPONSIVE_LABEL" description="RESPONSIVE_DESC" />
+
                 <field name="spacer-positions-map" class="positions-map" type="spacer" text="MODULE_POSITIONS_MAP" description="MODULE_POSITIONS_MAP_DESC" />
                 <field name="layouts" type="layouts" default="sidebara-content-sidebarb" label="LAYOUT_TYPE_LABEL" description="LAYOUT_TYPE_DESC" />
 
