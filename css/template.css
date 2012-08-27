@@ -652,8 +652,8 @@ a {
   background: #fff;
   color: #333333;
 }
-#exdl-mainnav a,
-#exdl-mainnav ul li > span,
+#mainnav a,
+#mainnav ul li > span,
 #splitmenu a,
 #splitmenu ul li > span {
   padding-left: 15px;
