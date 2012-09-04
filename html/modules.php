@@ -47,7 +47,7 @@ function modChrome_standard( $module, $params, $attribs )
 	        	echo $badge;
 
                 //separate subtitle
-                if( strpos( '||' , $module->title) === FALSE)
+                if( strpos( $module->title, '||' ) === FALSE)
                 {
                     $title = $module->title;
 
