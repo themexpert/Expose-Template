@@ -47,9 +47,16 @@ function modChrome_standard( $module, $params, $attribs )
 	        	echo $badge;
 
                 //separate subtitle
-                $titles 	= explode('||', $module->title);
-                $title 		= $titles[0];
-                $subTitle 	= $titles[1];
+                if( strpos( '||' , $module->title) === FALSE)
+                {
+                    $title = $module->title;
+
+                }else{
+                    $titles 	= explode('||', $module->title);
+                    $title 		= $titles[0];
+                    $subTitle 	= $titles[1];
+                }
+
 
                 // Creates span around first word of module title for unique styling
                 $parts = explode(' ', $title);
