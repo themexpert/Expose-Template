@@ -281,6 +281,14 @@
                 <field name="analytics-enabled" type="toggle" default="0" pretext="ENABLE" label="GOOGLE_ANALYTICS_LABEL" description="GOOGLE_ANALYTICS_DESC" />
                     <field name="analytics-id" type="text" default="UA-xxxxxx-x" class="remove-lbl border-left" pretext="UA Code" description="GOOGLE_ANALYTICS_CODE_DESC" />
 
+                <field name="spacer-social" type="spacer" text="SPACER_SOCIAL_WIDGET_LABEL" description="SPACER_SOCIAL_WIDGET_DESC" />
+                    <field name="social-enabled" type="toggle" default="1" pretext="ENABLE" label="SOCIAL_LABEL" description="SOCIAL_DESC" />
+                    <field name="social-position" type="positions" default="top-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="social-twitter" type="text" default="http://www.twitter.com/ThemeXpert" class="remove-lbl border-left" pretext="SOCIAL_TWITTER_LABEL" description="SOCIAL_TWITTER_DESC" />
+                    <field name="social-facebook" type="text" default="http://www.facebook.com/ThemeXpert" class="remove-lbl border-left" pretext="SOCIAL_FACEBOOK_LABEL" description="SOCIAL_FACEBOOK_DESC" />
+                    <field name="social-rss" type="text" class="remove-lbl border-left" pretext="SOCIAL_RSS_LABEL" description="SOCIAL_RSS_DESC" />
+
+
                 <field name="designedby-enabled" type="hidden" default="1" />
                     <field name="designedby-position" type="hidden" default="copyright-1" />
 

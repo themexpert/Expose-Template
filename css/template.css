@@ -196,74 +196,170 @@ textarea {
 .offset12 {
   margin-left: 960px;
 }
+html[dir='rtl'] .offset12 {
+  margin-right: 960px;
+  margin-left: 0;
+}
 .offset11 {
   margin-left: 880px;
+}
+html[dir='rtl'] .offset11 {
+  margin-right: 880px;
+  margin-left: 0;
 }
 .offset10 {
   margin-left: 800px;
 }
+html[dir='rtl'] .offset10 {
+  margin-right: 800px;
+  margin-left: 0;
+}
 .offset9 {
   margin-left: 720px;
+}
+html[dir='rtl'] .offset9 {
+  margin-right: 720px;
+  margin-left: 0;
 }
 .offset8 {
   margin-left: 640px;
 }
+html[dir='rtl'] .offset8 {
+  margin-right: 640px;
+  margin-left: 0;
+}
 .offset7 {
   margin-left: 560px;
+}
+html[dir='rtl'] .offset7 {
+  margin-right: 560px;
+  margin-left: 0;
 }
 .offset6 {
   margin-left: 480px;
 }
+html[dir='rtl'] .offset6 {
+  margin-right: 480px;
+  margin-left: 0;
+}
 .offset5 {
   margin-left: 400px;
+}
+html[dir='rtl'] .offset5 {
+  margin-right: 400px;
+  margin-left: 0;
 }
 .offset4 {
   margin-left: 320px;
 }
+html[dir='rtl'] .offset4 {
+  margin-right: 320px;
+  margin-left: 0;
+}
 .offset3 {
   margin-left: 240px;
+}
+html[dir='rtl'] .offset3 {
+  margin-right: 240px;
+  margin-left: 0;
 }
 .offset2 {
   margin-left: 160px;
 }
+html[dir='rtl'] .offset2 {
+  margin-right: 160px;
+  margin-left: 0;
+}
 .offset1 {
   margin-left: 80px;
+}
+html[dir='rtl'] .offset1 {
+  margin-right: 80px;
+  margin-left: 0;
 }
 .inset12 {
   margin-left: -960px;
 }
+html[dir='rtl'] .inset12 {
+  margin-right: -960px;
+  margin-left: 0;
+}
 .inset11 {
   margin-left: -880px;
+}
+html[dir='rtl'] .inset11 {
+  margin-right: -880px;
+  margin-left: 0;
 }
 .inset10 {
   margin-left: -800px;
 }
+html[dir='rtl'] .inset10 {
+  margin-right: -800px;
+  margin-left: 0;
+}
 .inset9 {
   margin-left: -720px;
+}
+html[dir='rtl'] .inset9 {
+  margin-right: -720px;
+  margin-left: 0;
 }
 .inset8 {
   margin-left: -640px;
 }
+html[dir='rtl'] .inset8 {
+  margin-right: -640px;
+  margin-left: 0;
+}
 .inset7 {
   margin-left: -560px;
+}
+html[dir='rtl'] .inset7 {
+  margin-right: -560px;
+  margin-left: 0;
 }
 .inset6 {
   margin-left: -480px;
 }
+html[dir='rtl'] .inset6 {
+  margin-right: -480px;
+  margin-left: 0;
+}
 .inset5 {
   margin-left: -400px;
+}
+html[dir='rtl'] .inset5 {
+  margin-right: -400px;
+  margin-left: 0;
 }
 .inset4 {
   margin-left: -320px;
 }
+html[dir='rtl'] .inset4 {
+  margin-right: -320px;
+  margin-left: 0;
+}
 .inset3 {
   margin-left: -240px;
+}
+html[dir='rtl'] .inset3 {
+  margin-right: -240px;
+  margin-left: 0;
 }
 .inset2 {
   margin-left: -160px;
 }
+html[dir='rtl'] .inset2 {
+  margin-right: -160px;
+  margin-left: 0;
+}
 .inset1 {
   margin-left: -80px;
+}
+html[dir='rtl'] .inset1 {
+  margin-right: -80px;
+  margin-left: 0;
 }
 .row-fluid {
   width: 100%;
@@ -910,6 +1006,38 @@ ul.menu li img {
 #scrolltop:hover {
   background-position: 0 -71px;
 }
+/* Social */
+.social-icons {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+.social-icons li {
+  float: left;
+}
+.social-icons li a {
+  margin-right: 10px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  text-indent: -9999px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 1px 2px #444444;
+  -moz-box-shadow: inset 0 1px 2px #444444;
+  box-shadow: inset 0 1px 2px #444444;
+}
+.social-icons li.twitter a {
+  background: url(../images/social-icons/twitter.png) no-repeat 50% 50% #00b9f4;
+}
+.social-icons li.facebook a {
+  background: url(../images/social-icons/facebook.png) no-repeat 50% 50% #3b5998;
+}
+.social-icons li.rss a {
+  background: url(../images/social-icons/rss.png) no-repeat 50% 50% #d45421;
+}
 .white {
   color: #fff;
   text-shadow: 1px 1px 1px #444;
@@ -1047,13 +1175,10 @@ ul.menu li img {
 /*----------------------------------
         RTL
 -----------------------------------*/
-body.align-rtl * {
-  text-align: right;
-}
 body.align-rtl #mainbody,
 body.align-rtl #sidebar-a,
 body.align-rtl #sidebar-b,
-body.align-rtl .grid {
+body.align-rtl [class*="grid"] {
   float: right;
 }
 body.align-rtl .megamenu ul.level-0 > li.mega,
@@ -1084,10 +1209,6 @@ body.align-rtl .megamenu ul.level-0 li.has-submenu a.mega span.menu-title,
 body.align-rtl .megamenu ul.level-0 li.has-submenu span.mega.level-0 span.menu-title {
   padding-right: 12px;
   background-position: right center;
-}
-body.align-rtl .megamenu ul.level-0 li.has-submenu a.mega span.menu-desc,
-body.align-rtl .megamenu ul.level-0 li.has-submenu span.mega span.menu-desc {
-  padding-right: 12px;
 }
 body.align-rtl .megamenu ul.level-0 li.mega .has-image {
   padding-right: 35px;
