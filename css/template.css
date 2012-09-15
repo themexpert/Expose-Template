@@ -944,11 +944,18 @@ ul.menu li img {
 }
 #logo a {
   display: block;
+}
+#logo .logo-tagline {
+  display: block;
+  font-size: 16px;
+}
+.widget-logo .image a {
   font: a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
+  padding: 0;
 }
 /* Copyright info, designed by and expose logo widget settings */
 .widget-copyrightinfo,
