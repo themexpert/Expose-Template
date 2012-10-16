@@ -12,8 +12,10 @@
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
 //framework bootstrap
-if(file_exists(JPATH_LIBRARIES.DS.'expose'.DS.'expose.php')){
-    require_once JPATH_LIBRARIES.DS.'expose'.DS.'expose.php';
+if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
+
+    require_once JPATH_LIBRARIES . '/expose/expose.php';
+
 }else{
     echo JText::_('Unable to find Expose library. Please make sure you have it installed.');
     die();
