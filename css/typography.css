@@ -2565,7 +2565,7 @@ input[type="submit"].btn.btn-mini {
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #d7d7d7;
+  background-color: #eeeeee;
 }
 .nav > .pull-right {
   float: right;
@@ -2658,7 +2658,7 @@ input[type="submit"].btn.btn-mini {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #d7d7d7 #d7d7d7 #dddddd;
+  border-color: #eeeeee #eeeeee #dddddd;
 }
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {

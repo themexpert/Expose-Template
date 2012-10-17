@@ -372,6 +372,8 @@
                     <field name="roof-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="roof-1:standard,roof-2:standard,roof-3:standard,roof-4:standard,roof-5:standard,roof-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
                 
@@ -381,6 +383,8 @@
                     <field name="top-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="top-1:standard,top-2:standard,top-3:standard,top-4:standard,top-5:standard,top-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -390,6 +394,8 @@
                     <field name="header-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="header-1:standard,header-2:standard,header-3:standard,header-4:standard,header-5:standard,header-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
                 
@@ -399,6 +405,8 @@
                     <field name="utility-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="utility-1:standard,utility-2:standard,utility-3:standard,utility-4:standard,utility-5:standard,utility-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -408,6 +416,8 @@
                     <field name="feature-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="feature-1:standard,feature-2:standard,feature-3:standard,feature-4:standard,feature-5:standard,feature-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -417,6 +427,8 @@
                     <field name="maintop-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="maintop-1:standard,maintop-2:standard,maintop-3:standard,maintop-4:standard,maintop-5:standard,maintop-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -428,6 +440,8 @@
                     <field name="contenttop-chrome" type="hidden" max-mods="4" class="remove-lbl"
                            default="contenttop-1:standard,contenttop-2:standard,contenttop-3:standard,contenttop-4:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -437,6 +451,8 @@
                     <field name="contentbottom-chrome" type="hidden" max-mods="4" class="remove-lbl"
                            default="contentbottom-1:standard,contentbottom-2:standard,contentbottom-3:standard,contentbottom-4:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -448,6 +464,8 @@
                     <field name="mainbottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="mainbottom-1:standard,mainbottom-2:standard,mainbottom-3:standard,mainbottom-4:standard,mainbottom-5:standard,mainbottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -457,6 +475,8 @@
                     <field name="bottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="bottom-1:standard,bottom-2:standard,bottom-3:standard,bottom-4:standard,bottom-5:standard,bottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -466,6 +486,8 @@
                     <field name="footer-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="footer-1:standard,footer-2:standard,footer-3:standard,footer-4:standard,footer-5:standard,footer-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
@@ -475,6 +497,8 @@
                     <field name="copyright-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
                            default="copyright-1:standard,copyright-2:standard,copyright-3:standard,copyright-4:standard,copyright-5:standard,copyright-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 

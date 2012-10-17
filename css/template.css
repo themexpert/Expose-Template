@@ -574,7 +574,9 @@ body {
 a {
   text-decoration: none;
 }
-.block {
+.block,
+.tabbable,
+.accordion {
   padding: 15px;
   position: relative;
   display: block;
@@ -1157,6 +1159,59 @@ ul.menu li img {
 .box-red.title1 .header,
 .box-purple.title1 .header {
   border-left-color: #fff;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.collapse.in {
+  height: auto;
+}
+/* @group Tab Modules */
+.module-tabs .tab h3,
+.mainH3,
+.nav-tabs a span {
+  left: -99999px;
+  position: absolute;
+}
+.tab-pane {
+  padding: 0 10px 10px;
+}
+/* @end */.accordion-group {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.accordion-heading {
+  border-bottom: 0;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+.accordion-toggle {
+  cursor: pointer;
+}
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid #e5e5e5;
 }
 /*----------------------------------
         RTL

@@ -11,7 +11,11 @@ body{
 }
 a{ text-decoration: none; }
 
-.block {padding: 15px; position: relative; display: block;}
+// block wrapper will not apply for tabs and accordion type
+// same css will applly on tab and accordion type
+.block,
+.tabbable,
+.accordion {padding: 15px; position: relative; display: block;}
 .no-title > .header {display: none;}
     .title{margin: 0 0 7px;padding: 0 0 7px;}
 * html .ie6-offset {margin-right: -4px;}

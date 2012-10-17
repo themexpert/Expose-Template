@@ -88,3 +88,55 @@ function modChrome_basic($module, $params, $attribs)
         echo $module->content;
     }
 }
+
+function modChrome_tabs($module, &$params, &$attribs)
+{
+    global $counta;
+
+    if ( $counta == '' ) { $counta = 0;}
+    $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+    if (!empty ($module->content)) : ?>
+
+
+    <div class="mod-tab <?php echo $params->get('moduleclass_sfx'); ?>">
+        <h<?php echo $headerLevel; ?> class="tab1-<?php echo $counta; ?>"><?php echo $module->title; ?><?php echo '</h' . $headerLevel . '>'; ?>
+        <div class="tab-pane">
+            <?php echo $module->content; ?>
+        </div>
+    </div><!--end_module //-->
+
+    <?php
+        $counta++;
+    endif;
+}
+
+$countc = 0;
+
+function modChrome_accordion($module, &$params, &$attribs)
+{
+  global $countc;
+  if ( $countc == '' ) { $countc = 0;}
+  $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+  $positionName = isset($attribs['positionName']) ? $attribs['positionName'] : $module->id;
+
+  if (!empty ($module->content)) : ?>
+
+    <div class="accordion-group accordion-<?php echo $countc; ?> <?php echo $params->get('moduleclass_sfx'); ?>">
+
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#acc-<?php echo $positionName; ?>" href="#collapse-<?php echo $countc; ?>"><?php echo $module->title; ?></a>
+        </div>
+
+        <div id="collapse-<?php echo $countc; ?>" class="accordion-body collapse <?php if ( $countc == 0 ) { echo 'in'; } ?>">
+
+            <div class="accordion-inner">
+                <?php echo $module->content; ?>
+            </div>
+
+        </div>
+    </div><!--end_module //-->
+
+  <?php
+  $countc++;
+  endif;
+}
