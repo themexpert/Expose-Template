@@ -498,7 +498,7 @@
                 <field name="spacer-font-menu" type="spacer" text="SPACER_MENU_FONT_LABEL" description="SPACER_MENU_FONT_DESC" />
                 <!-- Menu Font Settings -->
                 <field name="webfonts-menu-font" type="fonts" default="0" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
-                <field name="webfonts-menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#ex-menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <field name="spacer-font-header" type="spacer" text="SPACER_HEADER_FONT_LABEL" description="SPACER_HEADER_FONT_DESC" />
@@ -509,7 +509,7 @@
 
                 <!-- Module Header Settings -->
                 <field name="webfonts-module-font" type="fonts" default="0" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
-                <field name="webfonts-module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".ex-title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
             </fieldset>
             <!-- Typography Settings -->
@@ -524,6 +524,7 @@
                     <field name="jquery-version" type="list" default="1.7.2" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
                         <option value="1.7.2">1.7.2</option>
                         <option value="1.7.1">1.7.1</option>
+                        <option value="1.8.2">1.8.2</option>
                     </field>
                 <field name="combined-css" type="toggle" default="0" class="hidenext" pretext="ENABLE" label="COMBINED_CSS_LABEL" description="COMBINED_CSS_DESC" />
                     <field name="minify-css" type="toggle" default="0" pretext="ENABLE" label="MINIFY_CSS_LABEL" description="MINIFY_CSS_DESC" />
