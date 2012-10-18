@@ -241,7 +241,7 @@
                     <field name="logo-position" type="positions" default="top-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
                     <field name="logo-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
                     <field name="logo-image" pretext="Logo image" type="media" label="LOGO_IMAGE_LABEL" description="LOGO_IMAGE_DESC" />
-                    <field name="logo-display-tagline" pretext="ENABLE" type="toggle" default="0" label="LOGO_TAGLINE_LABEL" description="LOGO_TAGLINE_DESC">
+                    <field name="logo-display-tagline" pretext="ENABLE" type="toggle" default="0" label="LOGO_TAGLINE_LABEL" description="LOGO_TAGLINE_DESC" >
                     <field name="logo-tagline" pretext="LOGO_TAGLINE_TEXT_LABEL" type="text" class="remove-lbl border-left input-large" description="LOGO_TAGLINE_TEXT_DESC" filter="string" />
                 </field>
 
@@ -263,6 +263,10 @@
                 <field name="copyrightinfo-mobile" type="toggle" default="0" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="ie6warn-enabled" type="toggle" default="1" pretext="SHOW" label="IE6_WARNING_LABEL" description="IE6_WARNING_DESC" />
+
+                <field name="fontresizer-enabled" type="toggle" default="0" pretext="SHOW" label="FONT_RESIZER_LABEL" description="FONT_RESIZER_DESC" />
+                    <field name="fontresizer-position" type="positions" default="roof-6" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="fontresizer-selector" pretext="FONT_RESIZER_SELECTOR_LABEL" type="text" default="body" class="remove-lbl border-left input-large" description="FONT_RESIZER_SELECTOR_DESC" filter="string" />
 
                 <field name="totop-enabled" type="toggle" default="1" pretext="SHOW" label="SCROLL_TO_TOP_LABEL" description="SCROLL_TO_TOP_DESC" />
                     <field name="totop-position" type="positions" default="copyright-3" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
