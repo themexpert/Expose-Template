@@ -31,9 +31,10 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
             $expose->addLink(array('typography.css','template.css','responsive.css'),'css');
             $expose->addLink( array('template.js') ,'js', 11 )
         ?>
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+        <!--[if (gte IE 6)&(lte IE 8)]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="<?php echo $expose->exposeUrl; ?>/interface/js/respond.js"></script>
         <![endif]-->
 
     </head>
