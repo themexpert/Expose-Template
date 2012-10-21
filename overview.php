@@ -10,15 +10,7 @@
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
  *
  **/
-$imagePath = $templateUrl . '/template_thumbnail.png';
-$templateXml = $templatePath . '/templateDetails.xml';
-$version = '1.0';
 
-if ( JFile::exists($templateXml) )
-{
-    $xml = simplexml_load_file($templateXml);
-    $version = $xml->version[0];
-}
 
 ?>
 
