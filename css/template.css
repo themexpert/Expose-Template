@@ -1,11 +1,3 @@
-/*!
- * @package     Bootstrap Theme
- * @version     1.5
- * @author      ThemeXpert http://www.themexpert.com
- * @copyright   Copyright (C) 2010 - 2012 ThemeXpert
- * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
- * @file        template.less
- **/
 article,
 aside,
 details,
@@ -117,7 +109,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -131,9 +123,6 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/*---------------------------------------
-        Template Grid system
-----------------------------------------*/
 .row {
   margin-left: 0px;
   *zoom: 1;
@@ -361,177 +350,6 @@ html[dir='rtl'] .inset1 {
   margin-right: -80px;
   margin-left: 0;
 }
-.row-fluid {
-  width: 100%;
-  *zoom: 1;
-}
-.row-fluid:before,
-.row-fluid:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.row-fluid:after {
-  clear: both;
-}
-.row-fluid [class*="grid"] {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  margin-left: 0%;
-  *margin-left: -0.052083333333333336%;
-}
-.row-fluid [class*="grid"]:first-child {
-  margin-left: 0;
-}
-.row-fluid .grid12 {
-  width: 99.99999999999999%;
-  *width: 99.94791666666666%;
-}
-.row-fluid .grid11 {
-  width: 91.66666666666666%;
-  *width: 91.61458333333333%;
-}
-.row-fluid .grid10 {
-  width: 83.33333333333331%;
-  *width: 83.28124999999999%;
-}
-.row-fluid .grid9 {
-  width: 74.99999999999999%;
-  *width: 74.94791666666666%;
-}
-.row-fluid .grid8 {
-  width: 66.66666666666666%;
-  *width: 66.61458333333333%;
-}
-.row-fluid .grid7 {
-  width: 58.33333333333333%;
-  *width: 58.28124999999999%;
-}
-.row-fluid .grid6 {
-  width: 49.99999999999999%;
-  *width: 49.94791666666666%;
-}
-.row-fluid .grid5 {
-  width: 41.66666666666666%;
-  *width: 41.61458333333332%;
-}
-.row-fluid .grid4 {
-  width: 33.33333333333333%;
-  *width: 33.28124999999999%;
-}
-.row-fluid .grid3 {
-  width: 24.999999999999996%;
-  *width: 24.947916666666664%;
-}
-.row-fluid .grid2 {
-  width: 16.666666666666664%;
-  *width: 16.614583333333332%;
-}
-.row-fluid .grid1 {
-  width: 8.333333333333332%;
-  *width: 8.281249999999998%;
-}
-.row-fluid .offset12 {
-  margin-left: 99.99999999999999%;
-  *margin-left: 99.89583333333333%;
-}
-.row-fluid .offset12:first-child {
-  margin-left: 99.99999999999999%;
-  *margin-left: 99.89583333333333%;
-}
-.row-fluid .offset11 {
-  margin-left: 91.66666666666666%;
-  *margin-left: 91.5625%;
-}
-.row-fluid .offset11:first-child {
-  margin-left: 91.66666666666666%;
-  *margin-left: 91.5625%;
-}
-.row-fluid .offset10 {
-  margin-left: 83.33333333333331%;
-  *margin-left: 83.22916666666666%;
-}
-.row-fluid .offset10:first-child {
-  margin-left: 83.33333333333331%;
-  *margin-left: 83.22916666666666%;
-}
-.row-fluid .offset9 {
-  margin-left: 74.99999999999999%;
-  *margin-left: 74.89583333333333%;
-}
-.row-fluid .offset9:first-child {
-  margin-left: 74.99999999999999%;
-  *margin-left: 74.89583333333333%;
-}
-.row-fluid .offset8 {
-  margin-left: 66.66666666666666%;
-  *margin-left: 66.5625%;
-}
-.row-fluid .offset8:first-child {
-  margin-left: 66.66666666666666%;
-  *margin-left: 66.5625%;
-}
-.row-fluid .offset7 {
-  margin-left: 58.33333333333333%;
-  *margin-left: 58.22916666666666%;
-}
-.row-fluid .offset7:first-child {
-  margin-left: 58.33333333333333%;
-  *margin-left: 58.22916666666666%;
-}
-.row-fluid .offset6 {
-  margin-left: 49.99999999999999%;
-  *margin-left: 49.89583333333332%;
-}
-.row-fluid .offset6:first-child {
-  margin-left: 49.99999999999999%;
-  *margin-left: 49.89583333333332%;
-}
-.row-fluid .offset5 {
-  margin-left: 41.66666666666666%;
-  *margin-left: 41.562499999999986%;
-}
-.row-fluid .offset5:first-child {
-  margin-left: 41.66666666666666%;
-  *margin-left: 41.562499999999986%;
-}
-.row-fluid .offset4 {
-  margin-left: 33.33333333333333%;
-  *margin-left: 33.22916666666666%;
-}
-.row-fluid .offset4:first-child {
-  margin-left: 33.33333333333333%;
-  *margin-left: 33.22916666666666%;
-}
-.row-fluid .offset3 {
-  margin-left: 24.999999999999996%;
-  *margin-left: 24.895833333333332%;
-}
-.row-fluid .offset3:first-child {
-  margin-left: 24.999999999999996%;
-  *margin-left: 24.895833333333332%;
-}
-.row-fluid .offset2 {
-  margin-left: 16.666666666666664%;
-  *margin-left: 16.5625%;
-}
-.row-fluid .offset2:first-child {
-  margin-left: 16.666666666666664%;
-  *margin-left: 16.5625%;
-}
-.row-fluid .offset1 {
-  margin-left: 8.333333333333332%;
-  *margin-left: 8.229166666666664%;
-}
-.row-fluid .offset1:first-child {
-  margin-left: 8.333333333333332%;
-  *margin-left: 8.229166666666664%;
-}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -546,23 +364,6 @@ html[dir='rtl'] .inset1 {
 .container:after {
   clear: both;
 }
-.container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
-  *zoom: 1;
-}
-.container-fluid:before,
-.container-fluid:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.container-fluid:after {
-  clear: both;
-}
-/*----------------------------------------
-           Common
------------------------------------------*/
 body {
   background: #f5f5f5;
   color: #555;
@@ -605,22 +406,14 @@ a {
   padding: 10px 15px;
   margin: 0;
 }
-/*--------------------------------------------------
-        Layout
----------------------------------------------------*/
-/*Override default values*/
 .container {
   background: #fff;
   border-left: 1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
 }
-/*-------------------------------------------------
-        Positions Specific
---------------------------------------------------*/
 #header {
   background: #fcfcfc;
 }
-/*Common*/
 #roof,
 #top,
 #header,
@@ -664,10 +457,6 @@ a {
   border-top: 1px solid #d7d7d7;
   border-bottom: 1px solid #d7d7d7;
 }
-/*-------------------------------------------------
-        Menu
---------------------------------------------------*/
-/* Override block with menu specific selector */
 .widget-menu {
   padding: 0;
   margin: 0;
@@ -697,7 +486,7 @@ a {
   background: #fff;
 }
 #menu ul.level-1 li.mega {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 #menu ul.level-1 li.last {
   border-bottom: 0;
@@ -748,7 +537,7 @@ a {
 }
 .fancy {
   background: #fff;
-  color: #333333;
+  color: #333;
 }
 #mainnav a,
 #mainnav ul li > span,
@@ -769,11 +558,6 @@ a {
 #mobile-menu select {
   margin: 0 auto;
 }
-/*----------------------------------
-        Component Area
------------------------------------*/
-/* Joomla - Article
-------------------------------*/
 #component .articles-row {
   margin-bottom: 10px;
 }
@@ -856,10 +640,6 @@ a {
   margin-top: 15px;
   height: 32px;
 }
-/*----------------------------------
-        Module Specific
------------------------------------*/
-/* Finder */
 #mod-finder-searchform {
   float: right;
   margin: 0 0;
@@ -872,11 +652,9 @@ a {
 #mod-finder-searchform #mod-finder-searchword:focus {
   background: #fff;
 }
-/*Breadcrumbs*/
 ul.breadcrumb {
   margin: 0;
 }
-/* Default login module */
 #login-form #modlgn-username,
 #login-form #modlgn-passwd {
   display: block;
@@ -893,8 +671,6 @@ ul.breadcrumb {
   margin: 0 0 5px;
   float: right;
 }
-/* Default joomla menu */
-/* Turn off image */
 ul.menu li img {
   display: none;
 }
@@ -916,10 +692,6 @@ ul.menu li img {
   color: #000;
   text-shadow: 1px 1px 1px #fff;
 }
-/*----------------------------------
-        Widget Specific
------------------------------------*/
-/* Logo */
 #logo {
   margin: 0;
 }
@@ -931,14 +703,13 @@ ul.menu li img {
   font-size: 16px;
 }
 .widget-logo .image a {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
   padding: 0;
 }
-/* Copyright info, designed by and expose logo widget settings */
 .widget-copyrightinfo,
 .widget-designedby,
 .widget-exposelogo {
@@ -947,11 +718,9 @@ ul.menu li img {
   padding-bottom: 5px;
   margin-left: 25px;
 }
-/*Date*/
 .block.widget-date {
   text-align: right;
 }
-/* Designed by - ThemeXpert */
 .designed-by a {
   background: url(../images/themexpert.png) no-repeat;
   width: 75px;
@@ -960,9 +729,6 @@ ul.menu li img {
   text-indent: -9999px;
   font-size: 0;
 }
-/* Powered by - Expose */
-/* Core Widgets
--------------------------------------------*/
 .expose-logo,
 .expose-logo a {
   width: 152px;
@@ -981,7 +747,6 @@ ul.menu li img {
 #poweredby {
   margin: 0 auto;
 }
-/* Scroll to top */
 #scrolltop {
   background: url(../images/totop.png) no-repeat;
   display: block;
@@ -994,7 +759,6 @@ ul.menu li img {
 #scrolltop:hover {
   background-position: 0 -71px;
 }
-/* Social */
 .social-icons {
   list-style: none;
   margin: 0;
@@ -1013,9 +777,9 @@ ul.menu li img {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  -webkit-box-shadow: inset 0 1px 2px #444444;
-  -moz-box-shadow: inset 0 1px 2px #444444;
-  box-shadow: inset 0 1px 2px #444444;
+  -webkit-box-shadow: inset 0 1px 2px #444;
+  -moz-box-shadow: inset 0 1px 2px #444;
+  box-shadow: inset 0 1px 2px #444;
 }
 .social-icons li.twitter a {
   background: url(../images/social-icons/twitter.png) no-repeat 50% 50% #00b9f4;
@@ -1034,10 +798,6 @@ ul.menu li img {
   color: #333;
   text-shadow: 1px 1px 1px #fff;
 }
-/*----------------------------------
-        Module Variations
------------------------------------*/
-/* Default block style */
 .block {
   border-left: 1px solid #d7d7d7;
   margin: 0;
@@ -1045,15 +805,12 @@ ul.menu li img {
 .first .block {
   border-left: none;
 }
-/*Exceptions*/
 #top .block,
 #header .block,
 #component .block,
 #copyright .block {
   border: none;
 }
-/* Block style (box)
----------------------------------*/
 .box-black {
   background: #333439;
   color: #fff;
@@ -1105,8 +862,6 @@ ul.menu li img {
   color: #222;
   text-shadow: 0 1px 1px #fff;
 }
-/* Title Style
-------------------------------------*/
 .title {
   padding: 0;
   font-size: 20px;
@@ -1118,7 +873,7 @@ ul.menu li img {
   margin-left: -15px;
 }
 .title2 .header {
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238,238,238,0.5);
   border-left: 4px solid #333439;
   padding-left: 10px;
   margin-left: -15px;
@@ -1151,8 +906,6 @@ ul.menu li img {
   left: 0;
   right: 0;
 }
-/* Box and title style combo
----------------------------------*/
 .box-black.title1 .header,
 .box-green.title1 .header,
 .box-blue.title1 .header,
@@ -1162,10 +915,10 @@ ul.menu li img {
 }
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -moz-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
+  -webkit-transition: opacity .15s linear;
+  -moz-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
 }
 .fade.in {
   opacity: 1;
@@ -1174,15 +927,14 @@ ul.menu li img {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  -webkit-transition: height .35s ease;
+  -moz-transition: height .35s ease;
+  -o-transition: height .35s ease;
+  transition: height .35s ease;
 }
 .collapse.in {
   height: auto;
 }
-/* @group Tab Modules */
 .module-tabs .tab h3,
 .mainH3,
 .nav-tabs a span {
@@ -1192,7 +944,7 @@ ul.menu li img {
 .tab-pane {
   padding: 0 10px 10px;
 }
-/* @end */.accordion-group {
+.accordion-group {
   margin-bottom: 2px;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 4px;
@@ -1213,9 +965,6 @@ ul.menu li img {
   padding: 9px 15px;
   border-top: 1px solid #e5e5e5;
 }
-/*----------------------------------
-        RTL
------------------------------------*/
 body.align-rtl #mainbody,
 body.align-rtl #sidebar-a,
 body.align-rtl #sidebar-b,
@@ -1281,9 +1030,6 @@ body.align-rtl #mod-finder-searchform button.finder {
   left: 10px;
   right: auto;
 }
-/* Globally usable classes
---------------------------------*/
-/* Margin */
 .nomargin {
   margin: 0;
 }
@@ -1299,7 +1045,6 @@ body.align-rtl #mod-finder-searchform button.finder {
 .nomargin-top {
   margin-top: 0;
 }
-/* Padding */
 .nopadding {
   padding: 0;
 }
@@ -1315,7 +1060,6 @@ body.align-rtl #mod-finder-searchform button.finder {
 .nopadding-top {
   padding-top: 0;
 }
-/* Both */
 .nostyle {
   margin: 0;
   padding: 0;
@@ -1323,7 +1067,6 @@ body.align-rtl #mod-finder-searchform button.finder {
 .nobg {
   background: transparent;
 }
-/* Alignments */
 .pull-left {
   float: left;
   margin-right: 10px;
@@ -1341,7 +1084,6 @@ body.align-rtl #mod-finder-searchform button.finder {
 .align-center {
   text-align: center;
 }
-/* Fonts */
 .font-large {
   font-size: 2em;
   line-height: 1.2em;

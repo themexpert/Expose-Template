@@ -28,8 +28,8 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
 
         <?php
             $expose->displayHead();
-            $expose->addLink(array('typography.css','template.css','responsive.css'),'css');
-            $expose->addLink( array('template.js') ,'js', 11 )
+            $expose->addLink(array('typography.less','template.less','responsive.less'),'less');
+            $expose->addLink( array('template.js') ,'js', 11 );
         ?>
 
         <!--[if (gte IE 6)&(lte IE 8)]>

@@ -142,7 +142,7 @@
 
                 <!-- Background Style -->
                 <field name="stylus-background-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="fffff" label="BACKGROUND_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="fffff" description="IMAGE_DESC" />
+                <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="ffffff" description="IMAGE_DESC" />
                 <field name="stylus-background-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
@@ -575,9 +575,19 @@
             <fieldset name="DEVELOPER">
 
                 <field name="remove-joomla-metainfo" type="toggle" default="0" pretext="ENABLE" label="JOOMLA_METAINFO_REMOVE_LABEL" description="JOOMLA_METAINFO_REMOVE_DESC" />
+
                 <field name="disable-mootools" type="toggle" default="0" pretext="ENABLE" label="DISABLE_MOOTOOLS_LABEL" description="DISABLE_MOOTOOLS_DESC" />
+
+                <field name="less-enabled" type="toggle" default="0" pretext="ENABLE" label="LESS_LABEL" description="LESS_DESC" />
+                    <field name="less-compression" type="list" default="compressed" class="remove-lbl border-left" pretext="LESS_COMPRESSION_TYPE_LABEL" description="LESS_COMPRESSION_TYPE_DESC">
+                        <option value="compressed">COMPRESSED</option>
+                        <option value="lessjs">LESSJS</option>
+                    </field>
+
                 <field name="prevent-css-js" type="textarea" cols="40" rows="3" label="PREVENT_CSS_JS_LABEL" description="PREVENT_CSS_JS_DESC" />
+
                 <field name="custom-css" type="textarea" cols="40" rows="5" filter="raw" label="CUSTOM_CSS_LABEL" description="CUSTOM_CSS_DESC" />
+
                 <field name="custom-js" type="textarea" cols="40" rows="5" filter="raw" label="CUSTOM_JS_LABEL" description="CUSTOM_JS_DESC" />
 
             </fieldset>

@@ -1,5 +1,5 @@
 /*----------------------------------------
-           Common
+       Common for general purpose
 -----------------------------------------*/
 body{
     background: @bodyBackground;
@@ -9,6 +9,7 @@ body{
     line-height: 20px;
     margin: 0;
 }
+
 a{ text-decoration: none; }
 
 // block wrapper will not apply for tabs and accordion type
@@ -20,11 +21,13 @@ a{ text-decoration: none; }
     .title{margin: 0 0 7px;padding: 0 0 7px;}
 * html .ie6-offset {margin-right: -4px;}
 #mainbody, #sidebar-a, #sidebar-b{position: relative;}
+
 // Sidebar a/b grid inside grid
 #sidebar-a[class*='grid'] [class*='grid'],
 #sidebar-b[class*='grid'] [class*='grid']{ margin-left: 0; width: 100%;}
 
 #copyright .block{padding: 10px 15px;margin: 0;}
+
 /*--------------------------------------------------
         Layout
 ---------------------------------------------------*/
@@ -35,7 +38,6 @@ a{ text-decoration: none; }
     border-left: 1px solid @grayLighter;
     border-right: 1px solid @grayLighter;
 }
-
 
 /*-------------------------------------------------
         Positions Specific
