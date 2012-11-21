@@ -1,13 +1,20 @@
+//Load Google webfont
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
+
+//Font mixin
+.gfont-serif{ font-family: 'Gentium Book Basic', serif; }
+
 /*----------------------------------------
        Common for general purpose
 -----------------------------------------*/
 body{
-    background: @bodyBackground;
-    color: #555;
+    background: @bodyBackground url(../images/backgrounds/noise.png) repeat 0 0;
+    color: #444;
     font-family: @sansFontFamily;
     font-size: 14px;
     line-height: 20px;
     margin: 0;
+    position : relative;
 }
 
 a{ text-decoration: none; }
@@ -16,10 +23,78 @@ a{ text-decoration: none; }
 // same css will applly on tab and accordion type
 .block,
 .tabbable,
-.accordion {padding: 15px; position: relative; display: block;}
+.accordion {padding: 15px; margin: 10px; position: relative; display: block;}
 .no-title > .header {display: none;}
     .title{margin: 0 0 7px;padding: 0 0 7px;}
 * html .ie6-offset {margin-right: -4px;}
+
+/*Master head*/
+.master-head{
+  .btn-wrap{
+    #translucent > .background(#000, 0.4);
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent #ddd #ddd transparent;
+    padding: 10px;
+    margin: 20px 0;
+    display: inline-block;
+    .border-radius(4px);
+    min-width: 300px;
+  }
+  h3{ font-size: 20px;}
+}
+@media (max-width: 979px) {
+  .master-head .width-block{ float: none; width: 100%; text-align: center;}
+}
+@media (min-width: 980px) and (max-width: 1199px){
+  .master-head h3{ font-size: 18px; line-height: 24px;}
+}
+
+/*Header*/
+.page-header{border:none;}
+
+// Readmore and button
+.button,
+.readon,
+.readmore{
+  display: inline-block;
+  padding: 4px 14px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  .border-radius(4px);
+  a, &:hover{
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  }
+}
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  .border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+}
+
+// Perfect circle
+.img-circle {
+  .border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+}
+
+/*--------------------------------------------------
+        Layout
+---------------------------------------------------*/
+.container{}
+
 #mainbody, #sidebar-a, #sidebar-b{position: relative;}
 
 // Sidebar a/b grid inside grid
@@ -28,36 +103,44 @@ a{ text-decoration: none; }
 
 #copyright .block{padding: 10px 15px;margin: 0;}
 
-/*--------------------------------------------------
-        Layout
----------------------------------------------------*/
+#feature,
+#maintop,
+#breadcrumbs,
+#main,
+#main-bottom,
+#bottom{
+  border-top: 1px solid #d7d7d7;
+  .box-shadow(0 -1px 1px #fff);
+}
+/* Positions Specific
+----------------------------------*/
+#absolute{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#roof{
+  .box-shadow(1px -2px 11px rgba(0,0,0,0.3) inset);
 
-/*Override default values*/
-.container{
-    background: #fff;
-    border-left: 1px solid @grayLighter;
-    border-right: 1px solid @grayLighter;
+  .widget-date,
+  .widget-fontresizer{ padding-top: 0; padding-bottom: 0;}
+
 }
 
-/*-------------------------------------------------
-        Positions Specific
---------------------------------------------------*/
-#header{background: @whiteLight;}
+#header-wrap{
+  background: @white;
+  .box-shadow(0 3px 10px rgba(0,0,0,0.3));
+}
 
-/*Common*/
-#roof,
-#top,
-#header,
-#utility,
-#feature,
-#main-top,
-#breadcrumbs,
-#content-top{border-bottom: 1px solid @grayLighter;}
+#utility{
+  color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
 
-#main-bottom,
-#content-bottom,
-#bottom,
-#footer{border-top: 1px solid @grayLighter;}
+    #gradient > .radial(#c7d6b7, #f5d4ce);
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+       -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
 
 #sidebar-a:after,
 #sidebar-b:after{
@@ -71,14 +154,16 @@ a{ text-decoration: none; }
     left: 0;
     right: 0;
 }
-#sidebar-a:after{border-width: 0 1px 0 0;}
-#sidebar-b:after{border-width: 0 0 0 1px;}
+#sidebar-a:after{border-width: 0 1px 0 0; .box-shadow(1px 0 1px #fff)}
+#sidebar-b:after{border-width: 0 0 0 1px; .box-shadow(-1px 0 1px #fff)}
 #sidebar-a, #sidebar-b{
     .block{z-index:10;}
 }
-
+#footer-wrap{
+  background: @whiteLight;
+  border-top: 1px solid @grayLighter;
+}
 #copyright{
-    background: @whiteLight;
+  padding-top: 15px;
     border-top: 1px solid @grayLighter;
-    border-bottom: 1px solid @grayLighter
 }

@@ -31,38 +31,30 @@ JHtml::_('behavior.tooltip');
 	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
 		<fieldset>
             <div class="control-group">
-                <?php echo $this->form->getLabel('contact_name'); ?>
-                <div class="controls">
-                    <?php echo $this->form->getInput('contact_name'); ?>
-                </div>
+                <div class="control-label"><?php echo $this->form->getLabel('contact_name'); ?></div>
+                <div class="controls"><?php echo $this->form->getInput('contact_name'); ?></div>
             </div>
 
             <div class="control-group">
-                <?php echo $this->form->getLabel('contact_email'); ?>
-                <div class="controls">
-                    <?php echo $this->form->getInput('contact_email'); ?>
-                </div>
+                <div class="control-label"><?php echo $this->form->getLabel('contact_email'); ?></div>
+                <div class="controls"><?php echo $this->form->getInput('contact_email'); ?></div>
             </div>
 
             <div class="control-group">
-                <?php echo $this->form->getLabel('contact_subject'); ?>
-                <div class="controls">
-                    <?php echo $this->form->getInput('contact_subject'); ?>
-                </div>
+                <div class="control-label"><?php echo $this->form->getLabel('contact_subject'); ?></div>
+                <div class="controls"><?php echo $this->form->getInput('contact_subject'); ?></div>
             </div>
 
             <div class="control-group">
-                <?php echo $this->form->getLabel('contact_message'); ?>
-                <div class="controls">
-                    <?php echo $this->form->getInput('contact_message'); ?>
-                </div>
+                <div class="control-label"><?php echo $this->form->getLabel('contact_message'); ?></div>
+                <div class="controls"><?php echo $this->form->getInput('contact_message'); ?></div>
             </div>
 
 
 				<?php 	if ($this->params->get('show_email_copy')){ ?>
 					<div class="control-group">
-                        <?php echo $this->form->getInput('contact_email_copy'); ?>
-                        <?php echo $this->form->getLabel('contact_email_copy'); ?>
+                        <div class="control-label"><?php echo $this->form->getLabel('contact_email_copy'); ?></div>
+                        <div class="controls"><?php echo $this->form->getInput('contact_email_copy'); ?></div>
 					</div>
 
 				<?php 	} ?>

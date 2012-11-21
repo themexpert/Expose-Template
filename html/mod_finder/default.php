@@ -17,7 +17,7 @@ $lang = JFactory::getLanguage();
 $lang->load('com_finder', JPATH_SITE);
 
 $suffix = $params->get('moduleclass_sfx');
-$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox search-query span2" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
+$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox width-80" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
 $button = '';
 $label = '';
 
@@ -155,7 +155,7 @@ JHtml::stylesheet('com_finder/finder.css', false, true, false);
 //]]>
 </script>
 
-<form id="mod-finder-searchform" class="form-search" action="<?php echo JRoute::_($route); ?>" method="get">
+<form id="mod-finder-searchform" class="" action="<?php echo JRoute::_($route); ?>" method="get">
 	<div class="finder <?php echo $suffix; ?> <?php echo $bs_class; ?>">
 		<?php
 		// Show the form fields.

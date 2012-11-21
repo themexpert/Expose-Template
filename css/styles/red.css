@@ -1,0 +1,104 @@
+.clearfix,
+.clear {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after,
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after,
+.clear:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  border-bottom: 5px solid #b51e0c;
+}
+a {
+  color: #b51e0c;
+}
+a:hover {
+  color: #444;
+  text-decoration: none;
+}
+::selection {
+  background: #b51e0c;
+  color: #fff;
+}
+::-moz-selection {
+  background: #b51e0c;
+  color: #fff;
+}
+.colorWhite {
+  color: #f5f5f5;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+.button,
+.readon,
+.readmore,
+.btn-primary {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #c9240f;
+  background-image: -moz-linear-gradient(top,#d72811,#b51e0c);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#d72811),to(#b51e0c));
+  background-image: -webkit-linear-gradient(top,#d72811,#b51e0c);
+  background-image: -o-linear-gradient(top,#d72811,#b51e0c);
+  background-image: linear-gradient(to bottom,#d72811,#b51e0c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd72811', endColorstr='#ffb51e0c', GradientType=0);
+  border-color: #b51e0c #b51e0c #6d1207;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  border: 1px solid #d72811;
+}
+.button:hover,
+.readon:hover,
+.readmore:hover,
+.btn-primary:hover {
+  background: #c7260f;
+}
+#roof {
+  background: url(../../images/backgrounds/noise.png) repeat 0 0 #b51e0c;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+#roof a {
+  color: #f5f5f5;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+#menu ul.level-1 li span.menu-title:hover,
+#menu ul.level-1 li.mega .group-content > ul > li > a > span.menu-title:hover,
+#menu ul.level-1 li.mega .group-content > ul > li > span > span.menu-title:hover,
+#menu ul.level-1 li.active a.mega,
+#menu ul.level-1 li.active .menu-title {
+  color: #b51e0c;
+}
+#mod-finder-searchform button.finder {
+  background-color: #b51e0c;
+}
+.nav-list .active > a,
+.nav-list .active:hover > a,
+.nav-list > li > a:hover {
+  border-color: #b51e0c;
+}
+.title span {
+  color: #b51e0c;
+}

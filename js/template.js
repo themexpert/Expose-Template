@@ -26,8 +26,6 @@ jQuery(window).bind('enterBreakpoint480',function() {
     jQuery('.block').each(function(){
        jQuery(this).css('min-height', 0);
     });
-    jQuery('#mainbody, #sidebar-a, #sidebar-b').css('min-height', 0);
-
 });
 
 

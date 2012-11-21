@@ -9,7 +9,7 @@
  * */
 
 
-/* 
+/*
  * @modified	Jonathan Shroyer of 'corePHP', LLC
  * @url			http://www.corephp.com
  * @comment		Restructured output for less divs and renamed classes
@@ -20,7 +20,7 @@ function modChrome_standard( $module, $params, $attribs )
 
 	// Determines H tag level (ie. h1, h2, h3)
 	$headerLevel = isset( $attribs['headerLevel'] ) ? $attribs['headerLevel'] : 2;
-	
+
 	// Badge?
 	$badge = preg_match( '/badge/', $params->get( 'moduleclass_sfx' ) ) ? '<span class="badge"></span>' : '';
 
@@ -95,15 +95,19 @@ function modChrome_tabs($module, &$params, &$attribs)
 
     if ( $counta == '' ) { $counta = 0;}
     $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+    // Badge?
+    $badge = preg_match( '/badge/', $params->get( 'moduleclass_sfx' ) ) ? '<span class="badge"></span>' : '';
     if (!empty ($module->content)) : ?>
 
-
     <div class="mod-tab <?php echo $params->get('moduleclass_sfx'); ?>">
-        <h<?php echo $headerLevel; ?> class="tab1-<?php echo $counta; ?>"><?php echo $module->title; ?><?php echo '</h' . $headerLevel . '>'; ?>
+        <h<?php echo $headerLevel; ?> class="tab1-<?php echo $counta; ?>">
+            <?php echo $module->title; ?>
+            <?php echo $badge; ?>
+        </h<?php echo $headerLevel;?>>
         <div class="tab-pane">
             <?php echo $module->content; ?>
         </div>
-    </div><!--end_module //-->
+    </div>
 
     <?php
         $counta++;

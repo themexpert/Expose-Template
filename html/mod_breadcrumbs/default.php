@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 $separator = '<span class="divider">/</span>';
 ?>
 
-<ul class="breadcrumb">
+<ul class="breadcrumb box3">
 <?php if ($params->get('showHere', 1))
 	{
 		echo JText::_('MOD_BREADCRUMBS_HERE');

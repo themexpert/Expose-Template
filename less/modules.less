@@ -3,17 +3,18 @@
 -----------------------------------*/
 /* Finder */
 #mod-finder-searchform{
-    float:right;
     margin: 0 0;
     position: relative;
-    width: 300px;
+    //width: 300px;
+
+    div.finder{margin-bottom: 0;}
 
     #mod-finder-searchword{
         background: #fbfbfb;
         &:focus{background: #fff;}
     }
-    button.finder{
-        //.border-radius(3px);
+    button.btn{
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
     }
 }
 /*Breadcrumbs*/
@@ -21,33 +22,11 @@ ul.breadcrumb{margin: 0;}
 
 /* Default login module */
 #login-form{
-    #modlgn-username,
-    #modlgn-passwd{display: block;width: 98%;}
-    #form-login-remember{
-        margin: 5px 0;
-        *{float: left;margin-right: 5px;}
-    }
-    .button{margin: 0 0 5px; float: right;}
+  .add-on label{display: none;}
 }
 
 /* Default joomla menu */
 /* Turn off image */
 ul.menu li img{
     display: none;
-}
-.nav-list > li{margin: 4px 0}
-.nav-list > li > a,
-.nav-list .nav-header{
-    border-style: solid;
-    border-width: 0 0 0 4px;
-    border-color: #E8E8E8;
-    background: transparent;
-    color: #333;
-}
-.nav-list .active > a,
-.nav-list .active:hover > a,
-.nav-list > li > a:hover{
-    background: #E8E8E8;
-    color: #000;
-    text-shadow: 1px 1px 1px #fff;
 }

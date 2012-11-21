@@ -1,20 +1,52 @@
 /**
- * @package     Bootstrap Theme
- * @version     1.0
+ * @package     Expose Base Theme
+ * @version     2.0
  * @author      ThemeXpert http://www.themexpert.com
  * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
- * @file        style3.css
+ * @file        green.css
  **/
 
-@color-primary: #44b700;
+// Import mixing for better use of CSS3
+@import "../../../../libraries/expose/interface/less/mixins.less";
+
+@color-primary: #51a351;
+@color-primary-light: #56af57;
+@color-primary-extralight: #5bb75b;
 @color-light-black : #444;
 
+body{border-bottom: 5px solid @color-primary;}
 a{color: @color-primary;}
 a:hover{color: @color-light-black;text-decoration: none;}
 ::selection         {background: @color-primary; color: #fff;}
 ::-moz-selection    {background: @color-primary; color: #fff;}
 
+.colorWhite{
+    color: #f5f5f5;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+// Readon and primary button
+.button,
+.readon,
+.readmore,
+.btn-primary{
+  .gradientBar(@color-primary-extralight, @color-primary);
+  border: 1px solid @color-primary-extralight;
+
+  &:hover{
+    background: @color-primary-light;
+  }
+}
+/*----------------------------------
+         Position Specific
+-----------------------------------*/
+#roof{
+  background: url(../../images/backgrounds/noise.png) repeat 0 0 @color-primary;
+  .colorWhite;
+
+  a{.colorWhite;}
+}
 /*----------------------------------
          Menu style
 -----------------------------------*/

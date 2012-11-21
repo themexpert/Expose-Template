@@ -39,7 +39,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 <?php else : ?>
 
-<form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
 	<fieldset class="filters">
 		<?php if ($this->params->get('filter_field') != 'hide') :?>
@@ -67,7 +67,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	</fieldset>
 	<?php endif; ?>
 
-	<table class="table table-striped">
+	<table class="table table-striped table-bordered">
 		<?php if ($this->params->get('show_headings')) :?>
 		<thead>
 			<tr>
