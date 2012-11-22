@@ -18,7 +18,7 @@ JHtml::_('behavior.formvalidation');
 	<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 <?php endif; ?>
 
-	<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate">
+	<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate form-horizontal">
 <?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
 	<?php $fields = $this->form->getFieldset($fieldset->name);?>
 	<?php if (count($fields)):?>
@@ -26,21 +26,25 @@ JHtml::_('behavior.formvalidation');
 		<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
 			<legend><?php echo JText::_($fieldset->label);?></legend>
 		<?php endif;?>
-			<dl>
+
 		<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
 			<?php if ($field->hidden):// If the field is hidden, just display the input.?>
 				<?php echo $field->input;?>
 			<?php else:?>
-				<dt>
-				<?php echo $field->label; ?>
-				<?php if (!$field->required && $field->type != 'Spacer'): ?>
-					<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
-				<?php endif; ?>
-				</dt>
-				<dd><?php echo $field->input;?></dd>
+				<div class="control-group">
+                    <div class="control-label">
+                        <?php echo $field->label; ?>
+                        <?php if (!$field->required && $field->type != 'Spacer'): ?>
+                            <span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
+                        <?php endif; ?>
+                    </div>
+                    <div class="controls">
+                        <?php echo $field->input;?>
+                    </div>
+				</div>
 			<?php endif;?>
 		<?php endforeach;?>
-			</dl>
+
 		</fieldset>
 	<?php endif;?>
 <?php endforeach;?>

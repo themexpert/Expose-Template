@@ -1,0 +1,107 @@
+//color mixin
+.white{
+    color: #fff;
+    text-shadow: 1px 1px 1px #444;
+}
+.black{
+    color: #333;
+    text-shadow: 1px 1px 1px #fff;
+}
+/*----------------------------------
+        Module Variations
+-----------------------------------*/
+.alert,
+[class*="box"]{
+  .border-radius(3px);
+}
+/* Block style (box)
+---------------------------------*/
+.box1,
+.box2,
+.box3{
+    background: #fff;
+    .black();
+    border: 1px solid #d7d7d7;
+    .box-shadow(0 0 3px #fff);
+
+    .title{ color: #333; }
+}
+.box1{
+   #gradient > .vertical(#fff, #f9f9f9);
+
+  .title{
+    border-bottom: 1px solid #d1d1d1;
+    .box-shadow(0 1px 0 #fff);
+  }
+}
+.box2{
+    background: transparent;
+}
+.box3{
+    background: transparent;
+    .box-shadow(0 0 8px #d7d7d7 inset);
+}
+.box4{
+  #gradient > .vertical(#3b3b3b, #2e2e2e);
+  color: #adadad;
+  text-shadow: 0 2px 3px #000000;
+
+  .title{
+    border-bottom: 1px solid #212121;
+    .box-shadow(0 1px 0 #4c4c4c);
+  }
+}
+
+/* Title Style
+------------------------------------*/
+.title{
+  padding: 10px 0;
+  font-size: 24px;
+  line-height: 23px;
+  .gfont-serif;
+  position: relative;
+}
+[class*="title"] .title{ padding-left: 10px; padding-right: 10px;}
+
+.title1 .title{
+  border-bottom: 1px solid #d7d7d7;
+  .box-shadow(0 1px 1px #fff);
+}
+.title2 .title{
+  .box3();
+}
+.title3 .title{
+  .box4();
+  .border-radius(3px 3px 0 0);
+}
+
+// Create bottom border element
+.title4 .title:after{
+  .box3();
+  height: 6px;
+  width: auto;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* Box and title style combo
+---------------------------------*/
+// Remove padding left+right when title used in box
+[class*="box"] [class*="title"]{
+  padding-left: 0;
+  padding-right: 0;
+}
+// Exception for title2 and title3
+[class*="box"] + .title2,
+[class*="box"] + .title3{
+  .title{
+    margin: -15px -15px 10px;
+    padding: 15px;
+  }
+}
+
+/* BS Alerts exceptions */
+.alert .title span{ color: #4c4c4c;}

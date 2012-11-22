@@ -1,0 +1,174 @@
+/*-------------------------------------------------
+        Menu
+--------------------------------------------------*/
+/* Override block with menu specific selector */
+.widget-menu{margin:0;}
+
+// common menu code for mega, dropline and split
+#menu{
+    position: relative; z-index: 99; float: right; margin-top: 10px;
+
+    // Level 0 - first level
+    ul.level-0 > li.mega > a.mega,
+    ul.level-0 > li.mega > span.mega{
+        padding:0;
+    }
+    ul.level-0 > li { margin-left: 10px; .border-radius(3px);}
+    ul.level-0 > li.has-submenu{ .border-radius(3px 3px 0 0);}
+    ul.level-0 > li > a > span.menu-title{ height: 30px; line-height: 30px; padding: 0 10px;}
+
+    //Exception class first and last
+    ul.level-0 > li.last{margin-right: 0;}
+    ul.level-0 > li.fast{}
+
+    ul li span.menu-title,
+    ul li span.menu-desc{color: #a19e9e;}
+
+    // Hover State common
+    ul li:hover span.menu-title, ul li:hover span.menu-desc,
+    ul li.active span.menu-title, ul li.active span.menu-desc{color: #131313;}
+
+    // lv - 0 Active Menu and hover
+    ul.level-0 > li:hover {
+        background: #fafafa;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.5), 0 -2px 2px rgba(0,0,0,0.2), 1px 0 0 #fff inset;
+    }
+
+    // lv - 1 and below
+    //-----------------------------------
+
+    // Normal List Item
+    ul.level-1{
+        li.mega { padding: 0 5px;}
+        li.last { border-bottom: 0; } //Last child
+
+        > li.mega a.mega,
+        > li.mega span.mega{padding: 2px 5px; .border-radius(3px);}
+
+        //Exception for grooup content
+        .group-content{
+          padding-bottom: 10px;
+            li.mega{
+                border: none;
+
+                a.mega, span.mega{padding: 4px 0; line-height: 18px;}
+            }
+        }
+
+        li span.menu-title,
+        li span.menu-desc{ border: 0; color: #222;}
+
+        li,
+        li.active{
+          a.mega:hover,
+          span.mega:hover{ background: #f6f7f8; border: 1px solid #EAEBEC; margin: -1px;}
+        }
+
+        //Active menu
+        li.active a {}
+    }
+
+    // CHILD CONTENT WRAPPER
+    //-----------------------------------
+    li.mega .childcontent{
+        //border applied here
+        border: none;
+        padding: 10px 0;
+        background: #fafafa;
+        .border-radius(0 0 3px 3px);
+        box-shadow: 0 2px 3px rgba(0,0,0,0.5), -1px 0 0 #fff inset, 1px -1px 0 #fff inset;
+
+        .childcontent{ box-shadow: 0 0 3px rgba(0,0,0,0.5); }
+    }
+    .childcontent-inner { color: #333; background: none;}
+    .level-1 .childcontent-inner { }
+
+    // GROUPD TITLE,DESC + DIRECT CHILD
+    //--------------------------------------------
+    ul.level-1 .group-title {}
+    ul.level-1 .group-title .menu-title {
+    	color: #333;
+    	text-transform: uppercase;
+    	font-weight: bold;
+    	font-size: 115%;
+    }
+    ul.level-1 .group-title .menu-desc {
+    	color: #333;
+        font-size: 11px;
+    	padding-left: 0 !important;
+    }
+    // Group content child item
+    //-----------------------------------
+    ul.level-1 li.mega .group-content > ul > li{
+        margin: 0 10px;
+        background: url(../images/list-bullets.png) no-repeat 0 3px;
+        &:hover{ background-position: 0 -38px;}
+        > a,
+        > span{
+          &:hover{background: transparent; margin: 0 10px; border: 0;}
+          > span.menu-title{
+            color: #666;
+          }
+        }
+    }
+
+    // Module under menu
+    .block{padding: 0 10px;margin: 0;}
+}
+
+// Fancy menu
+//-----------------------------------
+.fancy{background: #fff;color: #333}
+    .fancy-inner{}
+
+// Dropline Menu + Split menu
+#mainnav,
+#splitmenu{
+  ul{
+    float: right;
+    background: #fafafa;
+    border: 1px solid #EAEBEC;
+    .border-radius(3px);
+
+    li{
+      border-right: 1px solid #eaebec;
+
+      a,
+      span{ padding: 0 15px; height: 30px; line-height: 30px; padding: 0 10px;}
+    }
+
+    li.last-item{border-right: 0;}
+
+
+  }
+}
+
+// Subnav common (Dorpline+Split)
+//-----------------------------------
+#subnav{
+  background: #f6f7f8;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2), 1px 0 0 #fff inset;
+
+  ul{
+
+    li:hover > ul {background: #f6f7f8;box-shadow: 0 2px 3px rgba(0,0,0,0.5), -1px 0 0 #fff inset, 1px -1px 0 #fff inset;}
+
+    li span.menu-title,
+    li span.menu-desc{ color: #333;}
+  }
+
+  span.has-image{ background: none !important; padding: 0;}
+  span.menu-desc{ display: none; }
+
+
+}
+
+// Mobile menu
+//----------------
+//Menu
+#mobile-menu{
+    margin: 10px;
+    text-align: center;
+
+    select{ margin: 0 auto; }
+}

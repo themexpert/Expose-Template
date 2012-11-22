@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
-    <name>Tx_Bootstrap</name>
-    <version>1.0</version>
+    <name>Expose</name>
+    <version>2.0</version>
     <creationDate>01 March 2012</creationDate>
     <author>ThemeXpert.com</author>
     <authorEmail>support@themexpert.com</authorEmail>
@@ -18,8 +18,10 @@
         <folder>images</folder>
         <folder>js</folder>
         <folder>layouts</folder>
+        <folder>less</folder>
         <filename>index.php</filename>
         <filename>index.html</filename>
+        <filename>overview.php</filename>
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>offline.php</filename>
@@ -29,10 +31,6 @@
         <filename>templateDetails.xml</filename>
     </files>
 
-    <languages folder="language">
-        <language tag="en-GB">en-GB.tpl_tx_bootstrap.ini</language>
-    </languages>
-
     <positions>
         <!--Upper Module positions-->
         <position>roof-1</position>
@@ -40,31 +38,37 @@
         <position>roof-3</position>
         <position>roof-4</position>
         <position>roof-5</position>
+        <position>roof-6</position>
         <position>top-1</position>
         <position>top-2</position>
         <position>top-3</position>
         <position>top-4</position>
         <position>top-5</position>
+        <position>top-6</position>
         <position>header-1</position>
         <position>header-2</position>
         <position>header-3</position>
         <position>header-4</position>
         <position>header-5</position>
+        <position>header-6</position>
         <position>utility-1</position>
         <position>utility-2</position>
         <position>utility-3</position>
         <position>utility-4</position>
         <position>utility-5</position>
+        <position>utility-6</position>
         <position>feature-1</position>
         <position>feature-2</position>
         <position>feature-3</position>
         <position>feature-4</position>
         <position>feature-5</position>
+        <position>feature-6</position>
         <position>maintop-1</position>
         <position>maintop-2</position>
         <position>maintop-3</position>
         <position>maintop-4</position>
         <position>maintop-5</position>
+        <position>maintop-6</position>
         <position>breadcrumbs</position>
         <!--Upper Module positions-->
         <!--Inner Content Positions-->
@@ -72,12 +76,10 @@
         <position>contenttop-2</position>
         <position>contenttop-3</position>
         <position>contenttop-4</position>
-        <position>contenttop-5</position>
         <position>contentbottom-1</position>
         <position>contentbottom-2</position>
         <position>contentbottom-3</position>
         <position>contentbottom-4</position>
-        <position>contentbottom-5</position>
         <position>sidebar-a</position>
         <position>sidebar-b</position>
         <!--Inner Content Positions-->
@@ -87,41 +89,51 @@
         <position>mainbottom-3</position>
         <position>mainbottom-4</position>
         <position>mainbottom-5</position>
+        <position>mainbottom-6</position>
         <position>bottom-1</position>
         <position>bottom-2</position>
         <position>bottom-3</position>
         <position>bottom-4</position>
         <position>bottom-5</position>
+        <position>bottom-6</position>
         <position>footer-1</position>
         <position>footer-2</position>
         <position>footer-3</position>
         <position>footer-4</position>
         <position>footer-5</position>
+        <position>footer-6</position>
         <position>absolute</position>
         <position>copyright-1</position>
         <position>copyright-2</position>
         <position>copyright-3</position>
         <position>copyright-4</position>
         <position>copyright-5</position>
+        <position>copyright-6</position>
         <!--Mega menu position only for menu-->
         <position>mega1</position>
         <position>mega2</position>
         <position>mega3</position>
         <position>mega4</position>
         <position>mega5</position>
+        <position>mega6</position>
     </positions>
 
+    <!--<languages folder="language">
+            <language tag="en-GB">en-GB.tpl_expose.ini</language>
+    </languages>-->
+
     <config>
+
         <fields name="params" addfieldpath="libraries/expose/admin/fields">
-            
+
             <fieldset name="OVERVIEW">
                 <field name="utility-func" type="utility" class="remove-lbl" action="boot" />
                 <field name="overview" type="overview" />
             </fieldset>
-            
+
             <!-- Styles Settings -->
             <fieldset name="STYLES">
-                <field name="style" type="presets" default="style1" pretext="SELECT" label="PRESET_STYLES" description="PRESET_STYLES_DESC_LABEL" />
+                <field name="style" type="presets" default="blue" pretext="SELECT" label="PRESET_STYLES" description="PRESET_STYLES_DESC_LABEL" />
 
                 <field name="stylus-enabled" type="toggle" default="0" pretext="ENABLE" label="CUSTOM_STYLE_LABEL" description="CUSTOM_STYLE_DESC" />
 
@@ -131,7 +143,7 @@
 
                 <!-- Background Style -->
                 <field name="stylus-background-color" type="colorpicker" pretext="BACKGROUND_COLOR_LABEL" default="fffff" label="BACKGROUND_LABEL" description="BACKGROUND_COLOR_DESC" />
-                <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="fffff" description="IMAGE_DESC" />
+                <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="ffffff" description="IMAGE_DESC" />
                 <field name="stylus-background-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
                     <option value="repeat-x">repeat-x</option>
@@ -223,20 +235,20 @@
             <!-- Widgets Settings -->
             <fieldset name="WIDGETS">
                 <field name="logo-enabled" type="toggle" default="1" pretext="SHOW" label="LOGO_LABEL" description="LOGO_DESC" />
-                    <field name="logo-type" pretext="Logo type" type="list" default="image" label="LOGO_TYPE_LABEL" class="remove-lbl border-left input-large" description="LOGO_TYPE_DESC">
-                        <option value="text">Text</option>
-                        <option value="image">Image</option>
-                    </field>
-                    <field name="logo-text" type="text" class="remove-lbl border-left input-large" pretext="LOGO_TEXT_LABEL" description="LOGO_TEXT_DESC" />
-                    <field name="logo-position" type="positions" default="top-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
-                    <field name="logo-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-                    <field name="logo-image" pretext="Logo image" type="media" label="LOGO_IMAGE_LABEL" description="LOGO_IMAGE_DESC" />
-                    <field name="logo-display-tagline" pretext="ENABLE" type="toggle" default="0" label="LOGO_TAGLINE_LABEL" description="LOGO_TAGLINE_DESC">
-                    <field name="logo-tagline" pretext="LOGO_TAGLINE_TEXT_LABEL" type="text" class="remove-lbl border-left input-large" description="LOGO_TAGLINE_TEXT_DESC" filter="string" />
-                </field>
+                       <field name="logo-type" pretext="Logo type" type="list" default="image" label="LOGO_TYPE_LABEL" class="remove-lbl border-left input-large" description="LOGO_TYPE_DESC">
+                           <option value="text">Text</option>
+                           <option value="image">Image</option>
+                       </field>
+                       <field name="logo-text" type="text" class="remove-lbl border-left input-large" pretext="LOGO_TEXT_LABEL" default="Expose Framework for Joomla 2.5 and 3.0+" description="LOGO_TEXT_DESC" />
+                       <field name="logo-position" type="positions" default="top-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                       <field name="logo-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                       <field name="logo-image" pretext="Logo image" type="media" label="LOGO_IMAGE_LABEL" description="LOGO_IMAGE_DESC" />
+                       <field name="logo-display-tagline" pretext="ENABLE" type="toggle" default="0" label="LOGO_TAGLINE_LABEL" description="LOGO_TAGLINE_DESC" >
+                       <field name="logo-tagline" pretext="LOGO_TAGLINE_TEXT_LABEL" type="text" class="remove-lbl border-left input-large" default="A rapid template development framework" description="LOGO_TAGLINE_TEXT_DESC" filter="string" />
+                   </field>
 
                 <field name="date-enabled" type="toggle" default="0" pretext="SHOW" label="DATE_LABEL" description="DATE_DESC" />
-                    <field name="date-position" type="positions" default="roof-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="date-position" type="positions" default="roof-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
                     <field name="date-formats" type="dateformates" default="" pretext="DATE_FORMAT_LABEL" class="remove-lbl border-left" description="DATE_FORMAT_DESC" >
                         <option value="l, F d, Y"/>
                         <option value="F d, Y"/>
@@ -254,8 +266,16 @@
 
                 <field name="ie6warn-enabled" type="toggle" default="1" pretext="SHOW" label="IE6_WARNING_LABEL" description="IE6_WARNING_DESC" />
 
+                <field name="fontresizer-enabled" type="toggle" default="0" pretext="SHOW" label="FONT_RESIZER_LABEL" description="FONT_RESIZER_DESC" />
+                    <field name="fontresizer-position" type="positions" default="roof-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="fontresizer-selector" pretext="FONT_RESIZER_SELECTOR_LABEL" type="text" default="body" class="remove-lbl border-left input-large" description="FONT_RESIZER_SELECTOR_DESC" filter="string" />
+
                 <field name="totop-enabled" type="toggle" default="1" pretext="SHOW" label="SCROLL_TO_TOP_LABEL" description="SCROLL_TO_TOP_DESC" />
-                    <field name="totop-position" type="positions" default="copyright-3" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="totop-position" type="positions" default="absolute" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+
+                <field name="wordformat-enabled" type="toggle" default="1" pretext="SHOW" label="WORDFORMAT_LABEL" description="WORDFORMAT_DESC" />
+                    <field name="wordformat-selector" pretext="WORDFORMAT_SELECTOR_LABEL" type="text" default="header h2 a" class="remove-lbl border-left input-large" description="WORDFORMAT_SELECTOR_DESC" filter="string" />
+
 
                 <field name="lazyloader-enabled" type="toggle" default="1" pretext="ENABLE" label="LAZY_LOADER_LABEL" description="LAZY_LOADER_DESC" />
 
@@ -266,10 +286,18 @@
                         <option value="light">Light</option>
                         <option value="dark">Dark</option>
                     </field>
-                    <field name="exposelogo-position" type="positions" default="copyright-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="exposelogo-position" type="positions" default="copyright-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
 
                 <field name="analytics-enabled" type="toggle" default="0" pretext="ENABLE" label="GOOGLE_ANALYTICS_LABEL" description="GOOGLE_ANALYTICS_DESC" />
                     <field name="analytics-id" type="text" default="UA-xxxxxx-x" class="remove-lbl border-left" pretext="UA Code" description="GOOGLE_ANALYTICS_CODE_DESC" />
+
+                <field name="spacer-social" type="spacer" text="SPACER_SOCIAL_WIDGET_LABEL" description="SPACER_SOCIAL_WIDGET_DESC" />
+                    <field name="social-enabled" type="toggle" default="1" pretext="ENABLE" label="SOCIAL_LABEL" description="SOCIAL_DESC" />
+                    <field name="social-position" type="positions" default="top-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
+                    <field name="social-twitter" type="text" default="http://www.twitter.com/ThemeXpert" class="remove-lbl border-left" pretext="SOCIAL_TWITTER_LABEL" description="SOCIAL_TWITTER_DESC" />
+                    <field name="social-facebook" type="text" default="http://www.facebook.com/ThemeXpert" class="remove-lbl border-left" pretext="SOCIAL_FACEBOOK_LABEL" description="SOCIAL_FACEBOOK_DESC" />
+                    <field name="social-rss" type="text" class="remove-lbl border-left" pretext="SOCIAL_RSS_LABEL" description="SOCIAL_RSS_DESC" />
+
 
                 <field name="designedby-enabled" type="hidden" default="1" />
                     <field name="designedby-position" type="hidden" default="copyright-1" />
@@ -287,10 +315,10 @@
                     <option value="dropline">Dropline Menu</option>
                     <option value="split">Split Menu</option>
                 </field>
-                
+
                 <field name="menutype" type="menu" default="mainmenu" class="remove-lbl border-left" pretext="MENU_NAME_LABEL" description="MENU_NAME_DESC" />
-                
-                <field name="menu-position" type="positions" default="header-1" pretext="SELECT" label="MENU_POSITION_LABEL" description="MENU_POSITION_DESC" />
+
+                <field name="menu-position" type="positions" default="top-2" pretext="SELECT" label="MENU_POSITION_LABEL" description="MENU_POSITION_DESC" />
                 <field name="menu-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="menu-delay" type="text" default="350" label="MENU_DELAY_LABEL" description="MENU_DELAY_DESC" />
@@ -334,169 +362,166 @@
 
             <!-- Layout Settings -->
             <fieldset name="LAYOUT">
+
+                <field name="responsive-enabled" type="hidden" default="1" pretext="ENABLE" label="RESPONSIVE_LABEL" description="RESPONSIVE_DESC" />
+
                 <field name="spacer-positions-map" class="positions-map" type="spacer" text="MODULE_POSITIONS_MAP" description="MODULE_POSITIONS_MAP_DESC" />
                 <field name="layouts" type="layouts" default="sidebara-content-sidebarb" label="LAYOUT_TYPE_LABEL" description="LAYOUT_TYPE_DESC" />
-                <field name="layouts-type" type="list" default="fixed" label="TEMPLATE_TYPE_LABEL" description="TEMPLATE_TYPE_DESC">
-                    <option value="fluid">Fluid</option>
-                    <option value="fixed">Fixed</option>
-                </field>
 
-                <field name="template-width" type="slider" class="input-right" default="980" max="1500" posttext="px" label="TEMPLATE_WIDTH_LABEL" description="TEMPLATE_WIDTH_DESC" />
-                <field name="sidebar-a" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_A_LABEL" description="SIDEBAR_A_DESC" />
+                <field name="sidebar-a" type="positionlayouts" default="1:3" posttext="%" max-mods="1" label="SIDEBAR_A_LABEL" description="SIDEBAR_A_DESC" />
                     <field name="sidebar-a-chrome" type="hidden" max-mods="1" default="sidebar-a:standard" />
-                    <field name="sidebar-a-mobile" type="hidden" default="0" />
 
-                <field name="sidebar-b" type="positionlayouts" default="1:30" posttext="%" max-mods="1" label="SIDEBAR_B_LABEL" description="SIDEBAR_B_DESC" />
-                    <field name="sidebar-b-chrome" type="hidden" max-mods="1" default="sidebar-b:standard" />                                     <field name="sidebar-b-mobile" type="hidden" default="0" />
-                
-                <field name="iphone-enabled" type="toggle" default="0" label="IPHONE_THEME_LABEL" description="IPHONE_THEME_DESC" />
-                <field name="android-enabled" type="toggle" default="0" label="ANDROID_THEME_LABEL" description="ANDROID_THEME_DESC" />
+                <field name="sidebar-b" type="positionlayouts" default="1:3" posttext="%" max-mods="1" label="SIDEBAR_B_LABEL" description="SIDEBAR_B_DESC" />
+                    <field name="sidebar-b-chrome" type="hidden" max-mods="1" default="sidebar-b:standard" />
 
                 <field name="spacer-upper" type="spacer" text="SPACER_UPPER_MODULE_LABEL" description="SPACER_UPPER_MODULE_DESC" />
 
-                <field name="roof" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="ROOF_LABEL" description="ROOF_DESC" />
-                
-                    <field name="roof-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="roof-1:standard,roof-2:standard,roof-3:standard,roof-4:standard,roof-5:standard" description="MODULE_CHROME_DESC">
-                        <option value="standard">Standard</option>
-                        <option value="basic">Basic</option>
-                    </field>
-                
-                    <field name="roof-mobile" type="toggle" default="0" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="roof" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="ROOF_LABEL" description="ROOF_DESC" />
 
-                <field name="top" type="positionlayouts" max-mods="5"
-                    default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="TOP_LABEL" description="TOP_DESC" />
-
-                    <field name="top-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="top-1:standard,top-2:standard,top-3:standard,top-4:standard,top-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="roof-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="roof-1:standard,roof-2:standard,roof-3:standard,roof-4:standard,roof-5:standard,roof-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="top-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="top" type="positionlayouts" max-mods="6"
+                    default="1:12,2:3,2:9,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="TOP_LABEL" description="TOP_DESC" />
 
-                <field name="header" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="HEADER_LABEL" description="HEADER_DESC" />
-                    
-                    <field name="header-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="header-1:standard,header-2:standard,header-3:standard,header-4:standard,header-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="top-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="top-1:standard,top-2:standard,top-3:standard,top-4:standard,top-5:standard,top-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
-                        <option value="basic">Basic</option>
-                    </field>
-                
-                    <field name="header-mobile" type="toggle" default="1" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-
-                <field name="utility" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="UTILITY_LABEL" description="UTILITY_DESC" />
-
-                    <field name="utility-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="utility-1:standard,utility-2:standard,utility-3:standard,utility-4:standard,utility-5:standard" description="MODULE_CHROME_DESC">
-                        <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="utility-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="header" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="HEADER_LABEL" description="HEADER_DESC" />
 
-                <field name="feature" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="FEATURE_LABEL" description="FEATURE_DESC" />
-
-                    <field name="feature-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="feature-1:standard,feature-2:standard,feature-3:standard,feature-4:standard,feature-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="header-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="header-1:standard,header-2:standard,header-3:standard,header-4:standard,header-5:standard,header-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="feature-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="utility" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="UTILITY_LABEL" description="UTILITY_DESC" />
 
-                <field name="maintop" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="MAIN_TOP_LABEL" description="MAIN_TOP_DESC" />
-
-                    <field name="maintop-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="maintop-1:standard,maintop-2:standard,maintop-3:standard,maintop-4:standard,maintop-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="utility-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="utility-1:standard,utility-2:standard,utility-3:standard,utility-4:standard,utility-5:standard,utility-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="maintop-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="feature" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FEATURE_LABEL" description="FEATURE_DESC" />
+
+                    <field name="feature-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="feature-1:standard,feature-2:standard,feature-3:standard,feature-4:standard,feature-5:standard,feature-6:standard" description="MODULE_CHROME_DESC">
+                        <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
+                        <option value="basic">Basic</option>
+                    </field>
+
+                <field name="maintop" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="MAIN_TOP_LABEL" description="MAIN_TOP_DESC" />
+
+                    <field name="maintop-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="maintop-1:standard,maintop-2:standard,maintop-3:standard,maintop-4:standard,maintop-5:standard,maintop-6:standard" description="MODULE_CHROME_DESC">
+                        <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
+                        <option value="basic">Basic</option>
+                    </field>
 
                 <field name="spacer-inner-content" type="spacer" text="SPACER_INNER_CONTENT_MODULE_LABEL" description="SPACER_INNER_CONTENT_MODULE_DESC" />
 
-                <field name="contenttop" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="CONTENT_TOP_LABEL" description="CONTENT_TOP_DESC" />
+                <field name="contenttop" type="hidden" max-mods="4"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3" label="CONTENT_TOP_LABEL" description="CONTENT_TOP_DESC" />
 
-                    <field name="contenttop-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="contenttop-1:standard,contenttop-2:standard,contenttop-3:standard,contenttop-4:standard,contenttop-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="contenttop-chrome" type="moduleschrome" max-mods="4"
+                           class=""
+                           default="contenttop-1:standard,contenttop-2:standard,contenttop-3:standard,contenttop-4:standard"
+                           label="Content top"
+                           description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="contenttop-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="contentbottom" type="hidden" max-mods="4"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3" label="CONTENT_BOTTOM" description="CONTENT_BOTTOM_DESC" />
 
-                <field name="contentbottom" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="CONTENT_BOTTOM" description="CONTENT_BOTTOM_DESC" />
-
-                    <field name="contentbottom-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="contentbottom-1:standard,contentbottom-2:standard,contentbottom-3:standard,contentbottom-4:standard,contentbottom-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="contentbottom-chrome" type="moduleschrome" max-mods="4" class=""
+                           default="contentbottom-1:standard,contentbottom-2:standard,contentbottom-3:standard,contentbottom-4:standard"
+                           label="Content bottom"
+                           description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="contentbottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="spacer-bottom" type="spacer" text="SPACER_BOTTOM_MODULE_LABEL" description="SPACER_BOTTOM_MODULE_DESC" />
-                
-                <field name="mainbottom" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="MAIN_BOTTOM_LABEL" description="MAIN_BOTTOM_DESC" />
 
-                    <field name="mainbottom-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="mainbottom-1:standard,mainbottom-2:standard,mainbottom-3:standard,mainbottom-4:standard,mainbottom-5:standard" description="MODULE_CHROME_DESC">
+                <field name="mainbottom" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="MAIN_BOTTOM_LABEL" description="MAIN_BOTTOM_DESC" />
+
+                    <field name="mainbottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="mainbottom-1:standard,mainbottom-2:standard,mainbottom-3:standard,mainbottom-4:standard,mainbottom-5:standard,mainbottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="mainbottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="bottom" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="BOTTOM_LABEL" description="BOTTOM_DESC" />
 
-                <field name="bottom" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="BOTTOM_LABEL" description="BOTTOM_DESC" />
-
-                    <field name="bottom-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="bottom-1:standard,bottom-2:standard,bottom-3:standard,bottom-4:standard,bottom-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="bottom-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="bottom-1:standard,bottom-2:standard,bottom-3:standard,bottom-4:standard,bottom-5:standard,bottom-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="bottom-mobile" type="toggle" default="0" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="footer" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="FOOTER_LABEL" description="FOOTER_DESC" />
 
-                <field name="footer" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="FOOTER_LABEL" description="FOOTER_DESC" />
-
-                    <field name="footer-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="footer-1:standard,footer-2:standard,footer-3:standard,footer-4:standard,footer-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="footer-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="footer-1:standard,footer-2:standard,footer-3:standard,footer-4:standard,footer-5:standard,footer-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
 
-                    <field name="footer-mobile" type="toggle" default="1" class="border-left remove-lbl" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
-                
-                <field name="copyright" type="positionlayouts" max-mods="5"
-                       default="1:100,2:50,2:50,3:33.33,3:33.33,3:33.33,4:25,4:25,4:25,4:25,5:20,5:20,5:20,5:20,5:20" label="COPYRIGHT_LABEL" description="COPYRIGHT_DESC" />
+                <field name="copyright" type="positionlayouts" max-mods="6"
+                       default="1:12,2:6,2:6,3:4,3:4,3:4,4:3,4:3,4:3,4:3,5:3,5:2,5:2,5:2,5:3,6:2,6:2,6:2,6:2,6:2,6:2" label="COPYRIGHT_LABEL" description="COPYRIGHT_DESC" />
 
-                    <field name="copyright-chrome" type="moduleschrome" max-mods="5" class="remove-lbl"
-                           default="copyright-1:standard,copyright-2:standard,copyright-3:standard,copyright-4:standard,copyright-5:standard" description="MODULE_CHROME_DESC">
+                    <field name="copyright-chrome" type="moduleschrome" max-mods="6" class="remove-lbl"
+                           default="copyright-1:standard,copyright-2:standard,copyright-3:standard,copyright-4:standard,copyright-5:standard,copyright-6:standard" description="MODULE_CHROME_DESC">
                         <option value="standard">Standard</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordion">Accordion</option>
                         <option value="basic">Basic</option>
                     </field>
-
-                    <field name="copyright-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
                 <field name="absolute" type="hidden" max-mods="1" default="1:100" />
                 <field name="absolute-chrome" type="hidden" default="absolute:raw" />
-                    <field name="absolute-mobile" type="hidden" default="0" />
 
                 <field name="breadcrumbs" type="hidden" max-mods="1" default="1:100" />
                 <field name="breadcrumbs-chrome" type="hidden" default="breadcrumbs:standard" />
-                    <field name="breadcrumbs-mobile" type="hidden" default="0" />
 
             </fieldset>
             <!-- Layout Settings -->
@@ -512,7 +537,7 @@
                 <field name="spacer-font-menu" type="spacer" text="SPACER_MENU_FONT_LABEL" description="SPACER_MENU_FONT_DESC" />
                 <!-- Menu Font Settings -->
                 <field name="webfonts-menu-font" type="fonts" default="0" label="MENU_FONT_LABEL" description="MENU_FONT_DESC"/>
-                <field name="webfonts-menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#ex-menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-menu-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default="#menu a" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
 
                 <field name="spacer-font-header" type="spacer" text="SPACER_HEADER_FONT_LABEL" description="SPACER_HEADER_FONT_DESC" />
@@ -523,7 +548,7 @@
 
                 <!-- Module Header Settings -->
                 <field name="webfonts-module-font" type="fonts" default="0" label="MODULE_FONT_LABEL" description="MODULE_FONT_DESC"/>
-                <field name="webfonts-module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".ex-title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
+                <field name="webfonts-module-selectors" type="text" pretext="FONT_SELECTOR_LABEL" default=".title" class="remove-lbl border-left input-large" description="FONT_SELECTOR_DESC" />
                 <!-- Menu Font Settings -->
             </fieldset>
             <!-- Typography Settings -->
@@ -535,9 +560,10 @@
                         <option value="google-cdn">Google CDN</option>
                         <option value="local">From Framework</option>
                     </field>
-                    <field name="jquery-version" type="list" default="1.7.1" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
+                    <field name="jquery-version" type="list" default="1.7.2" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
+                        <option value="1.7.2">1.7.2</option>
                         <option value="1.7.1">1.7.1</option>
-                        <option value="1.6.4">1.6.4</option>
+                        <option value="1.8.2">1.8.2</option>
                     </field>
                 <field name="combined-css" type="toggle" default="0" class="hidenext" pretext="ENABLE" label="COMBINED_CSS_LABEL" description="COMBINED_CSS_DESC" />
                     <field name="minify-css" type="toggle" default="0" pretext="ENABLE" label="MINIFY_CSS_LABEL" description="MINIFY_CSS_DESC" />
@@ -546,7 +572,7 @@
                 <field name="cache-time" type="text" default="2400" label="CACHE_TIMEOUT_LABEL" description="CACHE_TIMEOUT_DESC" />
                 <field name="component-disable" type="toggle" default="0" pretext="ENABLE" label="COMPONENT_DISABLE_LABEL" description="COMPONENT_DISABLE_DESC" />
                     <field name="component-disable-menu-ids" type="text" pretext="COMPONENT_DISABLE_MENU_IDS" class="remove-lbl border-left input-large" default="101" description="COMPONENT_DISABLE_MENU_IDS_DESC" />
-                
+
                 <field name="rtl-support" type="toggle" default="0" pretext="ENABLE" label="RTL_SUPPORT_LABEL" description="RTL_SUPPORT_DESC" />
                <!-- <field name="3pd_integration" type="toggle" disabled="true" default="0" label="3PD Integration" description="INTEGRATION_3PD_DESC" /> -->
             </fieldset>
@@ -555,9 +581,19 @@
             <fieldset name="DEVELOPER">
 
                 <field name="remove-joomla-metainfo" type="toggle" default="0" pretext="ENABLE" label="JOOMLA_METAINFO_REMOVE_LABEL" description="JOOMLA_METAINFO_REMOVE_DESC" />
+
                 <field name="disable-mootools" type="toggle" default="0" pretext="ENABLE" label="DISABLE_MOOTOOLS_LABEL" description="DISABLE_MOOTOOLS_DESC" />
+
+                <field name="less-enabled" type="toggle" default="0" pretext="ENABLE" label="LESS_LABEL" description="LESS_DESC" />
+                    <field name="less-compression" type="list" default="compressed" class="remove-lbl border-left" pretext="LESS_COMPRESSION_TYPE_LABEL" description="LESS_COMPRESSION_TYPE_DESC">
+                        <option value="compressed">COMPRESSED</option>
+                        <option value="lessjs">LESSJS</option>
+                    </field>
+
                 <field name="prevent-css-js" type="textarea" cols="40" rows="3" label="PREVENT_CSS_JS_LABEL" description="PREVENT_CSS_JS_DESC" />
+
                 <field name="custom-css" type="textarea" cols="40" rows="5" filter="raw" label="CUSTOM_CSS_LABEL" description="CUSTOM_CSS_DESC" />
+
                 <field name="custom-js" type="textarea" cols="40" rows="5" filter="raw" label="CUSTOM_JS_LABEL" description="CUSTOM_JS_DESC" />
 
             </fieldset>
@@ -569,6 +605,5 @@
             <!-- Assignments Settings -->
 
         </fields>
-        
     </config>
 </extension>

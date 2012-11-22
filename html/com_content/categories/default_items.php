@@ -1,12 +1,28 @@
 <?php
+
 /**
- * @package     Template Override - ThemeXpert
+ *
+ * @package     Template Override-ThemeXpert
  * @subpackage  com_content
  * @version     1.0
  * @author      ThemeXpert http://www.themexpert.com
  * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ *
  **/
+
+/**
+ *
+ * This HTML5 Override taken from OneWeb Template for Joomla 2.5
+ *
+ * @author      : Seth Warburton - Internet Inspired! - @nternetinspired
+ * @version     : 2.0
+ * @license     : GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ 			      DBAD License http://philsturgeon.co.uk/code/dbad-license
+ * @copyright   : Seth Warburton - (C) 2012 - All rights reserved
+ *
+ **/
+
 
 // no direct access
 defined('_JEXEC') or die;
@@ -29,13 +45,13 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 		</span>
 		<?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 		<?php if ($item->description) : ?>
-			<div class="category-desc">
-				<?php echo JHtml::_('content.prepare', $item->description); ?>
-			</div>
+			<section class="category-desc">
+				<?php echo JHtml::_('content.prepare', $item->description, '', 'com_content.categories'); ?>
+			</section>
 		<?php endif; ?>
         <?php endif; ?>
 		<?php if ($this->params->get('show_cat_num_articles_cat') == 1) :?>
-			<dl class="article-count"><dt>
+			<dl><dt>
 				<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?></dt>
 				<dd><?php echo $item->numitems; ?></dd>
 			</dl>

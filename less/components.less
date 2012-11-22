@@ -1,0 +1,57 @@
+/*----------------------------------
+        Component Area
+-----------------------------------*/
+#main{}
+
+/* Joomla - Article
+------------------------------*/
+#component{
+    //Column layout
+    .articles-row {margin-bottom: 10px;}
+      [class*='cols'] > [class*='col-']{float: left; padding: 0;}
+      .cols-1 > [class*='col-'] {display: block;float: none;margin: 0;}
+      .cols-2 > [class*='col-'] {width: 50%;}
+      .cols-3 > [class*='col-'] {float: left;width: 33.3%;}
+      .cols-4 > [class*='col-'] {width: 25%;}
+      article{margin: 0 10px 20px;}
+
+    .title{
+      font-size: 40px;
+      line-height: 40px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #d7d7d7;
+      .box-shadow(0 1px 1px #fff);
+    }
+    .block{ padding-left: 5px; padding-right: 5px;}
+
+    //Icons
+    .article-bg{padding-bottom: 0; border: 0;}
+    .actions a{
+        display:inline-block;
+        width:14px;
+        height:14px;vertical-align:text-top;
+        background-image:url(../images/glyphicons-halflings.png);
+    }
+    .print-icon a {background-position:-96px -48px;}
+    .email-icon a{background-position:-72px 0;}
+    .edit-icon a{background-position:-96px -72px;}
+    
+    // Editing
+    .edit .formelm{float: left; width: 70%;margin-top: 10px}
+    .edit .formelm label{float: left;line-height: 22px; width:110px}
+    .edit textarea{margin-top: 10px;}
+    .edit .pull-left{width: 50%}
+    .CodeMirror-wrapping{box-sizing: border-box;margin-top: 20px}
+    .edit .formelm-buttons{ margin-top: 10px;}
+    .button2-left {float: left;margin-right: 5px;}
+    #editor-xtd-buttons{margin-top: 15px; height: 32px;}
+
+    // Pagination
+    .pagination{
+      padding: 0 10px;
+      .box3();
+      ul{.box-shadow(none);}
+      a, span{ background: none; .border-radius(0px)}
+    }
+}

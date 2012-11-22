@@ -17,13 +17,32 @@ $lang = JFactory::getLanguage();
 $lang->load('com_finder', JPATH_SITE);
 
 $suffix = $params->get('moduleclass_sfx');
-$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
+$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox width-80" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
 $button = '';
 $label = '';
 
+switch ($params->get('button_pos', 'right')):
+	case 'top' :
+		$bs_class = '';
+		break;
+
+	case 'bottom' :
+		$bs_class = '';
+		break;
+
+	case 'right' :
+		$bs_class = 'input-append';
+		break;
+
+	case 'left' :
+	default :
+		$bs_class = 'input-prepend';
+		break;
+endswitch;
+
 if ($params->get('show_label', 1))
 {
-	$label = '<label for="mod-finder-searchword" class="finder' . $suffix . '">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
+	$label = '<label for="mod-finder-searchword" class="finder">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
 
 	switch ($params->get('label_pos', 'left')):
 		case 'top' :
@@ -38,18 +57,23 @@ if ($params->get('show_label', 1))
 
 		case 'right' :
 			$output = $output . $label;
+			$bs_class = 'input-append';
 			break;
 
 		case 'left' :
 		default :
 			$output = $label . $output;
+			$bs_class = 'input-prepend';
 			break;
 	endswitch;
 }
 
 if ($params->get('show_button', 1))
 {
-	$button = '<button class="button btn ' . $suffix . ' finder' . $suffix . '" type="submit"><i class="icon-search"></i>' . JText::_('MOD_FINDER_SEARCH_BUTTON') . '</button>';
+	/*$button = '<div class="input-append">
+  <input class="span2" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+</div>';*/
+	$button = '<button class="button btn" type="submit"><i class="icon-search"></i> ' . JText::_('MOD_FINDER_SEARCH_BUTTON') . '</button>';
 
 	switch ($params->get('button_pos', 'right')):
 		case 'top' :
@@ -131,8 +155,8 @@ JHtml::stylesheet('com_finder/finder.css', false, true, false);
 //]]>
 </script>
 
-<form id="mod-finder-searchform" action="<?php echo JRoute::_($route); ?>" method="get">
-	<div class="finder<?php echo $suffix; ?>">
+<form id="mod-finder-searchform" class="" action="<?php echo JRoute::_($route); ?>" method="get">
+	<div class="finder <?php echo $suffix; ?> <?php echo $bs_class; ?>">
 		<?php
 		// Show the form fields.
 		echo $output;

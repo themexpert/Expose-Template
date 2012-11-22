@@ -1,0 +1,39 @@
+/*----------------------------------
+        RTL
+-----------------------------------*/
+body.align-rtl{
+
+    //reverse the grid
+    #mainbody, #sidebar-a, #sidebar-b, [class*="grid"]{float: right}
+
+    //Menu
+    .megamenu ul.level-0 > li.mega,
+    #mainnav li,
+    #splitmenu li,
+    #subnav > ul > li,
+    #subnav .sublevel > ul > li{float: right}
+    .menu ul li:hover ul, .menu ul li.over ul{right: 0;}
+    .menu ul li:hover li ul, .menu ul li.over li ul{right: -999em;}
+    .menu ul li li:hover ul, .menu ul li li.over ul{right:13em;}
+    .menu ul li li li:hover ul,.menu ul li li li.over ul {right: 10em;top:0;}
+    
+    .megamenu ul.level-0 li.has-submenu a.mega span.menu-title,
+    .megamenu ul.level-0 li.has-submenu span.mega.level-0 span.menu-title {padding-right: 12px;background-position: right center;}
+    .megamenu ul.level-0 li.mega .has-image{padding-right: 35px;padding-left: 0; background-position: 100%;}
+
+    #menu ul.level-1 li.mega .group-content > ul > li{
+          background-position: 100% 3px;
+    }
+    
+    //Global utility classes
+    .pull-left{float:right;margin-left: 10px;}
+    .pull-right{float:left;margin-right: 10px;}
+    .align-left{text-align: right;}
+    .align-right{text-align: left;}
+    .align-center{text-align: center;}
+
+    //Joomla default menu
+    .nav-list > li > a,
+    .nav-list .nav-header{ border-width: 0 4px 0 0;}
+    #mod-finder-searchform button.finder{left: 10px;right: auto}
+}

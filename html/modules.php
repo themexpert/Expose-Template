@@ -9,7 +9,7 @@
  * */
 
 
-/* 
+/*
  * @modified	Jonathan Shroyer of 'corePHP', LLC
  * @url			http://www.corephp.com
  * @comment		Restructured output for less divs and renamed classes
@@ -20,7 +20,7 @@ function modChrome_standard( $module, $params, $attribs )
 
 	// Determines H tag level (ie. h1, h2, h3)
 	$headerLevel = isset( $attribs['headerLevel'] ) ? $attribs['headerLevel'] : 2;
-	
+
 	// Badge?
 	$badge = preg_match( '/badge/', $params->get( 'moduleclass_sfx' ) ) ? '<span class="badge"></span>' : '';
 
@@ -42,25 +42,37 @@ function modChrome_standard( $module, $params, $attribs )
 
     // Output module
 
-    echo '<div class="ex-block ex-module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' column-spacing clearfix">' . "\n";
-	    	echo "\t\t" . '<div class="ex-header">' . "\n";
+    echo '<div class="block module' . $moduleClassSfx . $moduleUniqueClass . $showTitle . ' clearfix">' . "\n";
+	    	echo "\t\t" . '<div class="header">' . "\n";
 	        	echo $badge;
 
-                // Creates span around first word of module title for unique styling
-                $part_one = explode(' ', $module->title);
-                $part_one = $part_one[0];
+                //separate subtitle
+                if( strpos( $module->title, '||' ) === FALSE)
+                {
+                    $title = $module->title;
 
-                if( count( explode( ' ', $module->title ) ) > 1 ) {
-                    $part_two = substr( $module->title, strpos( $module->title,' ' ) );
-                } else {
-                    $part_two = '';
+                }else{
+                    $titles 	= explode('||', $module->title);
+                    $title 		= $titles[0];
+                    $subTitle 	= $titles[1];
                 }
 
-                echo "\t\t\t\t" . '<h' . $headerLevel . ' class="ex-title"><span>'.$part_one.'</span>'.$part_two.'</h' . $headerLevel . '>' . "\n";
+
+                // Creates span around first word of module title for unique styling
+                $parts = explode(' ', $title);
+                $parts[0] = '<span>' . $parts[0] . '</span>';
+                $title = implode(' ', $parts);
+
+                echo "\t\t\t\t" . '<h2 class="title">' . $title .'</h2>' . "\n";
+
+                if( !empty($subTitle) )
+                {
+                    echo "\t\t\t\t\t" . '<h3 class="subtitle">' . $subTitle .'</h3>' . "\n";
+                }
 
 	    	echo "\t\t\t" . '</div>' . "\n";
 	        if ( !empty ( $module->content ) ) :
-	        echo "\t\t\t" . '<div class="ex-content">' . "\n";
+	        echo "\t\t\t" . '<div class="content">' . "\n";
 	        	echo "\t\t\t\t" . $module->content . "\n";
 	        	echo "\t\t\t\t" . '' . "\n";
 	        echo "\t\t\t" . '</div>' . "\n";
@@ -75,4 +87,60 @@ function modChrome_basic($module, $params, $attribs)
     if (!empty ($module->content)){
         echo $module->content;
     }
+}
+
+function modChrome_tabs($module, &$params, &$attribs)
+{
+    global $counta;
+
+    if ( $counta == '' ) { $counta = 0;}
+    $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+    // Badge?
+    $badge = preg_match( '/badge/', $params->get( 'moduleclass_sfx' ) ) ? '<span class="badge"></span>' : '';
+    if (!empty ($module->content)) : ?>
+
+    <div class="mod-tab <?php echo $params->get('moduleclass_sfx'); ?>">
+        <h<?php echo $headerLevel; ?> class="tab1-<?php echo $counta; ?>">
+            <?php echo $module->title; ?>
+            <?php echo $badge; ?>
+        </h<?php echo $headerLevel;?>>
+        <div class="tab-pane">
+            <?php echo $module->content; ?>
+        </div>
+    </div>
+
+    <?php
+        $counta++;
+    endif;
+}
+
+$countc = 0;
+
+function modChrome_accordion($module, &$params, &$attribs)
+{
+  global $countc;
+  if ( $countc == '' ) { $countc = 0;}
+  $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+  $positionName = isset($attribs['positionName']) ? $attribs['positionName'] : $module->id;
+
+  if (!empty ($module->content)) : ?>
+
+    <div class="accordion-group accordion-<?php echo $countc; ?> <?php echo $params->get('moduleclass_sfx'); ?>">
+
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#acc-<?php echo $positionName; ?>" href="#collapse-<?php echo $countc; ?>"><?php echo $module->title; ?></a>
+        </div>
+
+        <div id="collapse-<?php echo $countc; ?>" class="accordion-body collapse <?php if ( $countc == 0 ) { echo 'in'; } ?>">
+
+            <div class="accordion-inner">
+                <?php echo $module->content; ?>
+            </div>
+
+        </div>
+    </div><!--end_module //-->
+
+  <?php
+  $countc++;
+  endif;
 }

@@ -1,0 +1,128 @@
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 767px) {
+
+  // Padding to set content in a bit
+  body {}
+
+  #mainbody, #sidebar-a, #sidebar-b{ min-height: 0 !important;}
+
+  // Widgets
+  #logo a{margin: 0 auto;}
+  .widget-date,
+  .widget-fontresizer{display: none;}
+
+  // Modules
+  .finder{text-align: center;}
+
+    //Make all joomla columns into 1 column
+    #component [class*="cols"] > [class*="col-"] {float: none; width: 100%}
+
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  // Make all grid-sized elements block level again
+  [class*="grid"],
+  .row-fluid [class*="grid"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .grid12,
+    .row-fluid .grid12 {
+      width: 100%;
+      .box-sizing(border-box);
+    }
+
+  // FORM FIELDS
+  // -----------
+  // Make grid* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="grid"],
+  select[class*="grid"],
+  textarea[class*="grid"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="grid"],
+  .input-append input[class*="grid"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+  //Make all joomla columns into 1 column
+  #component [class*="cols"] > [class*="col-"] {float: none; width: 100%}
+
+  #mainbody, #sidebar-a, #sidebar-b{ min-height: 0 !important;}
+
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal .control-group > label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  // Move over all input controls and content
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  // Move the options list down to align with labels
+  .form-horizontal .control-list {
+    padding-top: 0; // has to be padding because margin collaspes
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+}

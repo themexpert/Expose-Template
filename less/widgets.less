@@ -1,0 +1,84 @@
+/*----------------------------------
+        Widget Specific
+-----------------------------------*/
+/* Logo */
+.widget-logo{ margin: 0; }
+#logo{
+    margin: 0;
+    a{
+        display: block;
+    }
+  .logo-tagline{ display: block; font-size: 16px;}
+}
+.widget-logo .image a{ .hide-text; .nopadding; }
+
+/* Copyright info, designed by and expose logo widget settings */
+.widget-copyrightinfo,
+.widget-designedby,
+.widget-exposelogo{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 25px
+}
+
+/*Date*/
+#ex-date,
+#font-resizer{margin-top: 5px; }
+
+/*Font Resizer*/
+#font-resizer{text-align: right;}
+/* Designed by - ThemeXpert */
+.designed-by a{
+    background: url(../images/themexpert.png) no-repeat;
+    width: 75px;
+    height: 18px;
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+}
+/* Powered by - Expose */
+/* Core Widgets
+-------------------------------------------*/
+.expose-logo, .expose-logo a{width: 152px;height: 40px;display: block}
+    .expose-logo-light{background: url(../../../libraries/expose/interface/images/expose_logo_light.png) no-repeat;}
+    .expose-logo-dark{background: url(../../../libraries/expose/interface/images/expose_logo_dark.png) no-repeat;}
+    .expose-logo span{display: none}
+
+#poweredby{margin: 0 auto;}
+
+/* Scroll to top */
+#scrolltop{
+    background: url(../images/totop.png) no-repeat;
+    display: block;
+    width: 26px;
+    height: 28px;
+    text-indent: -9999px;
+    font-size: 0px;
+    margin: 30px auto 0;
+
+    &:hover{background-position: 0 -71px}
+}
+
+/* Social */
+.social-icons{
+    list-style: none;
+    margin: 0;
+
+    li{ float: left; }
+    li a{
+        margin-right: 10px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+        text-indent: -9999px;
+        .border-radius( 30px );
+        .box-shadow (inset 0 1px 2px #444);
+
+    }
+
+    li.twitter a{background: url(../images/social-icons/twitter.png) no-repeat 50% 50% #00b9f4;}
+    li.facebook a{background: url(../images/social-icons/facebook.png) no-repeat 50% 50% #3b5998;}
+    li.rss a{background: url(../images/social-icons/rss.png) no-repeat 50% 50% #d45421;}
+}

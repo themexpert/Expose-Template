@@ -1,0 +1,43 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager,
+.pagenav{
+  margin: @baseLineHeight 0;
+  list-style: none;
+  text-align: center;
+  .clearfix();
+}
+.pager li,
+.pagenav li{
+  display: inline;
+}
+.pager a,
+.pagenav a{
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  .border-radius(15px);
+}
+.pager a:hover,
+.pagenav a:hover{
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.pager .next a,
+.pagenav .pagenav-next a{
+  float: right;
+}
+.pager .previous a,
+.pagenav .pagenav-prev a{
+  float: left;
+}
+.pager .disabled a,
+.pager .disabled a:hover {
+  color: @grayLight;
+  background-color: #fff;
+  cursor: default;
+}
