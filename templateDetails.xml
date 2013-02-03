@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
     <name>Expose</name>
-    <version>2.1</version>
-    <creationDate>01 March 2012</creationDate>
+    <version>2.2</version>
+    <creationDate>##DATE##</creationDate>
     <author>ThemeXpert.com</author>
     <authorEmail>support@themexpert.com</authorEmail>
     <authorUrl>http://www.themexpert.com</authorUrl>
@@ -273,7 +273,7 @@
                 <field name="totop-enabled" type="toggle" default="1" pretext="SHOW" label="SCROLL_TO_TOP_LABEL" description="SCROLL_TO_TOP_DESC" />
                     <field name="totop-position" type="positions" default="absolute" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
 
-                <field name="wordformat-enabled" type="toggle" default="1" pretext="SHOW" label="WORDFORMAT_LABEL" description="WORDFORMAT_DESC" />
+                <field name="wordformat-enabled" type="toggle" default="0" pretext="SHOW" label="WORDFORMAT_LABEL" description="WORDFORMAT_DESC" />
                     <field name="wordformat-selector" pretext="WORDFORMAT_SELECTOR_LABEL" type="text" default="header h2 a" class="remove-lbl border-left input-large" description="WORDFORMAT_SELECTOR_DESC" filter="string" />
 
 
@@ -517,10 +517,10 @@
                         <option value="basic">Basic</option>
                     </field>
 
-                <field name="absolute" type="hidden" max-mods="1" default="1:100" />
+                <field name="absolute" type="hidden" max-mods="1" default="1:12" />
                 <field name="absolute-chrome" type="hidden" default="absolute:raw" />
 
-                <field name="breadcrumbs" type="hidden" max-mods="1" default="1:100" />
+                <field name="breadcrumbs" type="hidden" max-mods="1" default="1:12" />
                 <field name="breadcrumbs-chrome" type="hidden" default="breadcrumbs:standard" />
 
             </fieldset>

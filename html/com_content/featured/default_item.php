@@ -171,7 +171,7 @@ $canEdit	= $this->item->params->get('access-edit');
     <section class="article-intro">
     <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
         <?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
-        <figure class="img-intro float<?php echo htmlspecialchars($imgfloat); ?>">
+        <figure class="img-intro pull-<?php echo htmlspecialchars($imgfloat); ?>">
         <img
             <?php if ($images->image_intro_caption):
                 echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';

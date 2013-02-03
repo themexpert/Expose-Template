@@ -196,19 +196,22 @@ endif; ?>
 <?php if ($params->get('access-view')):?>
 <?php  if (isset($images->image_fulltext) and !empty($images->image_fulltext)) : ?>
 <?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
-<figure class="img-fulltext float<?php echo htmlspecialchars($imgfloat); ?>">
+<figure class="img-fulltext pull-<?php echo htmlspecialchars($imgfloat); ?>">
 <img <?php if ($images->image_fulltext_caption): echo 'class="caption"'.' title="' .htmlspecialchars($images->image_fulltext_caption) .'"'; endif; ?>
 	src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>"/>
 </figure>
 <?php endif; ?>
 <?php
 if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
-	echo $this->item->pagination;
+    echo $this->item->pagination;
  endif;
 ?>
 <section class="article-body">
 <?php echo $this->item->text; ?>
 </section>
+
+<?php if( (!empty($this->item->pagination) AND $this->item->pagination)
+    OR isset($urls) AND ((!empty($urls->urls_position)  AND ($urls->urls_position=='1') )) ) :?>
 <footer class="article-footer">
 <?php
 if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item->paginationposition AND!$this->item->paginationrelative):
@@ -254,4 +257,5 @@ if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item-
 
 <?php echo $this->item->event->afterDisplayContent; ?>
 </footer>
+<?php endif; ?>
 </article>

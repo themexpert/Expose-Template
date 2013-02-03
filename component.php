@@ -1,17 +1,22 @@
 <?php
 /**
  *
- * @package     Bootstrap Theme
- * @version     1.0
+ * @package     Expose Bootstrap Theme
+ * @version     2.2
  * @author      ThemeXpert http://www.themexpert.com
  * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
  *
  **/
 
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted index access' );
+
 //framework bootstrap
-if(file_exists(JPATH_LIBRARIES.DS.'expose'.DS.'expose.php')){
-    require_once JPATH_LIBRARIES.DS.'expose'.DS.'expose.php';
+if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
+
+    require_once JPATH_LIBRARIES . '/expose/expose.php';
+
 }else{
     echo JText::_('Unable to find Expose library. Please make sure you have it installed.');
     die();
