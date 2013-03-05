@@ -32,23 +32,21 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 <section class="blog clearfix <?php echo $this->pageclass_sfx;?>">
 <hgroup>
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
-<header>
 	<h1>
 		<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
-</header>
 <?php endif; ?>
+
 <?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-<header>
 	<h2>
 		<?php echo $this->escape($this->params->get('page_subheading')); ?>
 		<?php if ($this->params->get('show_category_title')) : ?>
 			<span class="subheading-category"><?php echo $this->category->title;?></span>
 		<?php endif; ?>
-    </h2>
-</header>    
+	</h2>
 <?php endif; ?>
 </hgroup>
+
 <?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 	<section class="category-desc">
 	<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
