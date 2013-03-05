@@ -127,10 +127,10 @@ JHtml::_('behavior.framework');
                     </dd>
                 <?php endif; ?>
 
-                <?php if ($params->get('show_publish_date')) : ?>
+                <?php if ($params->get('show_create_date')) : ?>
                     <dd>
-                        <div class="published">
-                            <i class="icon-calendar"></i> <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
+                        <div class="create">
+                            <i class="icon-calendar"></i> <?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
                         </div>
                     </dd>
                 <?php endif; ?>
@@ -142,13 +142,14 @@ JHtml::_('behavior.framework');
                         </div>
                     </dd>
                 <?php endif; ?>
-                <?php if ($params->get('show_create_date')) : ?>
+
+                <?php if ($params->get('show_publish_date')) : ?>
                     <dd>
-                        <div class="create">
-                            <i class="icon-calendar"></i> <?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC3'))); ?>
+                        <div class="published">
+                            <i class="icon-calendar"></i> <?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
                         </div>
                     </dd>
-                <?php endif; ?>
+                <?php endif; ?>                
 
                 <?php if ($params->get('show_hits')) : ?>
                     <dd>
