@@ -21,6 +21,12 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
     echo JText::_('Unable to find Expose library. Please make sure you have it installed.');
     die();
 }
+
+//Import layout class
+expose_import('core.layout');
+// Create an instance of layout class and it will call the widget->init().
+$layout = ExposeLayout::getInstance();
+
 ?>
 
 <?php if (JRequest::getString('type')=='raw'):?>
@@ -34,7 +40,7 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
             $expose->addLink(array('template.css','bootstrap.css'),'css');
         ?>
     </head>
-    <body <?php echo $expose->generateBodyClass();?> <?php echo ($expose->platform == 'mobile')? 'id="ex-mobile"' : '' ;?>  >
+    <body <?php echo $expose->generateBodyClass();?> >
         <!--Start Main Body-->
         <div id="ex-main">
             <div class="ex-container">
