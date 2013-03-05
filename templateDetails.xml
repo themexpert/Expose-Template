@@ -118,9 +118,9 @@
         <position>mega6</position>
     </positions>
 
-    <!--<languages folder="language">
+    <languages folder="language">
             <language tag="en-GB">en-GB.tpl_expose.ini</language>
-    </languages>-->
+    </languages>
 
     <config>
 
