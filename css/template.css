@@ -812,21 +812,14 @@ a {
   padding-bottom: 0;
   border: 0;
 }
+#component .actions {
+  list-style: none;
+}
 #component .actions a {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  vertical-align: text-top;
-  background-image: url(../images/glyphicons-halflings.png);
 }
-#component .print-icon a {
-  background-position: -96px -48px;
-}
-#component .email-icon a {
-  background-position: -72px 0;
-}
-#component .edit-icon a {
-  background-position: -96px -72px;
+#component .actions img {
+  display: inline-block;
 }
 #component .edit .formelm {
   float: left;
