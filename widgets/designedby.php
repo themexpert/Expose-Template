@@ -34,7 +34,7 @@ class ExposeWidgetDesignedby extends ExposeWidget{
         ob_start()
         ?>
         <p class="designed-by">
-           Designed by: <a target="_blank" title="ThemeXpert" href="http://www.themexpert.com">ThemeXpert</a>
+           Designed by: <a target="_blank" title="Joomla Responsive Template by ThemeXpert" href="http://www.themexpert.com">Joomla Responsive Template by ThemeXpert</a>
         </p>
 
 
