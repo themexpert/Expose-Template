@@ -36,7 +36,7 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
         <!--[if (gte IE 6) & (lte IE 8)]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
             <script src="<?php echo $expose->exposeUrl; ?>/interface/js/respond.js"></script>
-            <script src="<?php echo $expose->templateUrl; ?>/js/selectivizr.js"></script>
+            <script src="<?php echo $expose->exposeUrl; ?>/interface/js/selectivizr.js"></script>
         <![endif]-->
 
     </head>
