@@ -257,6 +257,8 @@
                         <option value="l, d m, Y"/>
                         <option value="d m Y"/>
                         <option value="m d Y"/>
+                        <option value="Y, F, d"/>
+                        <option value="Y m d"/>
                     </field>
 
                 <field name="copyrightinfo-enabled" type="toggle" default="1" pretext="SHOW" label="COPYRIGHT_LABEL" description="COPYRIGHT_DESC" />
