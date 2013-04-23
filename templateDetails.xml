@@ -126,13 +126,13 @@
 
         <fields name="params" addfieldpath="libraries/expose/admin/fields">
 
-            <fieldset name="OVERVIEW">
+            <fieldset name="overview" label="OVERVIEW">
                 <field name="utility-func" type="utility" class="remove-lbl" action="boot" />
                 <field name="overview" type="overview" />
             </fieldset>
 
             <!-- Styles Settings -->
-            <fieldset name="STYLES">
+            <fieldset name="styles" label="STYLES">
                 <field name="style" type="presets" default="blue" pretext="SELECT" label="PRESET_STYLES" description="PRESET_STYLES_DESC_LABEL" />
 
                 <field name="stylus-enabled" type="toggle" default="0" pretext="ENABLE" label="CUSTOM_STYLE_LABEL" description="CUSTOM_STYLE_DESC" />
@@ -233,7 +233,7 @@
             <!-- Styles Settings -->
 
             <!-- Widgets Settings -->
-            <fieldset name="WIDGETS">
+            <fieldset name="widgets" label="WIDGETS">
                 <field name="logo-enabled" type="toggle" default="1" pretext="SHOW" label="LOGO_LABEL" description="LOGO_DESC" />
                        <field name="logo-type" pretext="Logo type" type="list" default="image" label="LOGO_TYPE_LABEL" class="remove-lbl border-left input-large" description="LOGO_TYPE_DESC">
                            <option value="text">Text</option>
@@ -310,7 +310,7 @@
             <!-- Widgets Settings -->
 
             <!-- Menu Settings -->
-            <fieldset name="MENU">
+            <fieldset name="menu" label="MENU">
                 <field name="menu-enabled" type="toggle" default="1" pretext="ENABLE" label="MENU_CONTROL_LABEL" description="MENU_CONTROL_DESC" />
                 <field name="menu-style" type="list" default="mega" class="remove-lbl border-left" pretext="MENU_TYPE_LABEL" description="MENU_TYPE_DESC">
                     <option value="mega">Mega Menu</option>
@@ -363,7 +363,7 @@
             <!-- Menu Settings -->
 
             <!-- Layout Settings -->
-            <fieldset name="LAYOUT">
+            <fieldset name="layout" label="LAYOUT">
 
                 <field name="responsive-enabled" type="hidden" default="1" pretext="ENABLE" label="RESPONSIVE_LABEL" description="RESPONSIVE_DESC" />
 
@@ -529,7 +529,7 @@
             <!-- Layout Settings -->
 
             <!-- Typography Settings -->
-            <fieldset name="TYPOGRAPHY">
+            <fieldset name="typography" label="TYPOGRAPHY">
                 <field name="spacer-font-global" type="spacer" text="SPACER_GLOBAL_FONT_LABEL" description="SPACER_GLOBAL_FONT_DESC" />
                 <!-- Body Font Settings -->
                 <field name="webfonts-body-font" type="fonts" default="0" label="BODY_FONT_LABEL" description="BODY_FONT_DESC"/>
@@ -556,7 +556,7 @@
             <!-- Typography Settings -->
 
             <!-- Advance Settings -->
-            <fieldset name="ADVANCED">
+            <fieldset name="advanced" label="ADVANCED">
                 <field name="jquery-enabled" type="toggle" default="1" pretext="ENABLE" label="JQUERY_LOADER_LABEL" description="JQUERY_LOADER_DESC" />
                     <field name="jquery-source" type="list" class="remove-lbl border-left" default="local" pretext="JQUERY_SOURCE_LABEL" description="JQUERY_SOURCE_DESC" >
                         <option value="google-cdn">Google CDN</option>
@@ -580,7 +580,7 @@
             </fieldset>
             <!-- Advance Settings -->
 
-            <fieldset name="DEVELOPER">
+            <fieldset name="developer" label="DEVELOPER">
 
                 <field name="remove-joomla-metainfo" type="toggle" default="0" pretext="ENABLE" label="JOOMLA_METAINFO_REMOVE_LABEL" description="JOOMLA_METAINFO_REMOVE_DESC" />
 
@@ -601,8 +601,8 @@
             </fieldset>
 
             <!-- Assignments Settings -->
-            <fieldset name="ASSIGNMENTS">
-                <field name="utility" type="utility" action="finalize" />
+            <fieldset name="assignments" label="ASSIGNMENTS">
+                <field name="utility" type="utility" class="remove-lbl" action="finalize" />
             </fieldset>
             <!-- Assignments Settings -->
 
