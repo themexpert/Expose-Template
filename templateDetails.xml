@@ -127,8 +127,13 @@
         <fields name="params" addfieldpath="libraries/expose/admin/fields">
 
             <fieldset name="overview" label="OVERVIEW">
+
                 <field name="utility-func" type="utility" class="remove-lbl" action="boot" />
+
+                <field name="configurator" type="configurator"  label="CONFIGURATOR" description="CONFIGURATOR_DESC" />
+
                 <field name="overview" type="overview" />
+
             </fieldset>
 
             <!-- Styles Settings -->
