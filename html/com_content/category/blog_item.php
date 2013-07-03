@@ -116,11 +116,11 @@ JHtml::_('behavior.framework');
                 <?php if ($params->get('show_category')) : ?>
                     <dd>
                         <div class="category-name">
-                            <?php 	$title = $this->escape($this->item->category_title);
-                            $url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
-                            <?php if ($params->get('link_category') and $this->item->catslug) : ?>
+                           <?php $title = $this->escape($this->item->category_title);
+                                    $url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catid)) . '">' . $title . '</a>'; ?>
+                            <?php if ($params->get('link_category')) : ?>
                                 <?php echo JText::sprintf('COM_CONTENT_CATEGORY', $url); ?>
-                            <?php else : ?>
+                                <?php else : ?>
                                 <?php echo JText::sprintf('COM_CONTENT_CATEGORY', $title); ?>
                             <?php endif; ?>
                         </div>
