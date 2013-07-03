@@ -13,6 +13,6 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-<div class="custom">
+<div class="custom" <?php if ($params->get('backgroundimage')): ?> style="background-image:url(<?php echo $params->get('backgroundimage');?>)"<?php endif;?>>
 	<?php echo $module->content;?>
 </div>
