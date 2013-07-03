@@ -19,6 +19,7 @@
         <folder>js</folder>
         <folder>layouts</folder>
         <folder>less</folder>
+        <folder>configs</folder>
         <filename>index.php</filename>
         <filename>index.html</filename>
         <filename>overview.php</filename>
@@ -151,9 +152,9 @@
                 <field name="stylus-background-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" default="ffffff" description="IMAGE_DESC" />
                 <field name="stylus-background-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Header Style -->
@@ -164,9 +165,9 @@
                 <field name="stylus-header-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-header-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Header Style -->
@@ -177,9 +178,9 @@
                 <field name="stylus-top-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-top-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Feature Style -->
@@ -190,9 +191,9 @@
                 <field name="stylus-feature-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-feature-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Main Content Style -->
@@ -203,9 +204,9 @@
                 <field name="stylus-maincontent-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-maincontent-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Bottom Style -->
@@ -216,9 +217,9 @@
                 <field name="stylus-bottom-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-bottom-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
                 <!-- Footer Style -->
@@ -229,9 +230,9 @@
                 <field name="stylus-footer-image" type="imagelist" directory="backgrounds" pretext="IMAGE_LABEL" class="remove-lbl border-left" description="IMAGE_DESC"  />
                 <field name="stylus-footer-image-repeat" type="list" default="repeat" pretext="IMAGE_REPEAT" class="remove-lbl border-left" description="IMAGE_REPEAT_DESC">
                     <option value="repeat">repeat</option>
-                    <option value="repeat-x">repeat-x</option>
-                    <option value="repeat-y">repeat-y</option>
-                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat-x">REPEAT-X</option>
+                    <option value="repeat-y">REPEAT-Y</option>
+                    <option value="no-repeat">NO-REPEAT</option>
                 </field>
 
             </fieldset>
@@ -240,7 +241,7 @@
             <!-- Widgets Settings -->
             <fieldset name="widgets" label="WIDGETS">
                 <field name="logo-enabled" type="toggle" default="1" pretext="SHOW" label="LOGO_LABEL" description="LOGO_DESC" />
-                       <field name="logo-type" pretext="Logo type" type="list" default="image" label="LOGO_TYPE_LABEL" class="remove-lbl border-left input-large" description="LOGO_TYPE_DESC">
+                       <field name="logo-type" pretext="LOGO_TYPE_LABEL" type="list" default="image" label="LOGO_TYPE_LABEL" class="remove-lbl border-left input-large" description="LOGO_TYPE_DESC">
                            <option value="text">Text</option>
                            <option value="image">Image</option>
                        </field>
@@ -296,7 +297,7 @@
                     <field name="exposelogo-position" type="positions" default="copyright-1" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
 
                 <field name="analytics-enabled" type="toggle" default="0" pretext="ENABLE" label="GOOGLE_ANALYTICS_LABEL" description="GOOGLE_ANALYTICS_DESC" />
-                    <field name="analytics-id" type="text" default="UA-xxxxxx-x" class="remove-lbl border-left" pretext="UA Code" description="GOOGLE_ANALYTICS_CODE_DESC" />
+                    <field name="analytics-id" type="text" default="UA-xxxxxx-x" class="remove-lbl border-left" pretext="UA_CODE" description="GOOGLE_ANALYTICS_CODE_DESC" />
 
                 <field name="spacer-social" type="spacer" text="SPACER_SOCIAL_WIDGET_LABEL" description="SPACER_SOCIAL_WIDGET_DESC" />
                     <field name="social-enabled" type="toggle" default="1" pretext="ENABLE" label="SOCIAL_LABEL" description="SOCIAL_DESC" />
