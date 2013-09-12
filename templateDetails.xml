@@ -329,6 +329,8 @@
 
                 <field name="menu-position" type="positions" default="top-2" class="remove-lbl border-left"  pretext="POSITIONS" description="MENU_POSITION_DESC" />
 
+                <field name="spacer-mega" type="spacer" text="SPACER_MEGA_MENU_SETTINGS_LABEL" description="SPACER_MEGA_MENU_SETTINGS_DESC" />
+
                 <field name="menu-animation" type="list" default="scale-up" pretext="Dropdown" label="MENU_ANIMATION_LABEL" description="MENU_ANIMATION_DESC">
                     <option value="fade">Fade</option>
                     <option value="scale-up">Scale Up</option>
@@ -393,6 +395,22 @@
                     <option value="9">J9</option>
                     <option value="10">J10</option>
                 </field>
+
+                
+                <field name="spacer-split" type="spacer" text="SPACER_SPLIT_MENU_SETTINGS_LABEL" description="SPACER_SPLIT_MENU_SETTINGS_DESC" />
+
+                <field name="splitmenu-title" type="toggle" default="1" pretext="ENABLE" label="SPLIT_MENU_TITLE_LABEL" description="SPLIT_MENU_TITLE_DESC" />
+
+                <field name="splitmenu-title-text" type="text" class="remove-lbl border-left input-large" pretext="SPLITMENU_TEXT_LABEL" default="Sub Menu" description="SPLITMENU_TEXT_DESC" />
+
+                <field name="splitmenu-style" type="list" default="vertical" pretext="NAV_STYLE" label="SPLITMENU_STYLE_LABEL" description="SPLITMENU_STYLE_DESC">
+                    <option value="horizontal">HORIZONTAL</option>
+                    <option value="vertical">VERTICAL</option>
+                </field>
+
+                <field name="splitmenu-position" type="positions" class="remove-lbl border-left" default="sidebar-b" pretext="POSITIONS" description="MENU_POSITION_DESC" />
+
+                <field name="spacer-offcanvas" type="spacer" text="SPACER_OFFCANVAS_MENU_SETTINGS_LABEL" description="SPACER_OFFCANVAS_MENU_SETTINGS_DESC" />
 
                 <field name="offcanvas-startlevel" type="list" default="1" label="OFFCANVAS_MENU_RENDER_LABEL" pretext="MENU_START_LEVEL" description="MENU_START_LEVEL_DESC"
                 >

@@ -815,6 +815,66 @@ a {
   -webkit-animation: roll-in 0.6s ease-in-out;
   animation: roll-in 0.6s ease-in-out;
 }
+#ex-splitmenu.horizontal .nav-list li {
+  position: relative;
+}
+#ex-splitmenu.horizontal > .nav-list > li {
+  float: left;
+}
+#ex-splitmenu.horizontal .nav-list > li > a {
+  display: block;
+  text-decoration: none;
+  padding: 0 15px;
+  margin: 0;
+  line-height: 40px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+#ex-splitmenu.horizontal .nav-list li:hover a {
+  background-color: #222;
+  color: #fff;
+}
+#ex-splitmenu.horizontal .nav-list li.parent > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #F13835;
+  letter-spacing: normal;
+}
+#ex-splitmenu.horizontal .nav-list li.parent:hover > ul {
+  display: block;
+  -webkit-animation: scale-up 0.2s ease-in-out;
+  animation: scale-up 0.2s ease-in-out;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+#ex-splitmenu.horizontal .nav-list li.parent:hover > ul li.parent ul {
+  left: 100%;
+  top: 0;
+}
+#ex-splitmenu.horizontal > .nav-list > li.hover a,
+#ex-splitmenu.horizontal > .nav-list > li.active a,
+#ex-splitmenu.horizontal > .nav-list > li.active a:focus {
+  background-color: #F13835;
+  color: #fff;
+}
+#ex-splitmenu.horizontal a[class^="icon-"],
+#ex-splitmenu.horizontal a[class*=" icon-"] {
+  width: auto;
+  text-align: left;
+}
+#ex-splitmenu.horizontal a[class^="icon-"]:before,
+#ex-splitmenu.horizontal a[class*=" icon-"]:before {
+  margin-right: 5px;
+}
 .uk-offcanvas {
   display: none;
   position: fixed;
@@ -823,7 +883,7 @@ a {
   bottom: 0;
   left: 0;
   z-index: 1010;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.3);
 }
 .uk-offcanvas.uk-active {
   display: block;
@@ -882,7 +942,11 @@ a {
   border-bottom: 1px solid rgba(0,0,0,0.4);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06);
 }
-.uk-offcanvas .ex-menu > ul.l1 > li.active > a {
+.uk-offcanvas .ex-menu > ul.l1 > li:hover > a,
+.uk-offcanvas .ex-menu > ul.l1 > li.active > a,
+.uk-offcanvas .ex-menu > ul.l1 > li a:focus,
+.uk-offcanvas .ex-menu > ul.l1 > li a:active {
+  background-color: #3A3B40;
   color: #fff;
 }
 .uk-offcanvas .ex-menu > ul.l1 > li ul {
