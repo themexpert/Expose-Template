@@ -168,6 +168,14 @@ if( file_exists( JPATH_LIBRARIES . '/expose/expose.php' ) ){
                 <?php $expose->renderModules('absolute'); ?>
             </div>
             <?php /**End Absolute**/ endif;?>
+            
+            <?php /** Begin Off-canvas **/ if($expose->countModules('offcanvas')): ?>
+            <div id="offcanvas" class="uk-offcanvas">
+                <div class="uk-offcanvas-bar">
+                    <?php $expose->renderModules('offcanvas'); ?>
+                </div>
+            </div>
+            <?php /** End Offcanvas **/ endif;?>
 
     </body>
 </html>

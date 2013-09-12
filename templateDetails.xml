@@ -117,6 +117,8 @@
         <position>mega4</position>
         <position>mega5</position>
         <position>mega6</position>
+        <!--Off canvas-->
+        <position>offcanvas</position>
     </positions>
 
     <languages folder="language">
@@ -320,50 +322,109 @@
                 <field name="menu-enabled" type="toggle" default="1" pretext="ENABLE" label="MENU_CONTROL_LABEL" description="MENU_CONTROL_DESC" />
                 <field name="menu-style" type="list" default="mega" class="remove-lbl border-left" pretext="MENU_TYPE_LABEL" description="MENU_TYPE_DESC">
                     <option value="mega">Mega Menu</option>
-                    <option value="dropline">Dropline Menu</option>
                     <option value="split">Split Menu</option>
                 </field>
 
                 <field name="menutype" type="menu" default="mainmenu" class="remove-lbl border-left" pretext="MENU_NAME_LABEL" description="MENU_NAME_DESC" />
 
-                <field name="menu-position" type="positions" default="top-2" pretext="SELECT" label="MENU_POSITION_LABEL" description="MENU_POSITION_DESC" />
-                <field name="menu-mobile" type="toggle" default="1" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
+                <field name="menu-position" type="positions" default="top-2" class="remove-lbl border-left"  pretext="POSITIONS" description="MENU_POSITION_DESC" />
 
-                <field name="menu-delay" type="text" default="350" label="MENU_DELAY_LABEL" description="MENU_DELAY_DESC" />
-
-                <field name="menu-animation" type="list" default="easeInOutQuad" label="MENU_ANIMATION_LABEL" description="MENU_ANIMATION_DESC">
-                    <option value="easeInQuad">easeInQuad</option>
-                    <option value="easeOutQuad">easeOutQuad</option>
-                    <option value="easeInOutQuad">easeInOutQuad</option>
-                    <option value="easeInCubic">easeInCubic</option>
-                    <option value="easeInOutCubic">easeInOutCubic</option>
-                    <option value="easeInQuart">easeInQuart</option>
-                    <option value="easeOutQuart">easeOutQuart</option>
-                    <option value="easeInOutQuart">easeInOutQuart</option>
-                    <option value="easeInQuint">easeInQuint</option>
-                    <option value="easeOutQuint">easeOutQuint</option>
-                    <option value="easeInOutQuint">easeInOutQuint</option>
-                    <option value="easeInSine">easeInSine</option>
-                    <option value="easeOutSine">easeOutSine</option>
-                    <option value="easeInOutSine">easeInOutSine</option>
-                    <option value="easeInExpo">easeInExpo</option>
-                    <option value="easeOutExpo">easeOutExpo</option>
-                    <option value="easeInOutExpo">easeInOutExpo</option>
-                    <option value="easeInCirc">easeInCirc</option>
-                    <option value="easeOutCirc">easeOutCirc</option>
-                    <option value="easeInOutCirc">easeInOutCirc</option>
-                    <option value="easeInElastic">easeInElastic</option>
-                    <option value="easeOutElastic">easeOutElastic</option>
-                    <option value="easeInOutElastic">easeInOutElastic</option>
-                    <option value="easeInBack">easeInBack</option>
-                    <option value="easeOutBack">easeOutBack</option>
-                    <option value="easeInOutBack">easeInOutBack</option>
-                    <option value="easeInBounce">easeInBounce</option>
-                    <option value="easeOutBounce">easeOutBounce</option>
-                    <option value="easeInOutBounce">easeInOutBounce</option>
+                <field name="menu-animation" type="list" default="scale-up" pretext="Dropdown" label="MENU_ANIMATION_LABEL" description="MENU_ANIMATION_DESC">
+                    <option value="fade">Fade</option>
+                    <option value="scale-up">Scale Up</option>
+                    <option value="scale-down">Scale Down</option>
+                    <option value="slide-top">Slide Top</option>
+                    <option value="slide-bottom">Slide Bottom</option>
+                    <option value="slide-left">Slide Left</option>
+                    <option value="slide-right">Slide Right</option>
+                    <option value="flipin-x">Flipin X</option>
+                    <option value="flipin-y">Flipin Y</option>
+                    <option value="bounce-in">Bounce In</option>
+                    <option value="bounce-in-up">Bounce In Up</option>
+                    <option value="bounce-in-left">Bounce In Left</option>
+                    <option value="bounce-in-right">Bounce In Right</option>
+                    <option value="roll-in">Roll In</option>
+                    <option value="custom">Custom</option>
                 </field>
 
-                <field name="menu-fancy-animation" type="toggle" default="0" pretext="ENABLE" label="MENU_FANCY_ANIMATION_LABEL" description="MENU_FANCY_ANIMATION_DESC" />
+                <field name="menu-animation-sublevel" type="list" default="slide-right" pretext="Sublevel Dropdown" class="remove-lbl border-left" description="MENU_ANIMATION_DESC">
+                    <option value="fade">Fade</option>
+                    <option value="scale-up">Scale Up</option>
+                    <option value="scale-down">Scale Down</option>
+                    <option value="slide-top">Slide Top</option>
+                    <option value="slide-bottom">Slide Bottom</option>
+                    <option value="slide-left">Slide Left</option>
+                    <option value="slide-right">Slide Right</option>
+                    <option value="flipin-x">Flipin X</option>
+                    <option value="flipin-y">Flipin Y</option>
+                    <option value="bounce-in">Bounce In</option>
+                    <option value="bounce-in-up">Bounce In Up</option>
+                    <option value="bounce-in-left">Bounce In Left</option>
+                    <option value="bounce-in-right">Bounce In Right</option>
+                    <option value="roll-in">Roll In</option>
+                    <option value="custom">Custom</option>
+                </field>
+
+                <field name="menu-startlevel" type="list" default="1" label="MEGA_MENU_RENDER_LABEL" pretext="MENU_START_LEVEL" description="MENU_START_LEVEL_DESC"
+                >
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                <field name="menu-endlevel" type="list" default="-1" class="remove-lbl border-left" pretext="MENU_END_LEVEL" description="MENU_END_LEVEL_DESC"
+                    >
+                    <option value="0">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                <field name="offcanvas-startlevel" type="list" default="1" label="OFFCANVAS_MENU_RENDER_LABEL" pretext="MENU_START_LEVEL" description="MENU_START_LEVEL_DESC"
+                >
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                <field name="offcanvas-endlevel" type="list" default="3" class="remove-lbl border-left" pretext="MENU_END_LEVEL" description="MENU_END_LEVEL_DESC"
+                    >
+                    <option value="0">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+
+                <!-- <field name="menu-fancy-animation" type="toggle" default="0" pretext="ENABLE" label="MENU_FANCY_ANIMATION_LABEL" description="MENU_FANCY_ANIMATION_DESC" /> -->
 
             </fieldset>
             <!-- Menu Settings -->
@@ -530,6 +591,10 @@
 
                 <field name="breadcrumbs" type="hidden" max-mods="1" default="1:12" />
                 <field name="breadcrumbs-chrome" type="hidden" default="breadcrumbs:standard" />
+
+                <!-- Offcanvas -->
+                <field name="offcanvas" type="hidden" max-mods="1" default="1:12" />
+                <field name="offcanvas-chrome" type="hidden" default="offcanvas:raw" />
 
             </fieldset>
             <!-- Layout Settings -->
