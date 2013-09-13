@@ -125,6 +125,11 @@
             <language tag="en-GB">en-GB.tpl_expose.ini</language>
     </languages>
 
+    <!-- UPDATESERVER DEFINITION -->
+    <updateservers>
+        <server name="Expose Template Update" priority="1" type="extension">http://www.themexpert.com/ustreams/templates/exposetemplate.xml</server>
+    </updateservers>
+
     <config>
 
         <fields name="params" addfieldpath="libraries/expose/admin/fields">
