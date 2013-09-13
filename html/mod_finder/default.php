@@ -17,7 +17,7 @@ $lang = JFactory::getLanguage();
 $lang->load('com_finder', JPATH_SITE);
 
 $suffix = $params->get('moduleclass_sfx');
-$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox width-80" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
+$output = '<input type="text" name="q" id="mod-finder-searchword" class="inputbox width-70" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" />';
 $button = '';
 $label = '';
 

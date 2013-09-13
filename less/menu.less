@@ -8,7 +8,7 @@
 
 // Style
 @menu-color:                                #fff;
-@menu-hover-background:                     #222;
+@menu-hover-background:                     rgba(0,0,0,0.3);
 @menu-hover-color:                          #fff;
 @menu-onclick-background:                   @menu-hover-background;
 @menu-onclick-color:                        @menu-hover-color;
@@ -18,11 +18,11 @@
 @menu-subtitle-offset:                      7px;
 
 // Level 1
-@menu-level1-item-background:               #F13835;
+@menu-level1-item-background:               @menu-hover-background;
 
 // Dropdown
 @dropdown-z-index:                          1000;
-@dropdown-background:                       @menu-level1-item-background;
+@dropdown-background:                       '';
 
 // Animation - Located on animation.less file
 @dropdown-animation:                        flipin-x;
@@ -45,7 +45,7 @@
 @offcanvas-bar-background:						#333;
 
 @offcanvas-item-color: 							#88898E;
-@offcanvas-item-hover-color: 					@menu-level1-item-background;
+@offcanvas-item-hover-color: 					#3A3B40;
 @offcanvas-l1-item-color: 						rgba(255, 255, 255, 0.8);
 @offcanvas-l1-item-background: 					#3A3B40;
 @offcanvas-l1-item-active-color: 				#fff;
@@ -58,7 +58,7 @@
 /* Implement hooks
 ========================================================================== */
 // Menu Wrapper
-.hook-menu() { background-color: #222; float: right; }
+.hook-menu() { float: right; }
 
 // Menu Item - Implement on all <a>
 .hook-menu-item() {}
@@ -92,7 +92,9 @@
 
 // Sub-objects: 'grouped'
 //==============================================================
-.hook-menu-grouped() {}
+.hook-menu-grouped() {
+	.box-shadow(~'0 0 6px rgba(0,0,0,0.4)');
+}
 
 // Sub-objects: 'column'
 // Apply padding/margin if needed
