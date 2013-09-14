@@ -1,18 +1,19 @@
 //Load Google webfont
-@import url(//fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
+@import url(//fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
 //Font mixin
-.gfont-serif{ font-family: 'Gentium Book Basic', serif; }
+.gfont-serif{ font-family: 'Oxygen', sans-serif; }
 
 /*----------------------------------------
        Common for general purpose
 -----------------------------------------*/
 body{
     background: @bodyBackground url(../images/backgrounds/noise.png) repeat 0 0;
-    color: #444;
-    font-family: @sansFontFamily;
+    color: #666;
+    .gfont-serif;
     font-size: 14px;
-    line-height: 20px;
+    font-weight: 300;
+    line-height: 22px;
     margin: 0;
     position : relative;
 }
@@ -54,6 +55,7 @@ a{ text-decoration: none; }
 .page-header{border:none;}
 
 // Readmore and button
+.btn,
 .button,
 .readon,
 .readmore{
@@ -61,7 +63,7 @@ a{ text-decoration: none; }
   padding: 4px 14px;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,0.4);
-  .border-radius(4px);
+  .border-radius(0);
   a, &:hover{
     color: #fff;
     text-shadow: 0 1px 1px rgba(0,0,0,0.4);
@@ -89,12 +91,20 @@ a{ text-decoration: none; }
 .img-circle {
   .border-radius(500px); // crank the border-radius so it works with most reasonably sized images
 }
+// Icons 10x
+.icon-10x {
+  font-size: 10em;
+  &.icon-border {
+    border-width: 10px;
+    .border-radius(12px);
+  }
+}
 
 /*--------------------------------------------------
         Layout
 ---------------------------------------------------*/
 .container{}
-
+.row{ padding-top: 40px; padding-bottom: 40px}
 #mainbody, #sidebar-a, #sidebar-b{position: relative;}
 
 // Sidebar a/b grid inside grid
@@ -114,6 +124,10 @@ a{ text-decoration: none; }
 }
 /* Positions Specific
 ----------------------------------*/
+#roof,
+#top,
+#breadcrumbs,
+#main{ padding-top: 0; padding-bottom: 0; }
 #absolute{
   position: absolute;
   bottom: 20px;
@@ -133,6 +147,7 @@ a{ text-decoration: none; }
 }
 
 #utility{
+  padding-bottom: 0;
   color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
 
@@ -163,7 +178,4 @@ a{ text-decoration: none; }
   background: @whiteLight;
   border-top: 1px solid @grayLighter;
 }
-#copyright{
-  padding-top: 15px;
-    border-top: 1px solid @grayLighter;
-}
+#copyright{ border-top: 1px solid @grayLighter; }

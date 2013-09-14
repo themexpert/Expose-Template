@@ -86,6 +86,11 @@
   .widget-fontresizer {
     display: none;
   }
+  .widget-menu {
+    margin: 0;
+    padding: 0;
+    height: 0;
+  }
   .finder {
     text-align: center;
   }

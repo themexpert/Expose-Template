@@ -31,11 +31,10 @@ a:hover{color: @color-light-black;text-decoration: none;}
 .readon,
 .readmore,
 .btn-primary{
-  .gradientBar(@color-primary-extralight, @color-primary);
-  border: 1px solid @color-primary-extralight;
-
-  &:hover{
-    background: @color-primary-light;
+  background: @color-primary;
+  border: 1px solid darken(@color-primary, 10%);
+  &:hover{ 
+    background-color: darken(@color-primary, 10%);
   }
 }
 /*----------------------------------

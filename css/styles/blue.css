@@ -55,25 +55,14 @@ a:hover {
 .readon,
 .readmore,
 .btn-primary {
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-  background-color: #00a8e7;
-  background-image: -moz-linear-gradient(top,#00B4F5,#0096D2);
-  background-image: -webkit-gradient(linear,0 0,0 100%,from(#00B4F5),to(#0096D2));
-  background-image: -webkit-linear-gradient(top,#00B4F5,#0096D2);
-  background-image: -o-linear-gradient(top,#00B4F5,#0096D2);
-  background-image: linear-gradient(to bottom,#00B4F5,#0096D2);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00b4f5', endColorstr='#ff0096d2', GradientType=0);
-  border-color: #0096D2 #0096D2 #005f86;
-  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-  border: 1px solid #00B4F5;
+  background: #0096D2;
+  border: 1px solid #00729f;
 }
 .button:hover,
 .readon:hover,
 .readmore:hover,
 .btn-primary:hover {
-  background: #00A5E4;
+  background-color: #00729f;
 }
 #roof {
   background: url(../../images/backgrounds/noise.png) repeat 0 0 #0096D2;
