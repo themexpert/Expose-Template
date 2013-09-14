@@ -24,6 +24,9 @@ function modChrome_standard( $module, $params, $attribs )
 	// Badge?
 	$badge = preg_match( '/badge/', $params->get( 'moduleclass_sfx' ) ) ? '<span class="badge"></span>' : '';
 
+    // Title icon
+    $icon = preg_match( '/icon-[a-zA-Z0-9]*(-?[a-zA-Z0-9]*)/', $params->get( 'moduleclass_sfx' ), $match ) ? '<span class="'. $match[0].'"></span>' : '';
+
 	// Add module class suffix and unique class name
 	$moduleClassSfx = '';
     $moduleUniqueClass = ' mod-'. $module->id ;
@@ -63,7 +66,7 @@ function modChrome_standard( $module, $params, $attribs )
                 $parts[0] = '<span>' . $parts[0] . '</span>';
                 $title = implode(' ', $parts);
 
-                echo "\t\t\t\t" . '<h2 class="title">' . $title .'</h2>' . "\n";
+                echo "\t\t\t\t" . '<h2 class="title">' . $icon . $title .'</h2>' . "\n";
 
                 if( !empty($subTitle) )
                 {
@@ -102,7 +105,6 @@ function modChrome_tabs($module, &$params, &$attribs)
     <div class="mod-tab <?php echo $params->get('moduleclass_sfx'); ?>">
         <h<?php echo $headerLevel; ?> class="tab1-<?php echo $counta; ?>">
             <?php echo $module->title; ?>
-            <?php echo $badge; ?>
         </h<?php echo $headerLevel;?>>
         <div class="tab-pane">
             <?php echo $module->content; ?>
@@ -122,13 +124,16 @@ function modChrome_accordion($module, &$params, &$attribs)
   if ( $countc == '' ) { $countc = 0;}
   $headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
   $positionName = isset($attribs['positionName']) ? $attribs['positionName'] : $module->id;
+    
+    // Title icon
+  $icon = preg_match( '/icon-[a-zA-Z0-9]*(-?[a-zA-Z0-9]*)/', $params->get( 'moduleclass_sfx' ), $match ) ? '<span class="'. $match[0].'"></span>' : '';
 
   if (!empty ($module->content)) : ?>
 
-    <div class="accordion-group accordion-<?php echo $countc; ?> <?php echo $params->get('moduleclass_sfx'); ?>">
+    <div class="accordion-group accordion-<?php echo $countc; ?>">
 
         <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#acc-<?php echo $positionName; ?>" href="#collapse-<?php echo $countc; ?>"><?php echo $module->title; ?></a>
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#acc-<?php echo $positionName; ?>" href="#collapse-<?php echo $countc; ?>"><?php echo $icon . $module->title; ?></a>
         </div>
 
         <div id="collapse-<?php echo $countc; ?>" class="accordion-body collapse <?php if ( $countc == 0 ) { echo 'in'; } ?>">
