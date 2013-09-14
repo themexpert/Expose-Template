@@ -84,9 +84,11 @@ a:hover {
   color: #f5f5f5;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
 }
-.ex-menu,
-.ex-menu .dropdown {
+.ex-menu {
   background-color: #47535f;
+}
+.ex-menu .dropdown {
+  background-color: #2d343c;
 }
 #mod-finder-searchform button.finder {
   background-color: #47535f;
