@@ -648,9 +648,12 @@ a {
 .ex-menu li a[class*=" icon-"] {
   width: auto;
   text-align: left;
+  font-family: inherit;
+  -webkit-font-smoothing: inherit;
 }
 .ex-menu li a[class^="icon-"]:before,
 .ex-menu li a[class*=" icon-"]:before {
+  font-family: FontAwesome;
   margin-right: 5px;
 }
 .ex-menu > ul.l1 > li:hover > a,
