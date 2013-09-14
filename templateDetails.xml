@@ -279,8 +279,6 @@
                     <field name="copyrightinfo-text" type="textarea" rows="3" cols="40" filter="raw" default="EXPOSE_DEFAULT_COPYRIGHT" pretext="COPYRIGHT_TEXT_LABEL" class="remove-lbl border-left" description="COPYRIGHT_TEXT_DESC" />
                 <field name="copyrightinfo-mobile" type="toggle" default="0" class="remove-lbl border-left" pretext="LOAD_MOBILE_LABEL" description="LOAD_MOBILE_DESC" />
 
-                <field name="ie6warn-enabled" type="toggle" default="1" pretext="SHOW" label="IE6_WARNING_LABEL" description="IE6_WARNING_DESC" />
-
                 <field name="fontresizer-enabled" type="toggle" default="0" pretext="SHOW" label="FONT_RESIZER_LABEL" description="FONT_RESIZER_DESC" />
                     <field name="fontresizer-position" type="positions" default="roof-5" class="remove-lbl border-left" pretext="POSITIONS" description="POSITIONS_DESC" />
                     <field name="fontresizer-selector" pretext="FONT_RESIZER_SELECTOR_LABEL" type="text" default="body" class="remove-lbl border-left input-large" description="FONT_RESIZER_SELECTOR_DESC" filter="string" />
@@ -656,11 +654,10 @@
                         <option value="google-cdn">Google CDN</option>
                         <option value="local">From Framework</option>
                     </field>
-                    <field name="jquery-version" type="list" default="1.7.2" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC">
-                        <option value="1.7.2">1.7.2</option>
-                        <option value="1.7.1">1.7.1</option>
-                        <option value="1.8.2">1.8.2</option>
+                    <field name="jquery-version" type="list" default="1.8.3" class="remove-lbl border-left" pretext="JQUERY_VERSION_LABEL" description="JQUERY_VERSION_DESC" >
+                        <option value="1.8.3">1.8.3</option>
                     </field>
+                    
                 <field name="combined-css" type="toggle" default="0" class="hidenext" pretext="ENABLE" label="COMBINED_CSS_LABEL" description="COMBINED_CSS_DESC" />
                     <field name="minify-css" type="toggle" default="0" pretext="ENABLE" label="MINIFY_CSS_LABEL" description="MINIFY_CSS_DESC" />
                 <field name="combined-js" type="toggle" default="0" class="hidenext" pretext="ENABLE" label="COMBINED_JS_LABEL" description="COMBINED_JS_DESC" />
