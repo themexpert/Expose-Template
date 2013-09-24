@@ -694,21 +694,6 @@ a {
   font-size: 10px;
   line-height: 17px;
 }
-.ex-menu .toggle {
-  font-size: ;
-  color: ;
-}
-.ex-menu .toggle:hover,
-.ex-menu .toggle:focus {
-  color: ;
-  text-decoration: none;
-  outline: none;
-}
-.ex-menu .toggle:after {
-  content: ;
-  font-family: "FontAwesome";
-  vertical-align: middle;
-}
 .ex-menu .dropdown {
   display: none;
   position: absolute;
@@ -1102,6 +1087,15 @@ a {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+}
+#component #contact-slider {
+  padding-bottom: 9px;
+}
+#component #contact-slider h3 {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
 }
 #mod-finder-searchform {
   margin: 0 0;

@@ -82,15 +82,18 @@
 
 // Common styles
 .nav-tabs,
-.nav-pills {
+.nav-pills,
+#contact-slider.tabs {
   .clearfix();
 }
 .nav-tabs > li,
-.nav-pills > li {
+.nav-pills > li,
+#contact-slider.tabs > dt {
   float: left;
 }
 .nav-tabs > li > a,
-.nav-pills > li > a {
+.nav-pills > li > a,
+#contact-slider.tabs > dt a {
   padding-right: 12px;
   padding-left: 12px;
   margin-right: 2px;
@@ -101,15 +104,18 @@
 // ----
 
 // Give the tabs something to sit on
-.nav-tabs {
+.nav-tabs,
+#contact-slider.tabs {
   border-bottom: 1px solid #ddd;
 }
 // Make the list-items overlay the bottom border
-.nav-tabs > li {
+.nav-tabs > li,
+#contact-slider.tabs > dt {
   margin-bottom: -1px;
 }
 // Actual tabs (as links)
-.nav-tabs > li > a {
+.nav-tabs > li > a,
+#contact-slider.tabs > dt a {
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: @baseLineHeight;
@@ -121,7 +127,9 @@
 }
 // Active state, and it's :hover to override normal :hover
 .nav-tabs > .active > a,
-.nav-tabs > .active > a:hover {
+.nav-tabs > .active > a:hover,
+#contact-slider.tabs > dt.open a,
+#contact-slider.tabs > dt.open a:hover {
   color: @gray;
   background-color: @white;
   border: 1px solid #ddd;
