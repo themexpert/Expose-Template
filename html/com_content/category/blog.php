@@ -81,37 +81,27 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 ?>
 <?php if (!empty($this->intro_items)) : ?>
 <section class="intro-articles">
-
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
-        <?php
-    		$key= ($key-$leadingcount)+1;
-    		$rowcount=( ((int)$key-1) %	(int) $this->columns) +1;
-    		$row = $counter / $this->columns ;
-
-    		if ($rowcount==1) : ?>
-    	<div class="articles-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row ; ?> clearfix">
-    	<?php endif; ?>
-
-        <div class="col-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
-            <article class="article">
-                <?php
-                    $this->item = &$item;
-                    echo $this->loadTemplate('item');
-                ?>
-            </article>
-        </div>
-
-    	<?php $counter++; ?>
-    	<?php if (($rowcount == $this->columns) or ($counter ==$introcount)): ?>
-    				<span class="row-separator"></span>
-    				</div>
-
-        <?php endif; ?>
-
+		<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
+		<?php if ($rowcount == 1) : ?>
+			<?php $row = $counter / $this->columns; ?>
+		<div class="articles-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row; ?> clearfix">
+		<?php endif; ?>
+			<div class="col-<?php echo round((12 / $this->columns));?>">
+				<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
+					<?php
+					$this->item = &$item;
+					echo $this->loadTemplate('item');
+				?>
+				</div><!-- end item -->
+				<?php $counter++; ?>
+			</div><!-- end span -->
+			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
+		</div><!-- end row -->
+			<?php endif; ?>
 	<?php endforeach; ?>
-
 </section>
-<?php endif; ?>
+<?php endif; ?>	
 
 <?php if (!empty($this->link_items)) : ?>
 	<section class="more-articles">
